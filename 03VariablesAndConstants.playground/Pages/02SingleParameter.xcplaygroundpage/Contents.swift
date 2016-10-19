@@ -1,7 +1,7 @@
-//: ### Overloading
+//: ### Single Parameter
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 func hello() {
-    hello(name: "World")
+    print("Hello, World!")
 }
 func hello(name: String) {
     print("Hello, \(name)!")
