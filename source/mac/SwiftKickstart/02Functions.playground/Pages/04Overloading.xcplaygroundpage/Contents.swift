@@ -1,10 +1,10 @@
 //: ### Overloading
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-func hello() {
-    hello(name: "World")
+func hello() -> String {
+    return hello(name: "World")
 }
-func hello(name: String) {
-    print("Hello, \(name)!")
+func hello(name: String) -> String {
+    return "Hello, \(name)!"
 }
 hello()
 hello(name: "my friend")
