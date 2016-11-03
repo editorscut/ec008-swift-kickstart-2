@@ -1,11 +1,11 @@
 //: ### Variadic Parameters
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-func hello(peopleNamed people: String...) {
+
+func hello(peopleNamed people: String...) -> String {
     if people.isEmpty {
-        print("No one to greet.")
-    }
-    for person in people {
-        print("Hello, \(person)!")
+        return "There's no one to greet."
+    } else {
+        return people.reduce(""){$0 + "\nHello, " + $1 + "!"}
     }
 }
 hello()

@@ -1,8 +1,8 @@
 //: ### Default Values
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-func hello(to name: String = "World") {
-    print("Hello, \(name)!")
+func hello(name: String = "World") -> String {
+    return "Hello, \(name)!"
 }
 hello()
-hello(to: "my friend")
+hello(name: "my friend")
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
