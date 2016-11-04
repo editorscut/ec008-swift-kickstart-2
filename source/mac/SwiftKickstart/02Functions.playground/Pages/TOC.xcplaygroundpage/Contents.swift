@@ -1,13 +1,13 @@
 /*:
  # Table of Contents
  * [01 No Parameter No Return](01NoParameterNoReturn)
- * [02 Single Parameter](02SingleParameter)
- * [03 Overloading](03Overloading)
- * [04 External Parameter Names](04ExternalParameterNames)
+ * [02 Return Values](02ReturnValues)
+ * [03 Single Parameter](03SingleParameter)
+ * [04 Overloading](04Overloading)
  * [05 Default Values](05DefaultValues)
- * [06 Multiple Parameters](06MultipleParameters)
- * [07 Variadic Parameters](07VariadicParameters)
- * [08 The print() Function](08ThePrintFunction)
- * [09 Return Values](09ReturnValues)
+ * [06 External Parameter Names](06ExternalParameterNames)
+ * [07 Multiple Parameters](07MultipleParameters)
+ * [08 Variadic Parameters](08VariadicParameters)
+ * [09 The print() Function](09ThePrintFunction)
  * [10 Returning Tuples](10ReturningTuples)
  */
