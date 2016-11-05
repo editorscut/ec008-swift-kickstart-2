@@ -5,7 +5,7 @@
 	<key>Version</key>
 	<string>1.0</string>
 	<key>Name</key>
-	<string>The print() Function</string>
+	<string>Variadic Parameters</string>
 	<key>LiveViewMode</key>
 	<string>HiddenByDefault</string>
 </dict>

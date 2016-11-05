@@ -1,8 +1,4 @@
-func hello() {
-    print("Hello, World!")
-}
-func hello(name: String) {
-    print("Hello, \(name)!")
+func hello() -> String {
+    return "Hello, World!"
 }
 hello()
-hello(name: "my friend")

@@ -1,6 +1,9 @@
-let name = "Swift Programmer"
-print("Hello, World!")
-print("Hello, \(name)!")
-print("Hello,", name, "!")
-print("Hello,", name, "!", separator:"^-^")
-print("Hello, ", name, "!", separator: "", terminator: "")
+func hello(peopleNamed people: String...) -> String {
+    if people.isEmpty {
+        return "There's no one to greet."
+    } else {
+        return people.reduce(""){$0 + "\nHello, " + $1 + "!"}
+    }
+}
+hello()
+hello(peopleNamed: "Thing One", "Thing Two")

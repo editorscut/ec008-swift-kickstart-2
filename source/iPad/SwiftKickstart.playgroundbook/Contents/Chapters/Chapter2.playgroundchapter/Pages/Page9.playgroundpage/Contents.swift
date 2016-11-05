@@ -1,4 +1,5 @@
-func hello(name: String) -> String {
-    return "Hello, \(name)!"
-}
-hello(name: "my friend")
+let name = "Swift Programmer"
+print("Hello, \(name)!")
+print("Hello,", name, "!")
+print("Hello,", name, "!", separator:"^-^")
+print("Hello, ", name, "!", separator: "", terminator: "")

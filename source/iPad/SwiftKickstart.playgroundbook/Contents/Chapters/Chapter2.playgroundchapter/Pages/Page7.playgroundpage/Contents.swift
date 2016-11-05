@@ -1,10 +1,7 @@
-func hello(peopleNamed people: String...) {
-    if people.isEmpty {
-        print("No one to greet.")
-    }
-    for person in people {
-        print("Hello, \(person)!")
-    }
+func hello(_ name: String = "World", from city: String = "Cupertino") -> String {
+    return "Hello, \(name) who comes from \(city)!"
 }
 hello()
-hello(peopleNamed: "Thing One", "Thing Two")
+hello("my friend", from: "London")
+hello("my friend")
+hello(from: "London")
