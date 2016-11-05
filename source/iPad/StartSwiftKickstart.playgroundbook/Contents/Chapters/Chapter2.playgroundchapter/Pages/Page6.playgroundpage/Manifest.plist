@@ -5,7 +5,7 @@
 	<key>Version</key>
 	<string>1.0</string>
 	<key>Name</key>
-	<string>Multiple Parameters</string>
+	<string>External Parameter Names</string>
 	<key>LiveViewMode</key>
 	<string>HiddenByDefault</string>
 </dict>
