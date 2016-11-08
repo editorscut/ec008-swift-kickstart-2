@@ -2,9 +2,9 @@
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 var name: String?
 name = "Swifty"
-print(name ?? "name is nil")
-name = nil
-print(name ?? "name is nil")
 
+let validName = name ?? "name is nil"
+
+print(validName)
 
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
