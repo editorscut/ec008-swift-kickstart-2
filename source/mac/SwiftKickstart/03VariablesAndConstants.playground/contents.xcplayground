@@ -6,9 +6,11 @@
         <page name='02Let'/>
         <page name='03Var'/>
         <page name='04UsingVariablesAndConstants'/>
-        <page name='05NumericTypes'/>
-        <page name='06Nil'/>
-        <page name='07HigherOrderFunctions'/>
-        <page name='08TypeAlias'/>
+        <page name='05StoringFunctions'/>
+        <page name='06TypeAlias'/>
+        <page name='07NumericTypes'/>
+        <page name='08Nil'/>
+        <page name='09NilCoalescingOperator'/>
+        <page name='10IfLet'/>
     </pages>
 </playground>

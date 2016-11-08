@@ -1,7 +1,10 @@
-//: ### Return Values
+//: ### Nil
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-func hello() -> String {
-    return "Hello, World!"
-}
-hello()
+var name: String?
+name = "Swifty"
+print(name)
+name = nil
+// print(name!) runtime error
+
+
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
