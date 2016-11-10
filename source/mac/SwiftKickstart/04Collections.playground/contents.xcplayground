@@ -3,7 +3,7 @@
     <pages>
         <page name='TOC'/>
         <page name='01OneType'/>
-        <page name='02Let'/>
+        <page name='01CreateArrays'/>
         <page name='03Var'/>
         <page name='04UsingVariablesAndConstants'/>
         <page name='05StoringFunctions'/>
