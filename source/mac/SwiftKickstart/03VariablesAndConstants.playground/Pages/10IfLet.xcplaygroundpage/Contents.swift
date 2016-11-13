@@ -19,11 +19,27 @@ let image = UIImage(named: "Kickstart.jpg")
 //}
 //viewer.image
 
-if let image = image {
+//if let image = image {
+//    viewer.image = image
+//} else {
+//    print("There is no image to display")
+//}
+
+//func display(image: UIImage?) {
+//    if let image = image {
+//        viewer.image = image
+//    } else {
+//        print("There is no image to display")
+//    }
+//}
+func display(image: UIImage?) {
+    guard let image = image else {
+        print("There is no image to display")
+        return
+    }
     viewer.image = image
-} else {
-    print("There is no image to display")
 }
+display(image: image)
 viewer.image
 
 
