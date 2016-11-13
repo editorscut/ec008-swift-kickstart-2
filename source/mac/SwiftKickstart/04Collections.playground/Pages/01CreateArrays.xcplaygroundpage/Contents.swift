@@ -1,5 +1,5 @@
 //: ### Create Arrays
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](TOC) | Previous | [Next](@next)
 let primes: [Int]
 primes = [2,3,5,7]
 
@@ -20,4 +20,4 @@ primeNames[1]
 greetings[0]("World")
 
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](TOC) | Previous | [Next](@next)

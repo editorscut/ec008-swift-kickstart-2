@@ -1,20 +1,17 @@
-//: ### Storing Functions
+//: ### Enumerate Arrays
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-func hello(peopleNamed people: String...) -> (count: Int, greeting: String) {
-    var tempGreeting = ""
-    for person in people {
-        tempGreeting += "\nHello, \(person)!"
-    }
-    return (people.count, tempGreeting)
+let coffeeDrinks = ["Drip", "Espresso", "Americano", "Cappuccino", "Drip"]
+
+for index in 0 ..< coffeeDrinks.count {
+    print(index, coffeeDrinks[index])
 }
 
-let result = hello(peopleNamed: "Thing One", "Thing Two")
+for kindOfDrink in coffeeDrinks {
+    print(coffeeDrinks.index(of: kindOfDrink)! + 1,  kindOfDrink)
+}
 
-result.count
-result.greeting
-
-let greetingFunction = hello
-
-greetingFunction("A", "B")
+for (index, kindOfDrink) in coffeeDrinks.enumerated() {
+    print(index + 1, kindOfDrink)
+}
 
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)

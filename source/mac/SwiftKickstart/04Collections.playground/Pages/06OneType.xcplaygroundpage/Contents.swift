@@ -12,6 +12,4 @@ let badTwo = badNumbers[2] as! Int
 let badThree = badOne + badTwo
 let badHello = badNumbers[3] as? Int
 
-
-
 //: [TOC](TOC) | Previous | [Next](@next)
