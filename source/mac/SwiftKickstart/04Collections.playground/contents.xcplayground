@@ -8,7 +8,7 @@
         <page name='04EnumerateArrays'/>
         <page name='05ValueAndReferenceTypes'/>
         <page name='06OneType'/>
-        <page name='07NumericTypes'/>
+        <page name='07CreateDictionaries'/>
         <page name='08Nil'/>
         <page name='09NilCoalescingOperator'/>
         <page name='10IfLet'/>
