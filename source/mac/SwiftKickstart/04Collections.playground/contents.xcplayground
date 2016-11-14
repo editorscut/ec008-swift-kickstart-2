@@ -10,8 +10,7 @@
         <page name='06OneType'/>
         <page name='07CreateDictionaries'/>
         <page name='08ModifyDictionaries'/>
-        <page name='09NilCoalescingOperator'/>
-        <page name='10IfLet'/>
-        <page name='11Sets'/>
+        <page name='09EnumerateDictionaries'/>
+        <page name='10Sets'/>
     </pages>
 </playground>

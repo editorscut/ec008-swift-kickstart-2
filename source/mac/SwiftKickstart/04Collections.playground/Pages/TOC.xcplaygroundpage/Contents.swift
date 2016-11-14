@@ -8,6 +8,6 @@
  * [06 One Type](06OneType)
  * [07 Create Dictionaries](07CreateDictionaries)
  * [08 Modify Dictionaries](08ModifyDictionaries)
- * [09 Nil Coalescing Operator](09NilCoalescingOperator)
- * [10 if let](10IfLet)
+ * [09 Enumerate Dictionaries](09EnumerateDictionaries)
+ * [10 Sets](10Sets)
  */
