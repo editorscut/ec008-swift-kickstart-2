@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='TOC'/>
+        <page name='01CreateStructs'/>
+        <page name='02Stored Properties'/>
+        <page name='03ModifyArrays'/>
+        <page name='04EnumerateArrays'/>
+        <page name='05ValueAndReferenceTypes'/>
+        <page name='06OneType'/>
+        <page name='07CreateDictionaries'/>
+        <page name='08ModifyDictionaries'/>
+        <page name='09EnumerateDictionaries'/>
+        <page name='10Sets'/>
+    </pages>
+</playground>
