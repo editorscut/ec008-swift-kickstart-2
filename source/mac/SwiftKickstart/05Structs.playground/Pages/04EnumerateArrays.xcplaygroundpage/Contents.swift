@@ -1,17 +1,26 @@
-//: ### Enumerate Arrays
+//: ### Computed Properties
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-let coffeeDrinks = ["Drip", "Espresso", "Americano", "Cappuccino", "Drip"]
+import Foundation
 
-for index in 0 ..< coffeeDrinks.count {
-    print(index, coffeeDrinks[index])
+struct Vertex {
+    private(set) var x, y: Double
+    var magnitude: Double {
+        get {
+            return sqrt(x * x + y * y)
+        }
+        set {
+            let multiplier = newValue / magnitude
+            x *= multiplier
+            y *= multiplier
+        }
+    }
 }
 
-for kindOfDrink in coffeeDrinks {
-    print(coffeeDrinks.index(of: kindOfDrink)! + 1,  kindOfDrink)
-}
-
-for (index, kindOfDrink) in coffeeDrinks.enumerated() {
-    print(index + 1, kindOfDrink)
-}
+var point = Vertex(x: 3.0, y: 4.0)
+point.magnitude
+point.magnitude = 10
+point.magnitude
+point.x
+point.y
 
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
