@@ -1,21 +1,26 @@
-//: ### Modify Arrays
+//: ### Computed Properties
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-var evens = [4, 10, 16]
-evens[1] = 2
-evens.append(8)
-evens += [12, 6, 10]
-evens.insert(14, at: 1)
-evens[1 ... 5] = [100, 200]
-evens[2 ... 2] = [22, 20, 18]
-evens.removeLast()
-evens.removeFirst(2)
-evens.remove(at: 2)
-evens.removeAll(keepingCapacity: true)
-if !evens.isEmpty{
-    evens.removeLast()
+import Foundation
+
+struct Vertex {
+    private(set) var x, y: Double
+    var magnitude: Double {
+        get {
+            return sqrt(x * x + y * y)
+        }
+        set {
+            let multiplier = newValue / magnitude
+            x *= multiplier
+            y *= multiplier
+        }
+    }
 }
 
-evens
-evens.count
+var point = Vertex(x: 3.0, y: 4.0)
+point.magnitude
+point.magnitude = 10
+point.magnitude
+point.x
+point.y
 
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)

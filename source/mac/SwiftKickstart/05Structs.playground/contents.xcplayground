@@ -5,7 +5,7 @@
         <page name='01CreateStructs'/>
         <page name='02StoredProperties'/>
         <page name='03ComputedProperties'/>
-        <page name='04EnumerateArrays'/>
+        <page name='04WillSetDidSet'/>
         <page name='05ValueAndReferenceTypes'/>
         <page name='06OneType'/>
         <page name='07CreateDictionaries'/>
