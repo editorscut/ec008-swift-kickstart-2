@@ -7,7 +7,7 @@
         <page name='03ComputedProperties'/>
         <page name='04WillSetDidSet'/>
         <page name='05CustomStringConvertible'/>
-        <page name='06OneType'/>
+        <page name='06Equatable'/>
         <page name='07CreateDictionaries'/>
         <page name='08ModifyDictionaries'/>
         <page name='09EnumerateDictionaries'/>
