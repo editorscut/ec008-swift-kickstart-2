@@ -1,5 +1,5 @@
-//: ###  Value Types
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+import Foundation
+
 struct Vertex {
     let x: Double
     let y: Double
@@ -10,6 +10,3 @@ extension Vertex: CustomStringConvertible {
         return "(\(x), \(y))"
     }
 }
-
-let point = Vertex(x: 3, y: 4)
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

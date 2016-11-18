@@ -1,5 +1,3 @@
-//: ### Value Types
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 struct Vertex {
     var x: Double
     let y: Double
@@ -19,5 +17,3 @@ pointTwo
 pointTwo.x = 9
 pointOne
 pointTwo
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
