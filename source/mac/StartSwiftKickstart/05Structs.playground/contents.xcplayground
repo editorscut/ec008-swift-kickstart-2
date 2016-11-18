@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='TOC'/>
+        <page name='01CreateStructs'/>
+        <page name='02StoredProperties'/>
+        <page name='03ComputedProperties'/>
+        <page name='04WillSetDidSet'/>
+        <page name='05CustomStringConvertible'/>
+        <page name='06Equatable'/>
+        <page name='07ValueTypes'/>
+        <page name='08Methods'/>
+    </pages>
+</playground>
