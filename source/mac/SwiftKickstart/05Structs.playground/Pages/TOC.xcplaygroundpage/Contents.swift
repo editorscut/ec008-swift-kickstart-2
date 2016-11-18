@@ -1,13 +1,11 @@
 /*:
  # Table of Contents
- * [01 Create Arrays](01CreateArrays)
- * [02 Create Modifiable Arrays](02CreateModifiableArrays)
- * [03 Modify Arrays](03ModifyArrays)
- * [04 Enumerate Arrays](04EnumerateArrays)
- * [05 Values and Reference Types](05ValuesAndReferenceTypes)
- * [06 One Type](06OneType)
- * [07 Create Dictionaries](07CreateDictionaries)
- * [08 Modify Dictionaries](08ModifyDictionaries)
- * [09 Enumerate Dictionaries](09EnumerateDictionaries)
- * [10 Sets](10Sets)
+ * [01 Create Structs](01CreateStructs)
+ * [02 Stored Properties](02StoredProperties)
+ * [03 Computed Properties](03ComputedProperties)
+ * [04 willSet() didSet()](04WillSetDidSet)
+ * [05 CustomStringConvertible](05CustomStringConvertible)
+ * [06 Equatable](06Equatable)
+ * [07 Value Types](07ValueTypes)
+ * [08 Methods](08Methods)
  */
