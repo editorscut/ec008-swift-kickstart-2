@@ -1,5 +1,6 @@
-//: ### Methods
+//: ### Computed Properties
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+
 import UIKit
 
 enum Color {
@@ -7,7 +8,7 @@ enum Color {
     case green
     case blue
     
-    func uiColor() -> UIColor {
+    var uiColor: UIColor {
         switch self {
         case .red:
             return UIColor.red
@@ -20,17 +21,15 @@ enum Color {
     
     func swatch(width: Int, height: Int) -> UIView {
         let myView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: height))
-        myView.backgroundColor = uiColor()
+        myView.backgroundColor = uiColor
         return myView
     }
 }
 
 let crayon = Color.blue
-crayon.uiColor()
-crayon.swatch(width: 10, height: 100)
+crayon.uiColor
 
 let paintBrush = Color.red
-paintBrush.uiColor()
-paintBrush.swatch(width: 100, height: 10)
+paintBrush.uiColor
 
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
