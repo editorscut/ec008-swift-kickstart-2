@@ -8,7 +8,7 @@
         <page name='04ComputedProperties'/>
         <page name='05StringRawValues'/>
         <page name='06NumericalRawValues'/>
-        <page name='07ValueTypes'/>
+        <page name='07AssociatedValues'/>
         <page name='08Methods'/>
     </pages>
 </playground>
