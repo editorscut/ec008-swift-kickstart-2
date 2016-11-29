@@ -9,6 +9,6 @@
         <page name='05StringRawValues'/>
         <page name='06NumericalRawValues'/>
         <page name='07AssociatedValues'/>
-        <page name='08Methods'/>
+        <page name='08Binding Associated Values'/>
     </pages>
 </playground>
