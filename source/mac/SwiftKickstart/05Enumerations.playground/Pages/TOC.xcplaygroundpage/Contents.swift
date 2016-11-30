@@ -1,11 +1,14 @@
 /*:
  # Table of Contents
- * [01 Create Structs](01CreateStructs)
- * [02 Stored Properties](02StoredProperties)
- * [03 Computed Properties](03ComputedProperties)
- * [04 willSet() didSet()](04WillSetDidSet)
- * [05 CustomStringConvertible](05CustomStringConvertible)
- * [06 Equatable](06Equatable)
- * [07 Value Types](07ValueTypes)
- * [08 Methods](08Methods)
+ * [01 Create Enumerations](01CreateEnumerations)
+ * [02 The switch Statement](02TheSwitchStatement)
+ * [03 Methods](03Methods)
+ * [04 Computed Properties](04ComputedProperties)
+ * [05 String Raw Values](05StringRawValues)
+ * [06 Numerical Raw Values](06NumericalRawValues)
+ * [07 Associated Values](07AssociatedValues)
+ * [08 Binding Associated Values](08BindingAssociatedValues)
+ * [09 Previews](09Previews)
+ * [10 Value Types](10ValueTypes)
+ * [11 Option Sets](11OptionSets)
  */

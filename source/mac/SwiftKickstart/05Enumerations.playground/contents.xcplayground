@@ -10,5 +10,8 @@
         <page name='06NumericalRawValues'/>
         <page name='07AssociatedValues'/>
         <page name='08Binding Associated Values'/>
+        <page name='09Previews'/>
+        <page name='10ValueTypes'/>
+        <page name='11OptionSets'/>
     </pages>
 </playground>
