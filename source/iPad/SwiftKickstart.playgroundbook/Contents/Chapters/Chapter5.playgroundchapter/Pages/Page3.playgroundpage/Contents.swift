@@ -1,22 +1,32 @@
-import Foundation
+import UIKit
 
-struct Vertex {
-    private(set) var x, y: Double
-    var magnitude: Double {
-        get {
-            return sqrt(x * x + y * y)
+enum Color {
+    case red
+    case green
+    case blue
+    
+    func uiColor() -> UIColor {
+        switch self {
+        case .red:
+            return UIColor.red
+        case .green:
+            return UIColor.green
+        case .blue:
+            return UIColor.blue
         }
-        set {
-            let multiplier = newValue / magnitude
-            x *= multiplier
-            y *= multiplier
-        }
+    }
+    
+    func swatch(width: Int, height: Int) -> UIView {
+        let myView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        myView.backgroundColor = uiColor()
+        return myView
     }
 }
 
-var point = Vertex(x: 3.0, y: 4.0)
-point.magnitude
-point.magnitude = 10
-point.magnitude
-point.x
-point.y
+let crayon = Color.blue
+crayon.uiColor()
+crayon.swatch(width: 10, height: 100)
+
+let paintBrush = Color.red
+paintBrush.uiColor()
+paintBrush.swatch(width: 100, height: 10)

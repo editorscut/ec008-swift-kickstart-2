@@ -1,11 +1,13 @@
-struct Vertex {
-    let x, y: Double
+enum Color : String {
+    case red = "Maraschino"
+    case green
+    case blue = "Blueberry"
 }
 
-extension Vertex: CustomStringConvertible {
-    var description: String {
-        return "(\(x), \(y))"
-    }
-}
+let crayon = Color.green
+crayon.rawValue
 
-let point = Vertex(x: 3, y: 4)
+let paintBrush = Color.red
+paintBrush.rawValue
+
+let marker = Color(rawValue: "Blueberry")

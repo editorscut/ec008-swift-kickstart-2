@@ -1,5 +1,9 @@
-struct Vertex {
-    
+enum Color {
+    case red
+    case green
+    case blue
 }
-
-let point = Vertex()
+let paintBrush: Color
+var crayon = Color.red
+crayon = .green
+paintBrush = .blue

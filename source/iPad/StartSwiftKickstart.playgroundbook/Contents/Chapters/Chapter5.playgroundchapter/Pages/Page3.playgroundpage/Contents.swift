@@ -1,5 +1,18 @@
-struct Vertex {
-    let x, y: Double
+import UIKit
+
+enum Color {
+    case red
+    case green
+    case blue
 }
 
-var point = Vertex(x: 3.0, y: 4.0)
+func actualColor(color: Color) -> UIColor {
+    switch color {
+    case .red:
+        return UIColor.red
+    case .green:
+        return UIColor.green
+    case .blue:
+        return UIColor.blue
+    }
+}

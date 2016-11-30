@@ -1,9 +1,5 @@
-struct Vertex {
-    let x, y: Double
-}
-
-extension Vertex: CustomStringConvertible {
-    var description: String {
-        return "(\(x), \(y))"
-    }
+enum Color : String {
+    case red
+    case green
+    case blue
 }

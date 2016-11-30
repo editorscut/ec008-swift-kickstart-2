@@ -1,17 +1,24 @@
-import Foundation
+import UIKit
 
-struct Vertex {
-    private(set) var x: Double
-    private(set) var y: Double
+enum Color {
+    case red
+    case green
+    case blue
     
-    var magnitude: Double {
-        get {
-            return sqrt(x * x + y * y)
-        }
-        set {
-            let multiplier = newValue / magnitude
-            x *= multiplier
-            y *= multiplier
+    func uiColor() -> UIColor {
+        switch self {
+        case .red:
+            return UIColor.red
+        case .green:
+            return UIColor.green
+        case .blue:
+            return UIColor.blue
         }
     }
 }
+
+let crayon = Color.blue
+crayon.uiColor()
+
+let paintBrush = Color.red
+paintBrush.uiColor()

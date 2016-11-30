@@ -1,12 +1,10 @@
-import Foundation
-
-struct Vertex {
-    let x: Double
-    let y: Double
+enum PrimaryColor : String {
+    case red
+    case yellow
+    case blue
 }
 
-extension Vertex: CustomStringConvertible {
-    var description: String {
-        return "(\(x), \(y))"
-    }
+enum Desktop {
+    case black
+    case color(PrimaryColor)
 }

@@ -1,5 +1,5 @@
-struct Vertex {
-    let x, y: Double
+enum Color {
+    case red
+    case green
+    case blue
 }
-
-let point = Vertex(x: 3, y: 4)

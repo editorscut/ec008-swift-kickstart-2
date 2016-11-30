@@ -1,32 +1,48 @@
-struct Vertex {
-    let x, y: Double
-}
+import UIKit
 
-extension Vertex: CustomStringConvertible {
-    var description: String {
-        return "(\(x), \(y))"
+//enum Color : Int {
+//    case red
+//    case green
+//    case blue
+//
+//    var hue : CGFloat {
+//        return CGFloat(rawValue)/3
+//    }
+//    var uiColor : UIColor {
+//        return UIColor(hue: hue, saturation: 1, brightness: 1, alpha: 1)
+//    }
+//}
+
+//enum Color : Int {
+//    case yellow = 1
+//    case green
+//    case blue = 4
+//    case purple
+//
+//    var hue : CGFloat {
+//        return CGFloat(rawValue)/6
+//    }
+//    var uiColor : UIColor {
+//        return UIColor(hue: hue, saturation: 1, brightness: 1, alpha: 1)
+//    }
+//}
+//
+//let crayon = Color.green
+//crayon.rawValue
+//crayon.hue
+//crayon.uiColor
+
+enum Color : CGFloat {
+    case yellow = 0.166667
+    case green  = 0.333333
+    case blue   = 0.666667
+    case purple = 0.833333
+    
+    var uiColor : UIColor {
+        return UIColor(hue: rawValue, saturation: 1, brightness: 1, alpha: 1)
     }
 }
 
-extension Vertex: Equatable{}
-
-func ==(lhs: Vertex, rhs: Vertex) -> Bool {
-    return lhs.x == rhs.x && lhs.y == rhs.y
-}
-
-let pointThreeFour = Vertex(x: 3, y: 4)
-let pointTwoFive = Vertex(x: 2, y: 5)
-let pointThreeFive = Vertex(x: 3, y: 5)
-let pointTwoFour = Vertex(x: 2, y: 4)
-let anotherPointThreeFour = Vertex(x: 3, y: 4)
-
-// completely different
-pointThreeFour == pointTwoFive
-// agree in x or y not both
-pointThreeFour == pointThreeFive
-pointThreeFour == pointTwoFour
-// same value
-pointThreeFour == anotherPointThreeFour
-
-pointThreeFour != pointTwoFive
-pointThreeFour != anotherPointThreeFour
+let crayon = Color.green
+crayon.rawValue
+crayon.uiColor

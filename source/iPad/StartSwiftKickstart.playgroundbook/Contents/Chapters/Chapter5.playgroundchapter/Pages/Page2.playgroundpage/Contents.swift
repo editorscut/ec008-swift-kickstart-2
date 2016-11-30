@@ -1,4 +1,5 @@
-struct Vertex {
+enum Color {
+    case red
+    case green
+    case blue
 }
-
-let point = Vertex()

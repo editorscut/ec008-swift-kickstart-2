@@ -1,47 +1,62 @@
-import Foundation
+enum PrimaryColor : String {
+    case red
+    case yellow
+    case blue
+}
 
-//struct Vertex {
-//    var x: Double
-//    let y: Double
-//
-//    func magnitude() -> Double {
-//        return sqrt(x * x + y * y)
-//    }
-//
-//    mutating func moveHorizontally(by deltaX: Double) {
-//        x += deltaX
-//    }
-//}
-//
-//extension Vertex: CustomStringConvertible {
-//    var description: String {
-//        return "(\(x), \(y))"
-//    }
-//}
-//
-//var point = Vertex(x: 3, y: 4)
-//point.moveHorizontally(by: 3)
-//point
-struct Vertex {
-    let x: Double
-    let y: Double
+enum Desktop {
+    case black
+    case color(PrimaryColor)
+    case tiled(PrimaryColor, PrimaryColor, Int, Int)
     
-    func magnitude() -> Double {
-        return sqrt(x * x + y * y)
-    }
-    
-    func movedHorizontally(by deltaX: Double) -> Vertex {
-        return Vertex(x: x + deltaX, y: y)
+    func isRed() -> Bool {
+        if case .color(let primaryColor) = self, primaryColor == .red {
+            return true
+        } else {
+            return false
+        }
     }
 }
 
-extension Vertex: CustomStringConvertible {
-    var description: String {
-        return "(\(x), \(y))"
+let backgrounds = [Desktop.color(.yellow), .black, .color(.red), .color(.blue)]
+
+backgrounds[0].isRed()
+backgrounds[1].isRed()
+backgrounds[2].isRed()
+backgrounds[3].isRed()
+
+func colorString(from desktop: Desktop) -> String {
+    let colorString : String
+    switch  desktop {
+    case .color(let primaryColor):
+        colorString = primaryColor.rawValue
+    default:
+        colorString = "black"
     }
+    return colorString
 }
 
-let point = Vertex(x: 3, y: 4)
-let movedPoint = point.movedHorizontally(by: 3)
-point
-movedPoint
+colorString(from: backgrounds[0])
+colorString(from: backgrounds[1])
+colorString(from: backgrounds[2])
+colorString(from: backgrounds[3])
+
+func redOnesDeleted(from startingArray: [Desktop]) -> [PrimaryColor] {
+    var tempArray = [PrimaryColor]()
+    for case .color(let primaryColor) in startingArray where primaryColor != .red {
+        tempArray.append(primaryColor)
+        
+    }
+    return tempArray
+}
+
+redOnesDeleted(from: backgrounds)
+
+let tiledBackground = Desktop.tiled(.red, .yellow, 5, 3)
+
+switch tiledBackground {
+case let .tiled(firstColor, secondColor, numberOfRows, numberOfColumns):
+    print("The \(numberOfRows) x \(numberOfColumns) grid is \(firstColor) and \(secondColor)")
+default:
+    print("It's not tiled")
+}

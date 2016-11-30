@@ -1,4 +1,4 @@
-//: ### The Switch Statement
+//: ### The switch Statement
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 enum Color {
     case red

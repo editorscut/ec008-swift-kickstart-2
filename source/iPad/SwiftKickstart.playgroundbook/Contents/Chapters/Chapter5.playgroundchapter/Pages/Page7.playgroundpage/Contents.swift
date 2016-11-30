@@ -1,19 +1,16 @@
-struct Vertex {
-    var x: Double
-    let y: Double
+enum PrimaryColor {
+    case red
+    case yellow
+    case blue
 }
 
-extension Vertex: CustomStringConvertible {
-    var description: String {
-        return "(\(x), \(y))"
-    }
+enum Desktop {
+    case black
+    case white
+    case color(PrimaryColor)
 }
 
-var pointOne = Vertex(x: 3, y: 4)
-var pointTwo = pointOne
-pointOne.x = 7
-pointOne
-pointTwo
-pointTwo.x = 9
-pointOne
-pointTwo
+let blackBackground = Desktop.black
+let whiteBackground = Desktop.white
+let redBackground = Desktop.color(PrimaryColor.red)
+let yellowBackground = Desktop.color(.yellow)
