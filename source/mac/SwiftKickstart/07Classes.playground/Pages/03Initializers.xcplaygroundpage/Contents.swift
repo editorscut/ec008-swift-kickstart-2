@@ -10,20 +10,12 @@ class Attendee {
     }
 }
 
-class TutorialAttendee : Attendee {
-    let tutorial : String
-    init(name: String, tutorial: String, hometown : String = "Cupertino"){
-        self.tutorial = tutorial
-        super.init(name: name, hometown: hometown)
-    }
-}
-
 let daniel = Attendee(name: "Daniel", hometown: "Shaker Heights")
-let kimberli = TutorialAttendee(name: "Kimberli", tutorial: "Swiftiness")
+let kimberli = Attendee(name: "Kimberli")
+
 daniel.name
 daniel.hometown
 kimberli.name
 kimberli.hometown
-kimberli.tutorial
 
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
