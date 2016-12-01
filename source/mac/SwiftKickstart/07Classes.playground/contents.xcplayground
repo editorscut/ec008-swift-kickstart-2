@@ -7,7 +7,7 @@
         <page name='03Initializers'/>
         <page name='04Subclasses'/>
         <page name='05Methods'/>
-        <page name='06Equatable'/>
+        <page name='06OptionalProperties'/>
         <page name='07ValueTypes'/>
         <page name='08Methods'/>
     </pages>
