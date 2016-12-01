@@ -8,7 +8,9 @@
         <page name='04Subclasses'/>
         <page name='05Methods'/>
         <page name='06OptionalProperties'/>
-        <page name='07ValueTypes'/>
-        <page name='08Methods'/>
+        <page name='07FailableInitializers'/>
+        <page name='08OptionalChaining'/>
+        <page name='09LoadingAndUnloading'/>
+        <page name='10Composition'/>
     </pages>
 </playground>
