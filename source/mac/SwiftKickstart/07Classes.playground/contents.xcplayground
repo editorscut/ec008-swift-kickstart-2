@@ -4,8 +4,8 @@
         <page name='TOC'/>
         <page name='01CreateClasses'/>
         <page name='02ReferenceTypes'/>
-        <page name='03ComputedProperties'/>
-        <page name='04WillSetDidSet'/>
+        <page name='03Initializers'/>
+        <page name='04Subclasses'/>
         <page name='05CustomStringConvertible'/>
         <page name='06Equatable'/>
         <page name='07ValueTypes'/>
