@@ -1,51 +1,40 @@
-//: ### Methods
+//: ### Composition
 //: [TOC](TOC) | [Previous](@previous) | Next
-import Foundation
 
-//struct Vertex {
-//    var x: Double
-//    let y: Double
-//    
-//    func magnitude() -> Double {
-//        return sqrt(x * x + y * y)
-//    }
-//    
-//    mutating func moveHorizontally(by deltaX: Double) {
-//        x += deltaX
-//    }
-//}
-//
-//extension Vertex: CustomStringConvertible {
-//    var description: String {
-//        return "(\(x), \(y))"
-//    }
-//}
-//
-//var point = Vertex(x: 3, y: 4)
-//point.moveHorizontally(by: 3)
-//point
-struct Vertex {
-    let x: Double
-    let y: Double
-    
-    func magnitude() -> Double {
-        return sqrt(x * x + y * y)
-    }
-    
-    func movedHorizontally(by deltaX: Double) -> Vertex {
-        return Vertex(x: x + deltaX, y: y)
-    }
+protocol NameBadgeable :CustomStringConvertible {
+    func nameBadge() -> String
 }
-
-extension Vertex: CustomStringConvertible {
+extension NameBadgeable {
     var description: String {
-        return "(\(x), \(y))"
+        return nameBadge()
     }
 }
 
-let point = Vertex(x: 3, y: 4)
-let movedPoint = point.movedHorizontally(by: 3)
-point
-movedPoint
+struct Attendee : NameBadgeable {
+    let name: String
+    init(name: String) {
+        self.name = name
+    }
+    func nameBadge() -> String {
+        return "Hi, I'm \(name)."
+    }
+}
 
+struct TutorialAttendee : NameBadgeable {
+    let tutorial: String
+    private let attendee: Attendee
+    var name : String {
+        return attendee.name
+    }
+    init(name: String, tutorial: String) {
+        self.tutorial = tutorial
+        self.attendee = Attendee(name: name)
+    }
+    func nameBadge() -> String {
+        return attendee.nameBadge() + " I'm taking \(tutorial)."
+    }
+}
+
+let daniel = Attendee(name: "Daniel")
+let kimberli = TutorialAttendee(name: "Kimberli", tutorial: "Swiftiness")
 //: [TOC](TOC) | [Previous](@previous) | Next
