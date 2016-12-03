@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='TOC'/>
+        <page name='01CreateClasses'/>
+        <page name='02ReferenceTypes'/>
+        <page name='03Initializers'/>
+        <page name='04Subclasses'/>
+        <page name='05Methods'/>
+        <page name='06OptionalProperties'/>
+        <page name='07FailableInitializers'/>
+        <page name='08OptionalChaining'/>
+        <page name='09LoadingAndUnloading'/>
+        <page name='10Composition'/>
+    </pages>
+</playground>
