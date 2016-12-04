@@ -20,7 +20,7 @@ extension Rectangle : Movable {
     }
     public func movedHorizontally(by deltaX: Int) -> Rectangle {
         let movedTopLeftCorner  = topLeftCorner.movedHorizontally(by: deltaX)
-        return Rectangle(topLeftCorner:movedTopLeftCorner, size: size)
+        return Rectangle(topLeftCorner: movedTopLeftCorner, size: size)
     }
 }
 
