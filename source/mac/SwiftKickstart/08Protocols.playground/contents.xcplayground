@@ -4,7 +4,7 @@
         <page name='TOC'/>
         <page name='01CreateProtocols'/>
         <page name='02ConformingToAProtocol'/>
-        <page name='03Initializers'/>
+        <page name='03Self'/>
         <page name='04Subclasses'/>
         <page name='05Methods'/>
         <page name='06OptionalProperties'/>
