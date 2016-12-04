@@ -6,7 +6,7 @@
         <page name='02ConformingToAProtocol'/>
         <page name='03Self'/>
         <page name='04Properties'/>
-        <page name='05Methods'/>
+        <page name='05Polymorphism'/>
         <page name='06OptionalProperties'/>
         <page name='07FailableInitializers'/>
         <page name='08OptionalChaining'/>
