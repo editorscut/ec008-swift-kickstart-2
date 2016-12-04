@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='rendered'>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
         <page name='TOC'/>
         <page name='01CreateStructs'/>
@@ -10,5 +10,6 @@
         <page name='06Equatable'/>
         <page name='07ValueTypes'/>
         <page name='08Methods'/>
+        <page name='09CustomOperators'/>
     </pages>
 </playground>

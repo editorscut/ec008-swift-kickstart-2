@@ -11,6 +11,5 @@
         <page name='07ProtocolExtensions'/>
         <page name='08ProtocolExtensionsGotcha'/>
         <page name='09AccessLevels'/>
-        <page name='10Composition'/>
     </pages>
 </playground>

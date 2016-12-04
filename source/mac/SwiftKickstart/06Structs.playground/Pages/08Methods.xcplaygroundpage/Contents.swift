@@ -1,5 +1,5 @@
 //: ### Methods
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 import Foundation
 
 //struct Vertex {
@@ -48,4 +48,4 @@ let movedPoint = point.movedHorizontally(by: 3)
 point
 movedPoint
 
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
