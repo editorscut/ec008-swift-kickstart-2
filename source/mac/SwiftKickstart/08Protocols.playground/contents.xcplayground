@@ -8,9 +8,9 @@
         <page name='04Properties'/>
         <page name='05Polymorphism'/>
         <page name='06Generics'/>
-        <page name='07FailableInitializers'/>
-        <page name='08OptionalChaining'/>
-        <page name='09LoadingAndUnloading'/>
+        <page name='07ProtocolExtensions'/>
+        <page name='08ProtocolExtensionsGotcha'/>
+        <page name='09AccessLevels'/>
         <page name='10Composition'/>
     </pages>
 </playground>
