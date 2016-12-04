@@ -7,7 +7,7 @@
         <page name='03Self'/>
         <page name='04Properties'/>
         <page name='05Polymorphism'/>
-        <page name='06OptionalProperties'/>
+        <page name='06Generics'/>
         <page name='07FailableInitializers'/>
         <page name='08OptionalChaining'/>
         <page name='09LoadingAndUnloading'/>
