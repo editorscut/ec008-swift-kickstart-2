@@ -10,5 +10,6 @@
         <page name='06Equatable'/>
         <page name='07ValueTypes'/>
         <page name='08Methods'/>
+        <page name='09CustomOperators'/>
     </pages>
 </playground>

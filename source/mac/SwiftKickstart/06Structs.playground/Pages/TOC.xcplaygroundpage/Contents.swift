@@ -8,4 +8,5 @@
  * [06 Equatable](06Equatable)
  * [07 Value Types](07ValueTypes)
  * [08 Methods](08Methods)
+ * [09 Custom Operators](09CustomOperators)
  */
