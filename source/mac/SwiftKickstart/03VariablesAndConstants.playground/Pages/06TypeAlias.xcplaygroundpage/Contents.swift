@@ -1,13 +1,13 @@
 //: ### TypeAlias
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 
-/// Used to measure payments in United States Dollars
+/// Used to measure payments in United States dollars
 typealias USDollars = Double
 
 /// Number of individual copies sold
 typealias Count = Int
 
-/// Function that calculates the USDollars earned on a given Count sold
+/// Function that calculates the USDollars earned on a given count sold
 typealias EarningsCalculator = (Count) -> USDollars
 
 func revenue(for numberSold: Count) -> USDollars {
