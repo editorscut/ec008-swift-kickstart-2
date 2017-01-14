@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='TOC'/>
+        <page name='01Types'/>
+        <page name='02ReturningAFunction'/>
+        <page name='03ReturningAClosure'/>
+        <page name='04ConsumingAClosure'/>
+        <page name='05MappingArrays'/>
+        <page name='06Map'/>
+        <page name='07Filter'/>
+        <page name='08Reduce'/>
+        <page name='09FlatMap'/>
+    </pages>
+</playground>
