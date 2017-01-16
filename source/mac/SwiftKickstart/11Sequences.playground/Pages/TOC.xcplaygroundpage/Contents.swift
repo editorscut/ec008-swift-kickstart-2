@@ -6,5 +6,6 @@
  * [04 Iterators](04Iterators)
  * [05 Sequences](05Sequences)
  * [06 Combined](06Combined)
- * [07 Subscripts](07Subscripts)
+ * [07 Generic](07Generic)
+ * [08 Subscripts](07Subscripts)
  */

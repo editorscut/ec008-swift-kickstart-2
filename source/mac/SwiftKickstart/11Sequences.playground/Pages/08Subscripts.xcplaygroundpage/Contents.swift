@@ -24,7 +24,6 @@ struct CardinalSequence : Sequence, IteratorProtocol {
     }
 }
 
-
 let sequence = CardinalSequence()
 
 sequence[2]

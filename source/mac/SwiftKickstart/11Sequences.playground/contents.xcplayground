@@ -8,6 +8,7 @@
         <page name='04Iterators'/>
         <page name='05Sequences'/>
         <page name='06Combined'/>
-        <page name='07Subscripts'/>
+        <page name='07Generic'/>
+        <page name='08Subscripts'/>
     </pages>
 </playground>
