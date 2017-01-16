@@ -1,4 +1,4 @@
-//: ### Mapping Arrays
+//: ### Sequences
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 
 enum Cardinal : Int {
@@ -20,6 +20,12 @@ struct CardinalIterator : IteratorProtocol {
     }
 }
 
+struct CardinalSequence : Sequence {
+    func makeIterator() -> CardinalIterator {
+        return CardinalIterator()
+    }
+}
+
 var iterator = CardinalIterator()
 
 var cardinalArray = [Cardinal]()
@@ -31,4 +37,10 @@ while let cardinal = iterator.next() {
 cardinalArray
 
 iterator.next()
+
+let sequence = CardinalSequence()
+
+for element in sequence {
+    print(element)
+}
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
