@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='TOC'/>
+        <page name='01Distributions'/>
+        <page name='02RawRepresentable'/>
+        <page name='03WhileLet'/>
+        <page name='04Iterators'/>
+        <page name='05Sequences'/>
+        <page name='06Combined'/>
+        <page name='07Subscripts'/>
+        <page name='08Reduce'/>
+        <page name='09FlatMap'/>
+    </pages>
+</playground>
