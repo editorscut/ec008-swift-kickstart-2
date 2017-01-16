@@ -44,4 +44,7 @@ for element in sequence {
 }
 
 arrayFromSequence
+
+let mappedArrayFromSequence = sequence.map{$0}
+mappedArrayFromSequence
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)

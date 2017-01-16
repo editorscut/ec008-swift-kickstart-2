@@ -36,6 +36,9 @@ for element in sequence {
 
 arrayFromSequence
 
+let mappedArrayFromSequence = sequence.map{$0}
+mappedArrayFromSequence
+
 sequence[2]
 sequence[3]
 sequence[30]
