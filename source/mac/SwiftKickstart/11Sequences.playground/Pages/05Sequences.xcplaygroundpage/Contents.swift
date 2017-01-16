@@ -11,12 +11,10 @@ enum Cardinal : Int {
 
 struct CardinalIterator : IteratorProtocol {
     private var index = 0
-    private(set) var cardinal: Cardinal?
     
     mutating func next() -> Cardinal? {
-        cardinal = Cardinal(rawValue: index)
-        index += 1
-        return cardinal
+        defer {index += 1}
+        return Cardinal(rawValue: index)
     }
 }
 
@@ -26,21 +24,24 @@ struct CardinalSequence : Sequence {
     }
 }
 
-var iterator = CardinalIterator()
-
-var cardinalArray = [Cardinal]()
-
-while let cardinal = iterator.next() {
-    cardinalArray.append(cardinal)
-}
-
-cardinalArray
-
-iterator.next()
-
 let sequence = CardinalSequence()
 
-for element in sequence {
-    print(element)
+var iterator = sequence.makeIterator()
+
+var arrayFromIterator = [Cardinal]()
+
+while let cardinal = iterator.next() {
+    arrayFromIterator.append(cardinal)
 }
+
+arrayFromIterator
+
+
+var arrayFromSequence = [Cardinal]()
+
+for element in sequence {
+    arrayFromSequence.append(element)
+}
+
+arrayFromSequence
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)

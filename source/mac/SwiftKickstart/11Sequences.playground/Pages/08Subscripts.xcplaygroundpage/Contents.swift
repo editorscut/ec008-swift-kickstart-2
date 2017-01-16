@@ -1,7 +1,11 @@
 //: ### Subscripts
 //: [TOC](TOC) | [Previous](@previous) | Next
 
-enum Cardinal : Int {
+protocol EnumIterable : RawRepresentable {
+    typealias RawValue = Int
+}
+
+enum Cardinal : Int, EnumIterable {
     case zero
     case one
     case two
@@ -10,26 +14,34 @@ enum Cardinal : Int {
 }
 
 
-struct CardinalSequence : Sequence, IteratorProtocol {
+struct IterableSequence<IterableValues : EnumIterable> : Sequence, IteratorProtocol {
     private var index = 0
-    private(set) var cardinal: Cardinal?
     
-    mutating func next() -> Cardinal? {
-        cardinal = Cardinal(rawValue: index)
-        index += 1
-        return cardinal
+    mutating func next() -> IterableValues? {
+        defer {index += 1}
+        return IterableValues(rawValue: index)
     }
-    subscript(index: Int) -> Cardinal?  {
-        return Cardinal(rawValue: index)
+    subscript(index: Int) -> IterableValues?  {
+        return IterableValues(rawValue: index)
     }
 }
 
-let sequence = CardinalSequence()
+let sequence = IterableSequence<Cardinal>()
+
+var arrayFromSequence = [Cardinal]()
+
+for element in sequence {
+    arrayFromSequence.append(element)
+}
+
+arrayFromSequence
 
 sequence[2]
 sequence[3]
+sequence[30]
+sequence[-30]
 
-for element in sequence {
-    print("wooo", element)
-}
+// arrayFromSequence[30]
+// arrayFromSequence[-30]
+
 //: [TOC](TOC) | [Previous](@previous) | Next

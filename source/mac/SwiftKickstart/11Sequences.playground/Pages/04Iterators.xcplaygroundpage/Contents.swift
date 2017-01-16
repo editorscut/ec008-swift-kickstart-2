@@ -10,14 +10,23 @@ enum Cardinal : Int {
     case four
 }
 
+//struct CardinalIterator : IteratorProtocol {
+//    private var index = 0
+//    private(set) var cardinal: Cardinal?
+//    
+//    mutating func next() -> Cardinal? {
+//        cardinal = Cardinal(rawValue: index)
+//        index += 1
+//        return cardinal
+//    }
+//}
+
 struct CardinalIterator : IteratorProtocol {
     private var index = 0
-    private(set) var cardinal: Cardinal?
     
     mutating func next() -> Cardinal? {
-        cardinal = Cardinal(rawValue: index)
-        index += 1
-        return cardinal
+        defer {index += 1}
+        return Cardinal(rawValue: index)
     }
 }
 
@@ -30,8 +39,6 @@ while let cardinal = iterator.next() {
 }
 
 cardinalArray
-
-iterator.next()
 
 
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)

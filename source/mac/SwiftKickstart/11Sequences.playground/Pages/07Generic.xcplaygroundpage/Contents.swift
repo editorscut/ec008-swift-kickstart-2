@@ -14,20 +14,23 @@ enum Cardinal : Int, EnumIterable {
 }
 
 
-struct CardinalSequence<T : EnumIterable> : Sequence, IteratorProtocol {
+struct IterableSequence<IterableValues : EnumIterable> : Sequence, IteratorProtocol {
     private var index = 0
-    private(set) var cardinal: T?
     
-    mutating func next() -> T? {
-        cardinal = T(rawValue: index)
-        index += 1
-        return cardinal
+    mutating func next() -> IterableValues? {
+        defer {index += 1}
+        return IterableValues(rawValue: index)
     }
 }
 
-let sequence = CardinalSequence<Cardinal>()
+let sequence = IterableSequence<Cardinal>()
+
+var arrayFromSequence = [Cardinal]()
 
 for element in sequence {
-    print("wooo", element)
+    arrayFromSequence.append(element)
 }
+
+arrayFromSequence
+
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)

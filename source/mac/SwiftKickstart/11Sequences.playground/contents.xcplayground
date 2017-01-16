@@ -7,7 +7,7 @@
         <page name='03WhileLet'/>
         <page name='04Iterators'/>
         <page name='05Sequences'/>
-        <page name='06Combined'/>
+        <page name='06SequenceAndIterator'/>
         <page name='07Generic'/>
         <page name='08Subscripts'/>
     </pages>
