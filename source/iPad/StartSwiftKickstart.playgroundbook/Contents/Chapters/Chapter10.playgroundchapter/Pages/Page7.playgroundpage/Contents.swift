@@ -1,8 +1,17 @@
 let numberSold = [17, 29, 11, 15, 32, 21, 27]
 
-let dailyNumberSold = ["Mon": 17, "Tue": 29,
-                       "Wed": 11, "Thu": 15,
-                       "Fri": 32, "Sat": 21,
-                       "Sun": 27]
+func apply<Input, Output>(to input: [Input], using f: (Input) -> Output) -> [Output] {
+    var output = [Output]()
+    for element in input {
+        output.append(f(element))
+    }
+    return output
+}
 
-let weekendDays = ["Sat", "Sun"]
+
+apply(to: numberSold){
+    USDollar($0.asDouble() * 1.99 * 0.70)
+}
+apply(to: numberSold){
+    USDollar($0.asDouble() * 1.99 * 0.70).description
+}

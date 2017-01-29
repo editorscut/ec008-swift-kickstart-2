@@ -1,19 +1,12 @@
-enum Language: String {
-    case c, cplusplus
-    case objectivec
-    case java, csharp
-    case ruby
-    case swift
+
+let numberSold = [17, 29, 11, 15, 32, 21, 27]
+
+func revenueAt199on(_ count: Count) -> USDollar {
+    return USDollar(count.asDouble() * 1.99 * 0.70)
 }
 
-let joansLanguages = [Language.ruby, .c, .csharp, .swift]
-let davesLanguages = [Language.c, .objectivec, .java]
-let marysLanguages = [Language.swift, .objectivec, .java]
-let fredsLanguages = [Language.objectivec, .swift]
-
-
-let dictionary = ["Joan"  : joansLanguages,
-                  "Dave"  : davesLanguages,
-                  "Mary"  : marysLanguages,
-                  "Fred"  : fredsLanguages]
+let dailyNumberSold = ["Mon": 17, "Tue": 29,
+                       "Wed": 11, "Thu": 15,
+                       "Fri": 32, "Sat": 21,
+                       "Sun": 27]
 

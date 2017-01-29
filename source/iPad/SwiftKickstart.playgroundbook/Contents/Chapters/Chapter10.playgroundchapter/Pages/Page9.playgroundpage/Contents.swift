@@ -1,54 +1,70 @@
-enum Language: String {
-    case c, cplusplus
-    case objectivec
-    case java, csharp
-    case ruby
-    case swift
+let numberSold = [17, 29, 11, 15, 32, 21, 27]
+
+func revenueAt199on(_ count: Count) -> USDollar {
+    return USDollar(count.asDouble() * 1.99 * 0.70)
 }
 
-let joansLanguages = [Language.ruby, .c, .csharp, .swift]
-let davesLanguages = [Language.c, .objectivec, .java]
-let marysLanguages = [Language.swift, .objectivec, .java]
-let fredsLanguages = [Language.objectivec, .swift]
-
-
-let dictionary = ["Joan"  : joansLanguages,
-                  "Dave"  : davesLanguages,
-                  "Mary"  : marysLanguages,
-                  "Fred"  : fredsLanguages]
-
-//: map and flatmap for arrays
-
-let languageMap = dictionary.map{ (key, langArray) in
-    langArray
+func combination(runningTotal: USDollar, daysSales: Count) -> USDollar {
+    return runningTotal + revenueAt199on(daysSales)
 }
 
-let languageFlatMap = dictionary.flatMap{ (key, langArray) in
-    langArray
+extension Sequence {
+    typealias Element = Iterator.Element
+    
+    func combine<Output>(_ initialResult: Output, _ nextPartialResult:(Output, Element) -> Output) -> Output {
+        var accumulator = initialResult
+        for element in self {
+            accumulator = nextPartialResult(accumulator, element)
+        }
+        return accumulator
+    }
+}
+
+numberSold.combine(USDollar(0), combination)
+
+numberSold.reduce(USDollar(0), combination)
+
+
+numberSold.reduce(USDollar(0)){
+    combination(runningTotal: $0, daysSales: $1)
 }
 
 
-let languages = Array(Set(languageFlatMap))
+numberSold.reduce(USDollar(0)){
+    $0 + revenueAt199on($1)
+}
 
-//: map and flatmap for optionals
-
-let firstLanguageMap = dictionary["Joan"].map{$0.first}
-firstLanguageMap
-let firstLanguageFlatMap = dictionary["Joan"].flatMap{$0.first}
-firstLanguageFlatMap
-
-
-
-//: Using flatMap
-
-let team = ["Joan", "Mike", "Dave", "Anna"]
-
-let languagesForTeamMap = team.map{dictionary[$0]}
-languagesForTeamMap
-
-let languagesForTeamFlatMap = team.flatMap{dictionary[$0]}
-languagesForTeamFlatMap
+let dailyNumberSold = ["Mon": 17, "Tue": 29,
+                       "Wed": 11, "Thu": 15,
+                       "Fri": 32, "Sat": 21,
+                       "Sun": 27]
 
 
-let languagesDoubleFlatMap = team.flatMap{dictionary[$0]}.flatMap{$0}
-languagesDoubleFlatMap
+let dailyTotals = dailyNumberSold.reduce([String : USDollar]()){(accumulator, entry) in
+    var running = accumulator
+    running[entry.key] = revenueAt199on(entry.value)
+    return running
+}
+
+dailyTotals.description
+
+extension Sequence {
+    func mapUsingReduce<Output>(_ f: (Element) -> Output) -> [Output] {
+        return reduce([Output]()){$0 + [f($1)]}
+    }
+}
+numberSold.mapUsingReduce(revenueAt199on).description
+
+
+func isMoreThan25(_ count: Count) -> Bool {
+    return count > 25
+}
+
+extension Sequence {
+    func filterUsingReduce(_ condition: (Element) -> Bool ) -> [Element] {
+        return reduce([Element]()){return condition($1) ? $0 + [$1] : $0 }
+    }
+}
+numberSold.filterUsingReduce(isMoreThan25)
+
+

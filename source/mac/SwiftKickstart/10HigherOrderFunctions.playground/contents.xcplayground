@@ -6,10 +6,11 @@
         <page name='02ReturningAFunction'/>
         <page name='03ReturningAClosure'/>
         <page name='04ConsumingAClosure'/>
-        <page name='05MappingArrays'/>
-        <page name='06Map'/>
-        <page name='07Filter'/>
-        <page name='08Reduce'/>
-        <page name='09FlatMap'/>
+        <page name='05CustomOperators'/>
+        <page name='06MappingArrays'/>
+        <page name='07Map'/>
+        <page name='08Filter'/>
+        <page name='09Reduce'/>
+        <page name='10FlatMap'/>
     </pages>
 </playground>

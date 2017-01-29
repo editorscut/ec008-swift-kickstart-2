@@ -1,70 +1,63 @@
+
 let numberSold = [17, 29, 11, 15, 32, 21, 27]
-
-func revenueAt199on(_ count: Count) -> USDollar {
-    return USDollar(count.asDouble() * 1.99 * 0.70)
-}
-
-func combination(runningTotal: USDollar, daysSales: Count) -> USDollar {
-    return runningTotal + revenueAt199on(daysSales)
-}
-
-extension Sequence {
-    typealias Element = Iterator.Element
-    
-    func combine<Output>(_ initialResult: Output, _ nextPartialResult:(Output, Element) -> Output) -> Output {
-        var accumulator = initialResult
-        for element in self {
-            accumulator = nextPartialResult(accumulator, element)
-        }
-        return accumulator
-    }
-}
-
-numberSold.combine(USDollar(0), combination)
-
-numberSold.reduce(USDollar(0), combination)
-
-
-numberSold.reduce(USDollar(0)){
-    combination(runningTotal: $0, daysSales: $1)
-}
-
-
-numberSold.reduce(USDollar(0)){
-    $0 + revenueAt199on($1)
-}
 
 let dailyNumberSold = ["Mon": 17, "Tue": 29,
                        "Wed": 11, "Thu": 15,
                        "Fri": 32, "Sat": 21,
                        "Sun": 27]
 
-
-let dailyTotals = dailyNumberSold.reduce([String : USDollar]()){(accumulator, entry) in
-    var running = accumulator
-    running[entry.key] = revenueAt199on(entry.value)
-    return running
-}
-
-dailyTotals.description
+let weekendDays = ["Sat", "Sun"]
 
 extension Sequence {
-    func mapUsingReduce<Output>(_ f: (Element) -> Output) -> [Output] {
-        return reduce([Output]()){$0 + [f($1)]}
+    typealias Element = Iterator.Element
+    func keep(using f: (Element) -> Bool) -> [Element] {
+        var output = [Element]()
+        for element in self {
+            if f(element) {
+                output.append(element)
+            }
+        }
+        return output
     }
 }
-numberSold.mapUsingReduce(revenueAt199on).description
 
+numberSold.keep{
+    $0 > 25
+}
+
+dailyNumberSold.keep{
+    !weekendDays.contains($0.key)
+}
+
+let moreThan25 = numberSold.filter{$0 > 25}
+moreThan25
+
+let weekdaySales = dailyNumberSold.filter{!weekendDays.contains($0.key)}
+weekdaySales
+
+let revenueFromMoreThan25
+    = numberSold.filter{$0 > 25}
+        .map{USDollar($0.asDouble() * 1.99 * 0.70)}
+        .description
+
+revenueFromMoreThan25
 
 func isMoreThan25(_ count: Count) -> Bool {
     return count > 25
 }
 
-extension Sequence {
-    func filterUsingReduce(_ condition: (Element) -> Bool ) -> [Element] {
-        return reduce([Element]()){return condition($1) ? $0 + [$1] : $0 }
-    }
+func revenueAt199on(_ count: Count) -> USDollar {
+    return USDollar(count.asDouble() * 1.99 * 0.70)
 }
-numberSold.filterUsingReduce(isMoreThan25)
 
+numberSold.filter{isMoreThan25($0)}
+    .map{revenueAt199on($0)}
+    .description
 
+numberSold.filter{count in isMoreThan25(count)}
+    .map{filteredCount in revenueAt199on(filteredCount)}
+    .description
+
+numberSold.filter(isMoreThan25)
+    .map(revenueAt199on)
+    .description
