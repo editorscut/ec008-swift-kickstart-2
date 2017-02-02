@@ -1,15 +1,23 @@
 //: ### Catching Errors
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 
-struct DivideByZeroError: Error {
+
+
+struct SubscriptOutOfBoundsError : Error {
 }
 
-func divide60by(_ divisor: Int) throws -> Int {
-    if divisor == 0 {
-        throw DivideByZeroError()
+extension Forecast {
+    static func number(_ index: Int) throws -> String {
+        if index < 0 || index >= Forecast.count {
+            throw SubscriptOutOfBoundsError()
+        }
+        return Forecast()[index]
     }
-    return 60 / divisor
 }
+
+//try Forecast.number(0)
+//try Forecast.number(20)
+//try Forecast.number(-2)
 
 
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
