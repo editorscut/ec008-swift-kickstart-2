@@ -1,39 +1,57 @@
 //: ### Catching Errors
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 
-struct DivideByZeroError: Error {
-    var reason: String
+
+
+struct SubscriptOutOfBoundsError : Error {
 }
 
-extension DivideByZeroError: CustomDebugStringConvertible {
-    var debugDescription: String {
-        return reason
+extension Forecast {
+    static func number(_ index: Int) throws -> String {
+        if index < 0 || index >= Forecast.count {
+            throw SubscriptOutOfBoundsError()
+        }
+        return Forecast()[index]
     }
 }
 
-func divide60by(_ divisor: Int) throws -> Int {
-    if divisor == 0 {
-        throw DivideByZeroError(reason: "can't divide 60 by \(divisor)")
-    }
-    return 60 / divisor
+//try Forecast.number(0)
+//try Forecast.number(20)
+//try Forecast.number(-2)
+
+do {
+    try Forecast.number(0)
+    try Forecast.number(20)
+}
+catch {
+    print("error")
 }
 
-var errorMessage = ""
+//func forecastNumber(_ index: Int) -> String {
+//    guard let forecast = try? Forecast.number(index),
+//        index < 3 else {
+//            return "error: can't get forecast for index \(index)"
+//    }
+//    return "forecast number \(index) is \(forecast)"
+//}
 
-func tryDivide60by(_ divisor: Int) -> Int? {
+
+func forecastNumber(_ index: Int) -> String {
     do {
-        return try divide60by(divisor)
+        let forecast = try Forecast.number(index)
+        return "Success!: forecast number \(index) is \(forecast)"
     }
     catch {
-        errorMessage = "error:  \(error)"
+        return "Error: \(error)"
     }
-    return nil
 }
 
-let by12 = tryDivide60by(12)
-let by0 = tryDivide60by(0)
+forecastNumber(0)
 
-errorMessage
+forecastNumber(20)
+
+forecastNumber(-2)
+
 
 
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)

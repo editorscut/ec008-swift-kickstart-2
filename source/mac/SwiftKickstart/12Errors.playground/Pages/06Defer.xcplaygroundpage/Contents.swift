@@ -1,45 +1,70 @@
-//: ### defer
+//: ### Defer
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 
-struct DivideByZeroError: Error {
-    var reason: String
+
+struct SubscriptOutOfBoundsError : Error {
 }
 
-extension DivideByZeroError: CustomDebugStringConvertible {
-    var debugDescription: String {
-        return reason
+extension Forecast {
+    static func number(_ index: Int) throws -> String {
+        if index < 0 || index >= Forecast.count {
+            throw SubscriptOutOfBoundsError()
+        }
+        return Forecast()[index]
     }
 }
 
-func divide60by(_ divisor: Int) throws -> Int {
-    if divisor == 0 {
-        throw DivideByZeroError(reason: "can't divide 60 by \(divisor)")
-    }
-    return 60 / divisor
-}
+var status = ""
 
-var message = ""
+//func forecastNumber(_ index: Int) -> String {
+//    status += "\nBegin for index = \(index)\n"
+//    do {
+//        let forecast = try Forecast.number(index)
+//        status += "Success\n"
+//        return "Success!: forecast number \(index) is \(forecast)"
+//    }
+//    catch {
+//        status += "Error\n"
+//        return "Error: \(error)"
+//    }
+//}
 
-func tryDivide60by(_ divisor: Int) -> Int? {
-    defer {
-        message += "Attempted to divide 60 by \(divisor)\n\n"
-    }
+
+//func forecastNumber(_ index: Int) -> String {
+//    status += "\nBegin for index = \(index)\n"
+//    defer {
+//        status += "In defer block\n"
+//    }
+//    do {
+//        let forecast = try Forecast.number(index)
+//        status += "Success\n"
+//        return "Success!: forecast number \(index) is \(forecast)"
+//    }
+//    catch {
+//        status += "Error\n"
+//        return "Error: \(error)"
+//    }
+//}
+
+func forecastNumber(_ index: Int) -> String {
     do {
-        let result =  try divide60by(divisor)
-        message += "Successfully divided 60 by \(divisor)\n"
-        return result
+        let forecast = try Forecast.number(index)
+        return "Success!: forecast number \(index) is \(forecast)"
     }
     catch {
-        message += "error:  \(error)\n"
+        return  "Error: \(error)"
     }
-    message += "about to return nil\n"
-    return nil
 }
 
-let by12 = tryDivide60by(12)
-let by0 = tryDivide60by(0)
 
-message
-print(message)
+forecastNumber(0)
+
+forecastNumber(20)
+
+forecastNumber(-2)
+
+
+status
+
 
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)

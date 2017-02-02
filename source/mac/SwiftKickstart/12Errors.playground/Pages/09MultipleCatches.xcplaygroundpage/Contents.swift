@@ -1,106 +1,106 @@
-//: ### Enumerations
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: ### Multiple Catches
+//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 
-enum InputSizeError: Error {
-    case negativeNumberError
-    case numberIsTooLargeError(amountOver: Int)
+
+enum SubscriptOutOfBoundsError : Error {
+    case negativeIndexError
+    case indexIsTooLargeError(amountOver: Int)
 }
 
-extension InputSizeError : CustomDebugStringConvertible {
+extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
     var debugDescription: String {
         switch self {
-        case .negativeNumberError:
-            return "Number is less than 0."
-        case .numberIsTooLargeError(let excess):
-            return "Number is too large by \(excess)."
+        case .negativeIndexError:
+            return "is less than zero"
+        case .indexIsTooLargeError(let excess):
+            return "is greater than \(Forecast.count) by \(excess)"
         }
     }
 }
 
-func double(_ input: Int) throws -> Int {
-    if input < 0 {
-        throw InputSizeError.negativeNumberError
-    } else if input > 49 {
-        throw InputSizeError.numberIsTooLargeError(amountOver: input - 49)
-    } else {
-        return input * 2
+extension Forecast {
+    static func number(_ index: Int) throws -> String {
+        if index < 0 {
+            throw SubscriptOutOfBoundsError.negativeIndexError
+        } else if index >= Forecast.count {
+            let excess = index - Forecast.count + 1
+            throw SubscriptOutOfBoundsError
+                .indexIsTooLargeError(amountOver: excess)
+        }
+        return Forecast()[index]
     }
 }
 
-
-//
-//func cautiouslyDouble(_ input: Int) {
+//func forecastNumber(_ index: Int) -> String {
 //    do {
-//        let doubleInput = try double(input)
-//        message += "double \(input) = \(doubleInput)\n"
+//        let forecast = try Forecast.number(index)
+//        return "Success!: forecast number \(index) is \(forecast)"
 //    }
 //    catch {
-//        message += "\(error)\n"
+//        return  "Error: \(index) \(error)"
 //    }
 //}
 
-//func cautiouslyDouble(_ input: Int) {
+//func forecastNumber(_ index: Int) -> String {
 //    do {
-//        let doubleInput = try double(input)
-//        message += "double \(input) = \(doubleInput)\n"
+//        let forecast = try Forecast.number(index)
+//        return "Success!: forecast number \(index) is \(forecast)"
 //    }
-//    catch InputSizeError.numberIsTooLargeError(let excess) {
-//        message += "We have a problem! "
-//                + "\(InputSizeError.numberIsTooLargeError(amountOver: excess))\n"
+//    catch SubscriptOutOfBoundsError.negativeIndexError {
+//        return "too small: \(index) \(SubscriptOutOfBoundsError.negativeIndexError)"
 //    }
 //    catch {
-//        message += "\(error)\n"
+//        return  "Error: \(index) \(error)"
 //    }
 //}
 
-//func cautiouslyDouble(_ input: Int) {
+//func forecastNumber(_ index: Int) -> String {
 //    do {
-//        let doubleInput = try double(input)
-//        message += "Double \(input) = \(doubleInput).\n"
+//        let forecast = try Forecast.number(index)
+//        return "Success!: forecast number \(index) is \(forecast)"
 //    }
-//    catch InputSizeError.numberIsTooLargeError(let excess) where excess < 10 {
-//        message += "You're not off by much! "  +
-//        "\(InputSizeError.numberIsTooLargeError(amountOver: excess))\n"
+//    catch SubscriptOutOfBoundsError.negativeIndexError {
+//        return "too small: \(index) \(SubscriptOutOfBoundsError.negativeIndexError)"
 //    }
-//    catch InputSizeError.numberIsTooLargeError(let excess) {
-//        message += "We have a problem! "
-//            + "\(InputSizeError.numberIsTooLargeError(amountOver: excess))\n"
+//    catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess) {
+//        return "too big: \(index) "
+//             + "\(SubscriptOutOfBoundsError.indexIsTooLargeError(amountOver: excess))"
 //    }
 //    catch {
-//        message += "\(error)\n"
+//        return  "Error: \(index) \(error)"
 //    }
 //}
 
-var message = ""
-
-func cautiouslyDouble(_ input: Int) {
+func forecastNumber(_ index: Int) -> String {
     do {
-        let doubleInput = try double(input)
-        message += "Double \(input) = \(doubleInput).\n"
+        let forecast = try Forecast.number(index)
+        return "Success!: forecast number \(index) is \(forecast)"
     }
-    catch InputSizeError.numberIsTooLargeError(let excess) where excess < 10 {
-        message += "You're not off by much! "  +
-        "\(InputSizeError.numberIsTooLargeError(amountOver: excess))\n"
+    catch SubscriptOutOfBoundsError.negativeIndexError {
+        return "too small: \(index) \(SubscriptOutOfBoundsError.negativeIndexError)"
     }
-    catch InputSizeError.numberIsTooLargeError(let excess) {
-        message += "We have a problem! "
-            + "\(InputSizeError.numberIsTooLargeError(amountOver: excess))\n"
+    catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess) where excess < 5 {
+        return "slightly over: \(index) "
+             + "\(SubscriptOutOfBoundsError.indexIsTooLargeError(amountOver: excess))\n"
     }
-    catch InputSizeError.negativeNumberError {
-        message += "You can't double a negative number."
+    catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess) {
+        return "too big: \(index) "
+            + "\(SubscriptOutOfBoundsError.indexIsTooLargeError(amountOver: excess))"
     }
     catch {
-        message += "\(error)\n"
+        return  "Error: \(index) \(error)"
     }
 }
 
 
-cautiouslyDouble(8)
-cautiouslyDouble(-8)
-cautiouslyDouble(54)
-cautiouslyDouble(80)
 
-message
+forecastNumber(3)
 
-print(message)
-//: [TOC](TOC) | [Previous](@previous) | Next
+forecastNumber(20)
+
+forecastNumber(-2)
+
+forecastNumber(7)
+
+
+//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

@@ -1,39 +1,51 @@
 //: ### Throwing Errors
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 
-
-
-//func divide60by(_ divisor: Int) -> Int {
-//    return 60 / divisor
+//extension Forecast {
+//    static func number(_ index: Int) -> String {
+//        if index < 0 || index >= count {
+//            preconditionFailure("\(index) is out of bounds. "
+//                + "Must be between 0 and \(count).")
+//        }
+//        return Forecast()[index]
+//    }
 //}
-//
-//divide60by(12)
-//divide60by(13)
-//divide60by(0)
 
 
-struct DivideByZeroError: Error {
+struct SubscriptOutOfBoundsError : Error {
 }
 
-func divide60by(_ divisor: Int) throws -> Int {
-    if divisor == 0 {
-        throw DivideByZeroError()
+extension Forecast {
+    static func number(_ index: Int) throws -> String {
+        if index < 0 || index >= Forecast.count {
+            throw SubscriptOutOfBoundsError()
+        }
+        return Forecast()[index]
     }
-    return 60 / divisor
 }
 
-let by12 = try? divide60by(12)
-let by0 = try? divide60by(0)
+//try Forecast.number(0)
+//try Forecast.number(20)
+//try Forecast.number(-2)
 
-func rethrowsExample(value: Int,  using f: (Int) throws -> Int) rethrows -> Int? {
-    return try f(value)
+//try! Forecast.number(0)
+//try! Forecast.number(20)
+
+let forecast0 =  try? Forecast.number(0)
+let forecast20 = try? Forecast.number(20)
+
+func forecastNumber(_ index: Int) -> String {
+    guard let forecast = try? Forecast.number(index),
+                         index < 3 else {
+        return "error: can't get forecast for index \(index)"
+    }
+    return "forecast number \(index) is \(forecast)"
 }
 
-try? rethrowsExample(value: 12, using: divide60by)
-try? rethrowsExample(value: 0, using: divide60by)
-
-
-
+forecastNumber(0)
+forecastNumber(20)
+forecastNumber(-2)
+forecastNumber(3)
 
 
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)

@@ -2,14 +2,15 @@
 <playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
         <page name='TOC'/>
-        <page name='01Subscripts'/>
+        <page name='01Examples'/>
         <page name='02Optionals'/>
         <page name='03Asserts'/>
         <page name='04ThrowingErrors'/>
         <page name='05CatchingErrors'/>
         <page name='06Defer'/>
-        <page name='07Enumerations'/>
-        <page name='08'/>
-        <page name='09'/>
+        <page name='07Structs'/>
+        <page name='08Enumerations'/>
+        <page name='09MultipleCatches'/>
+        <page name='10Rethrows'/>
     </pages>
 </playground>
