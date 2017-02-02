@@ -1,7 +1,3 @@
-//: ### Examples
-//: [TOC](TOC) | Previous | [Next](@next)
-
-
 //let dictionary = ["one": 1, "two": 2]
 //
 //let two = dictionary["two"]
@@ -43,8 +39,3 @@
 //Forecast.number(0)
 //Forecast.number(-2)
 //Forecast.number(20)
-
-
-
-
-//: [TOC](TOC) | Previous | [Next](@next)
