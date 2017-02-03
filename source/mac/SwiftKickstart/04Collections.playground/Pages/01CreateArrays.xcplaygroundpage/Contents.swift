@@ -1,7 +1,7 @@
 //: ### Create Arrays
 //: [TOC](TOC) | Previous | [Next](@next)
 let primes: [Int]
-primes = [2,3,5,7]
+primes = [2, 3, 5, 7]
 
 let primeNames = ["two", "three", "five", "seven"]
 

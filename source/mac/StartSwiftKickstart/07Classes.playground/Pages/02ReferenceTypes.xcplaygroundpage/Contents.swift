@@ -1,7 +1,7 @@
 //: ### Reference Types
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 class Attendee {
-    var name = "Daniel"
+    let name = "Daniel"
     let hometown = "Shaker Heights"
 }
 

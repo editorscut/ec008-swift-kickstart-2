@@ -17,7 +17,7 @@ class Location {
 
 class Attendee {
     let name: String
-    lazy var location = Location(city: "San Francisco")
+    var location = Location(city: "San Francisco")
     
     init(name: String) {
         self.name = name

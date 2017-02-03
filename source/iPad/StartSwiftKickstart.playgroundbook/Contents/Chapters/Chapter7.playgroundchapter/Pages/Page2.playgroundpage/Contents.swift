@@ -1,5 +1,5 @@
 class Attendee {
-    var name = "Daniel"
+    let name = "Daniel"
     let hometown = "Shaker Heights"
 }
 
