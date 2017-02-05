@@ -1,4 +1,4 @@
-//: ### Subclasses
+//: ### Properties
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 protocol Movable {
     func movedHorizontally(by deltaX: Int) -> Self
