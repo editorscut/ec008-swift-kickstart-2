@@ -26,7 +26,8 @@ struct TutorialAttendee : NameBadgeable {
     var name : String {
         return attendee.name
     }
-    init(name: String, tutorial: String) {
+    init(name: String,
+         tutorial: String) {
         self.tutorial = tutorial
         self.attendee = Attendee(name: name)
     }
@@ -36,5 +37,6 @@ struct TutorialAttendee : NameBadgeable {
 }
 
 let daniel = Attendee(name: "Daniel")
-let kimberli = TutorialAttendee(name: "Kimberli", tutorial: "Swiftiness")
+let kimberli = TutorialAttendee(name: "Kimberli",
+                                tutorial: "Swiftiness")
 //: [TOC](TOC) | [Previous](@previous) | Next

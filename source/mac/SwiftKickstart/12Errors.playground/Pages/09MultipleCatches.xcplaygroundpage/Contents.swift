@@ -47,7 +47,8 @@ extension Forecast {
 //        return "Success!: forecast number \(index) is \(forecast)"
 //    }
 //    catch SubscriptOutOfBoundsError.negativeIndexError {
-//        return "too small: \(index) \(SubscriptOutOfBoundsError.negativeIndexError)"
+//        let error = SubscriptOutOfBoundsError.negativeIndexError
+//        return "too small: \(index) \(error)"
 //    }
 //    catch {
 //        return  "Error: \(index) \(error)"
@@ -60,11 +61,13 @@ extension Forecast {
 //        return "Success!: forecast number \(index) is \(forecast)"
 //    }
 //    catch SubscriptOutOfBoundsError.negativeIndexError {
-//        return "too small: \(index) \(SubscriptOutOfBoundsError.negativeIndexError)"
+//        let error = SubscriptOutOfBoundsError.negativeIndexError
+//        return "too small: \(index) \(error)"
 //    }
 //    catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess) {
-//        return "too big: \(index) "
-//             + "\(SubscriptOutOfBoundsError.indexIsTooLargeError(amountOver: excess))"
+//        let error = SubscriptOutOfBoundsError
+//                   .indexIsTooLargeError(amountOver: excess)
+//        return "too big: \(index) " + "\(error))"
 //    }
 //    catch {
 //        return  "Error: \(index) \(error)"
@@ -77,15 +80,19 @@ func forecastNumber(_ index: Int) -> String {
         return "Success!: forecast number \(index) is \(forecast)"
     }
     catch SubscriptOutOfBoundsError.negativeIndexError {
-        return "too small: \(index) \(SubscriptOutOfBoundsError.negativeIndexError)"
+        let error = SubscriptOutOfBoundsError.negativeIndexError
+        return "too small: \(index) \(error)"
     }
-    catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess) where excess < 5 {
-        return "slightly over: \(index) "
-             + "\(SubscriptOutOfBoundsError.indexIsTooLargeError(amountOver: excess))\n"
+    catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess)
+                                                         where excess < 5 {
+        let error = SubscriptOutOfBoundsError
+                   .indexIsTooLargeError(amountOver: excess)
+        return "slightly over: \(index) \(error)"
     }
     catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess) {
-        return "too big: \(index) "
-            + "\(SubscriptOutOfBoundsError.indexIsTooLargeError(amountOver: excess))"
+        let error = SubscriptOutOfBoundsError
+                   .indexIsTooLargeError(amountOver: excess)
+        return "too big: \(index) " + "\(error))"
     }
     catch {
         return  "Error: \(index) \(error)"

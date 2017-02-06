@@ -1,12 +1,14 @@
 //: ### Mapping Arrays
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 
-func apply<Input, Output>(to input: Input, using f: (Input) -> Output) -> Output {
+func apply<Input, Output>(to input: Input,
+                          using f: (Input) -> Output) -> Output {
     return f(input)
 }
 
 
-func apply<Input, Output>(to input: [Input], using f: (Input) -> Output) -> [Output] {
+func apply<Input, Output>(to input: [Input],
+                          using f: (Input) -> Output) -> [Output] {
     var output = [Output]()
     for element in input {
         output.append(f(element))

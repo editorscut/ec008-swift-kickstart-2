@@ -35,10 +35,13 @@ struct Rectangle {
     let size : Size
     
     func movedHorizontally(by deltaX: Int) -> Rectangle {
-        guard let movedTopLeftCorner  = topLeftCorner.movedHorizontally(by: deltaX) as? Vertex else {
+        guard let movedTopLeftCorner
+            = topLeftCorner.movedHorizontally(by: deltaX)
+                as? Vertex else {
             return self
         }
-        return Rectangle(topLeftCorner:movedTopLeftCorner, size: size)
+        return Rectangle(topLeftCorner:movedTopLeftCorner,
+                         size: size)
     }
 }
 

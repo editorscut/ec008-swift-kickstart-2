@@ -20,7 +20,10 @@ enum Color {
     }
     
     func swatch(width: Int, height: Int) -> UIView {
-        let myView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        let myView = UIView(frame: CGRect(x: 0,
+                                          y: 0,
+                                          width: width,
+                                          height: height))
         myView.backgroundColor = uiColor
         return myView
     }

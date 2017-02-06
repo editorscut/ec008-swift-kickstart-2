@@ -32,7 +32,8 @@ calculateRevenue(for: 17){count in revenueAt199on(count)}
 
 calculateRevenue(for: 17){revenueAt199on($0)}
 
-func apply<Input, Output>(to input: Input, using f: (Input) -> Output) -> Output {
+func apply<Input, Output>(to input: Input,
+                          using f: (Input) -> Output) -> Output {
     return f(input)
 }
 

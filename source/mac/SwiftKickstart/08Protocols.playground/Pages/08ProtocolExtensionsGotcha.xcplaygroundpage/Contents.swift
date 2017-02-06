@@ -58,11 +58,15 @@ extension Rectangle : Movable {
         return Vertex(x: centerX, y: centerY)
     }
     func movedHorizontally(by deltaX: Int) -> Rectangle {
-        let movedTopLeftCorner  = topLeftCorner.movedHorizontally(by: deltaX)
-        return Rectangle(topLeftCorner:movedTopLeftCorner, size: size)
+        let movedTopLeftCorner
+            = topLeftCorner.movedHorizontally(by: deltaX)
+        return Rectangle(topLeftCorner:movedTopLeftCorner,
+                         size: size)
     }
     func shiftedRight() -> Rectangle {
-        return Rectangle(topLeftCorner: topLeftCorner.shiftedRight(), size: Size(width: 5, height: 5))
+        return Rectangle(topLeftCorner:
+                            topLeftCorner.shiftedRight(),
+                         size: Size(width: 5, height: 5))
     }
 }
 

@@ -34,8 +34,10 @@ struct Rectangle {
     let size : Size
     
     func movedHorizontally(by deltaX: Int) -> Rectangle {
-        let movedTopLeftCorner = topLeftCorner.movedHorizontally(by: deltaX)
-        return Rectangle(topLeftCorner: movedTopLeftCorner, size: size)
+        let movedTopLeftCorner
+            = topLeftCorner.movedHorizontally(by: deltaX)
+        return Rectangle(topLeftCorner: movedTopLeftCorner,
+                         size: size)
     }
 }
 
@@ -47,6 +49,7 @@ extension Rectangle : CustomStringConvertible {
 
 let vertex = Vertex(x: 3, y: 4)
 let size = Size(width: 100, height: 50)
-let rectangle = Rectangle(topLeftCorner: vertex, size: size)
+let rectangle = Rectangle(topLeftCorner: vertex,
+                          size: size)
 
 //: [TOC](TOC) | Previous | [Next](@next)

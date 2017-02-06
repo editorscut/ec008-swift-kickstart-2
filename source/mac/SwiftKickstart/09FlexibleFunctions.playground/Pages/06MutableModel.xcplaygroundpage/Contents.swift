@@ -18,10 +18,12 @@ extension Model { // Mutating Methods
     mutating func remove(at index: Int) {
         privateArray.remove(at: index)
     }
-    mutating func insert(_ string: String, at index: Int) {
+    mutating func insert(_ string: String,
+                         at index: Int) {
         privateArray.insert(string, at: index)
     }
-    mutating func move(from fromIndex: Int, to toIndex: Int) {
+    mutating func move(from fromIndex: Int,
+                       to toIndex: Int) {
         let elementToBeMoved = privateArray[fromIndex]
         remove(at: fromIndex)
         insert(elementToBeMoved, at: toIndex)

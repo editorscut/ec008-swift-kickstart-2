@@ -5,7 +5,8 @@ class Attendee {
     let name : String
     let hometown : String?
     
-    init(name: String, hometown: String? = nil) {
+    init(name: String,
+         hometown: String? = nil) {
         self.name = name
         self.hometown = hometown
     }
@@ -27,7 +28,8 @@ extension Attendee : CustomStringConvertible {
 }
 
 
-let daniel = Attendee(name: "Daniel", hometown: "Shaker Heights")
+let daniel = Attendee(name: "Daniel",
+                      hometown: "Shaker Heights")
 let kimberli = Attendee(name: "Kimberli")
 
 //: [TOC](TOC) | [Previous](@previous) | [Next](@next)

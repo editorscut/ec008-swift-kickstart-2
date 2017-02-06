@@ -7,14 +7,17 @@ func revenueAt199on(_ count: Count) -> USDollar {
     return USDollar(count.asDouble() * 1.99 * 0.70)
 }
 
-func combination(runningTotal: USDollar, daysSales: Count) -> USDollar {
+func combination(runningTotal: USDollar,
+                 daysSales: Count) -> USDollar {
     return runningTotal + revenueAt199on(daysSales)
 }
 
 extension Sequence {
     typealias Element = Iterator.Element
     
-    func combine<Output>(_ initialResult: Output, _ nextPartialResult:(Output, Element) -> Output) -> Output {
+    func combine<Output>(_ initialResult: Output,
+                         _ nextPartialResult:(Output, Element) -> Output)
+                                                                  -> Output {
         var accumulator = initialResult
         for element in self {
             accumulator = nextPartialResult(accumulator, element)
@@ -43,7 +46,8 @@ let dailyNumberSold = ["Mon": 17, "Tue": 29,
                        "Sun": 27]
 
 
-let dailyTotals = dailyNumberSold.reduce([String : USDollar]()){(accumulator, entry) in
+let dailyTotals = dailyNumberSold
+                 .reduce([String : USDollar]()){(accumulator, entry) in
     var running = accumulator
     running[entry.key] = revenueAt199on(entry.value)
     return running
