@@ -2,7 +2,7 @@
 //: [TOC](TOC) | [Previous](@previous) | Next
 
 protocol EnumIterable : RawRepresentable {
-    typealias RawValue = Int
+    init?(rawValue: Int)
 }
 
 enum Cardinal : Int, EnumIterable {
