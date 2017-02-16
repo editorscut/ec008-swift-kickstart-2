@@ -26,10 +26,14 @@ func >>> <Input, Output>(input: Input,
     return f(input)
 }
 
-func >>> <T, U, V>(f: @escaping (T) -> U,
-          g: @escaping (U) -> V ) -> (T) -> V {
+func >>> <T, U, V>(f:  @escaping (T) -> U,
+          g:  @escaping (U) -> V ) -> (T) -> V {
     return {x in g(f(x)) }
 }
+
+let composed = revenueAt199on  >>> less7PercentTax
+
+composed(17)
 
 17 >>> revenueAt199on  >>> less7PercentTax
 
