@@ -36,14 +36,19 @@ class SecondView : LoggingView {
     }
 }
 
+//var first = FirstView(name: "First View # 1")
+//first.presentView()
+//
+//if let ourSecondView = first.secondView {
+////    first = FirstView(name: "First View # 2")
+//    ourSecondView.returnToFirst()
+//}
+//
+//first = FirstView(name: "First View # 2")
+
 var first = FirstView(name: "First View # 1")
 first.presentView()
-
-if let ourSecondView = first.secondView {
-//    first = FirstView(name: "First View # 2")
-    ourSecondView.returnToFirst()
-}
-
+first.secondView?.returnToFirst()
 first = FirstView(name: "First View # 2")
 
 log
