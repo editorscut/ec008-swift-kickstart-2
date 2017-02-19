@@ -1,5 +1,5 @@
 //: ### Flat Map
-//: [TOC](TOC) - [Previous](@previous) - Next
+//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 
 enum Language: String {
     case c, cplusplus
@@ -58,4 +58,4 @@ languagesDoubleFlatMap
 
 
 
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

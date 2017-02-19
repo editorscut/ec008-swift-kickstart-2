@@ -1,7 +1,7 @@
 /*:
  # Table of Contents
  * [01 Types](01Types)
- * [02 Returning a Function](02ReturningFunction)
+ * [02 Returning a Function](02ReturningAFunction)
  * [03 Returning a Closure](03ReturningAClosure)
  * [04 Consuming a Closure](04ConsumingAClosure)
  * [05 Custom Operators](05CustomOperators)
