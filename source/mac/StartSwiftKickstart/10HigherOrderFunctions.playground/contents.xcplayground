@@ -12,5 +12,6 @@
         <page name='08Filter'/>
         <page name='09Reduce'/>
         <page name='10FlatMap'/>
+        <page name='11CaptureLists'/>
     </pages>
 </playground>

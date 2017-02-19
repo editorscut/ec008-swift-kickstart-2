@@ -1,5 +1,5 @@
 //: ### Flat Map
-//: [TOC](TOC) - [Previous](@previous) - Next
+//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
 
 enum Language: String {
     case c, cplusplus
@@ -21,4 +21,4 @@ let dictionary = ["Joan"  : joansLanguages,
                   "Fred"  : fredsLanguages]
 
 
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

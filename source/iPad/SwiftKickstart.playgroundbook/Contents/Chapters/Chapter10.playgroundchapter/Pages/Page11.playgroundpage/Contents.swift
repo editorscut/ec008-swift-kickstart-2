@@ -1,10 +1,7 @@
-//: ### Capture Lists
-//: [TOC](TOC) - [Previous](@previous) - Next
-
 //class FirstView : LoggingView {
-//    
+//
 //    var secondView: SecondView?
-//    
+//
 //    func presentView() {
 //        secondView = SecondView(name: "Second View")
 //        updateLog(with: "Presented: \(secondView?.name ?? "nil")")
@@ -40,13 +37,10 @@ var first = FirstView(name: "First View # 1")
 first.presentView()
 
 if let ourSecondView = first.secondView {
-//    first = FirstView(name: "First View # 2")
+    //    first = FirstView(name: "First View # 2")
     ourSecondView.returnToFirst()
 }
 
 first = FirstView(name: "First View # 2")
 
 log
-
-
-//: [TOC](TOC) - [Previous](@previous) - Next
