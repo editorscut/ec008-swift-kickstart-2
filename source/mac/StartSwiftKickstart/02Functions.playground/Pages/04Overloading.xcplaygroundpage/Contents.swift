@@ -1,5 +1,5 @@
 //: ### Overloading
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 func hello() -> String {
     return "Hello, World!"
 }
@@ -9,5 +9,6 @@ func hello(name: String) -> String {
 }
 
 hello()
+
 hello(name: "my friend")
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

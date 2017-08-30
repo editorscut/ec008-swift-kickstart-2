@@ -1,8 +1,13 @@
 //: ### The print() Function
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+
 let name = "Swift Programmer"
+
 print("Hello, \(name)!")
 print("Hello,", name, "!")
 print("Hello,", name, "!", separator:"^-^")
-print("Hello, ", name, "!", separator: "", terminator: "")
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+print("Hello, ", name, "!", separator:"", terminator: "")
+print("Hello, ", name, separator:"", terminator: "!")
+
+
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
