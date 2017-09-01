@@ -1,5 +1,6 @@
 //: ### if let
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | Next
+
 import UIKit
 let viewer = UIImageView()
 let image = UIImage(named: "Kickstart.jpg")
@@ -42,5 +43,5 @@ func display(image: UIImage?) {
 display(image: image)
 viewer.image
 
+//: [TOC](00TOC) | [Previous](@previous) | Next
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

@@ -1,6 +1,5 @@
 //: ### Inferring Type
-//: [TOC](TOC) | Previous | [Next](@next)
-
+//: [TOC](00TOC) | Previous | [Next](@next)
 let someone = "Swift Programmer"
 
 func hello(peopleNamed people: String...) {
@@ -8,4 +7,5 @@ func hello(peopleNamed people: String...) {
         print("Hello, \(person)!")
     }
 }
-//: [TOC](TOC) | Previous | [Next](@next)
+//: [TOC](00TOC) | Previous | [Next](@next)
+

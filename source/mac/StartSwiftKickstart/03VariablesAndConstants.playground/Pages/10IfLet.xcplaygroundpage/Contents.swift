@@ -1,6 +1,7 @@
 //: ### if let
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | Next
 
 
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | Next
+

@@ -1,8 +1,13 @@
 //: ### Let
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 let someone = "Swift Programmer"
 
+// someone = "Some new value"
+
 let shouldBeRed: Bool
+
+//print(shouldBeRed)
+
 shouldBeRed = true
 
 let stringWithoutValue: String
@@ -15,4 +20,5 @@ if shouldBeRed {
 
 print(shouldBeRed)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+

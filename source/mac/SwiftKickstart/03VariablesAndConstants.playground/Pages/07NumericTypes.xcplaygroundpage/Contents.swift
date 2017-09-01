@@ -1,5 +1,6 @@
 //: ### Numeric Types
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+
 let literalProduct = 5 * 3.7
 
 let five = 5
@@ -11,4 +12,5 @@ let product = doubleFiveFromInt * threePointSeven
 
 let compactProduct = Double(five) * threePointSeven
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+

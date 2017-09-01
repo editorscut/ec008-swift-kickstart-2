@@ -1,6 +1,6 @@
 //: ### Let
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 let someone = "Swift Programmer"
 
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

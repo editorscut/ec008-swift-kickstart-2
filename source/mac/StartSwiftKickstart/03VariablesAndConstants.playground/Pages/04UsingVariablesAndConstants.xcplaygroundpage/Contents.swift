@@ -1,5 +1,14 @@
 //: ### Using Variables and Constants
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
+func hello(peopleNamed people: String...) -> (count: Int,
+    greeting: String) {
+        return (people.count, people.reduce(""){
+            $0 + "\nHello, " + $1 + "!"
+        })
+}
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+hello(peopleNamed: "Thing One", "Thing Two")
+
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+
