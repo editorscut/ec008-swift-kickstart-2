@@ -1,6 +1,5 @@
 //: ### Sets
-//: [TOC](TOC) | [Previous](@previous) | Next
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 var odds = Set<Int>()
 for i in stride(from: 1, through: 10, by: 2) {
     odds.insert(i)
@@ -41,5 +40,6 @@ for odd in odds {
     print(odd)
 }
 
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | Next
+

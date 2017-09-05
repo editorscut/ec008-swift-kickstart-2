@@ -1,5 +1,5 @@
 //: ### Value and Reference Types
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 var x = 7
 var y = x
 x = 5
@@ -38,4 +38,6 @@ yFields[1].text = "Changed"
 xFields[1].text
 yFields[1].text
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+
+

@@ -1,5 +1,5 @@
 //: ### Modify Dictionaries
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 var numbers = [String : Int]()
 numbers["one"] = 8
 numbers["too"] = 3
@@ -11,4 +11,6 @@ numbers.removeValue(forKey: "four")
 
 numbers.count
 numbers
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+
+

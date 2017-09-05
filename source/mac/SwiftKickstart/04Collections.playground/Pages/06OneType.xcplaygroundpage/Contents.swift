@@ -1,6 +1,5 @@
 //: ### One Type
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 let numbers = [0, 1, 2]
 let one = numbers[1]
 let two = numbers[2]
@@ -11,5 +10,4 @@ let badOne = badNumbers[1] as! Int
 let badTwo = badNumbers[2] as! Int
 let badThree = badOne + badTwo
 let badHello = badNumbers[3] as? Int
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
