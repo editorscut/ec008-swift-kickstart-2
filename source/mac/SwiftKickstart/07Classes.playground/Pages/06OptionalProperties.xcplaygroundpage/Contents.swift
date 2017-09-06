@@ -1,9 +1,8 @@
 //: ### Optional Properties
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 class Attendee {
-    let name : String
-    let hometown : String?
+    let name: String
+    let hometown: String?
     
     init(name: String,
          hometown: String? = nil) {
@@ -21,7 +20,7 @@ class Attendee {
     }
 }
 
-extension Attendee : CustomStringConvertible {
+extension Attendee: CustomStringConvertible {
     var description: String {
         return nameBadge()
     }
@@ -31,5 +30,6 @@ extension Attendee : CustomStringConvertible {
 let daniel = Attendee(name: "Daniel",
                       hometown: "Shaker Heights")
 let kimberli = Attendee(name: "Kimberli")
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+

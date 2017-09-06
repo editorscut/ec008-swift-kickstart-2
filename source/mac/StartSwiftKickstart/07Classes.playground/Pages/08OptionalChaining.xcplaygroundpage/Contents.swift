@@ -1,13 +1,13 @@
 //: ### Optional Chaining
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 class StreetInformation {
     let number: String?
     let name: String?
     let apartment: String?
-
     
-    init(number: String? = nil, name: String? = nil, apartment: String? = nil){
+    init(number: String? = nil,
+         name: String? = nil,
+         apartment: String? = nil){
         self.number = number
         self.name = name
         self.apartment = apartment
@@ -19,7 +19,9 @@ class Address {
     let city: String
     let state: String
     
-    init(city: String, state: String, streetInformation: StreetInformation? = nil){
+    init(city: String,
+         state: String,
+         streetInformation: StreetInformation? = nil){
         self.city = city
         self.state = state
         self.streetInformation = streetInformation
@@ -35,5 +37,6 @@ class Attendee {
         self.address = address
     }
 }
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+

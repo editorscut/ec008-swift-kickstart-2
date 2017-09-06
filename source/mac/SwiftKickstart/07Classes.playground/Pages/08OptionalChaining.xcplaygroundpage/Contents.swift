@@ -1,11 +1,10 @@
 //: ### Optional Chaining
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 class StreetInformation {
     let number: String?
     let name: String?
     let apartment: String?
-
+    
     
     init(number: String? = nil,
          name: String? = nil,
@@ -52,8 +51,8 @@ func pyramidOfDoom(attendee: Attendee) -> Apartment? {
 
 func flatPyramid(attendee: Attendee) -> Apartment? {
     if let validAddress = attendee.address,
-       let validStreetInformation = validAddress.streetInformation {
-            return validStreetInformation.apartment
+        let validStreetInformation = validAddress.streetInformation {
+        return validStreetInformation.apartment
     }
     return nil
 }
@@ -70,6 +69,6 @@ func optionalChaining(attendee: Attendee) -> Apartment? {
     let info = attendee.address?.streetInformation?.apartment
     return info
 }
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

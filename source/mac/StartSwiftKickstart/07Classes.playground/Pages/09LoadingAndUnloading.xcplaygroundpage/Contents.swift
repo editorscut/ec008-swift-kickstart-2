@@ -1,5 +1,5 @@
 //: ### Loading and Unloading
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 var log = ""
 var count = 1
 
@@ -26,4 +26,7 @@ class Attendee {
         updateLog(with: "Create Attendee")
     }
 }
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+
+

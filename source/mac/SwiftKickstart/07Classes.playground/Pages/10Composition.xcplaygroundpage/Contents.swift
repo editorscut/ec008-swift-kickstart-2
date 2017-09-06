@@ -1,7 +1,6 @@
 //: ### Composition
-//: [TOC](TOC) | [Previous](@previous) | Next
-
-protocol NameBadgeable :CustomStringConvertible {
+//: [TOC](00TOC) | [Previous](@previous) | Next
+protocol NameBadgeable: CustomStringConvertible {
     func nameBadge() -> String
 }
 extension NameBadgeable {
@@ -10,7 +9,7 @@ extension NameBadgeable {
     }
 }
 
-struct Attendee : NameBadgeable {
+struct Attendee: NameBadgeable {
     let name: String
     init(name: String) {
         self.name = name
@@ -20,10 +19,10 @@ struct Attendee : NameBadgeable {
     }
 }
 
-struct TutorialAttendee : NameBadgeable {
+struct TutorialAttendee: NameBadgeable {
     let tutorial: String
     private let attendee: Attendee
-    var name : String {
+    var name: String {
         return attendee.name
     }
     init(name: String,
@@ -39,4 +38,6 @@ struct TutorialAttendee : NameBadgeable {
 let daniel = Attendee(name: "Daniel")
 let kimberli = TutorialAttendee(name: "Kimberli",
                                 tutorial: "Swiftiness")
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](00TOC) | [Previous](@previous) | Next
+
+

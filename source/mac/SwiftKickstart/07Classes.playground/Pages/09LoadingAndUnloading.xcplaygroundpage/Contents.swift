@@ -1,6 +1,5 @@
 //: ### Loading and Unloading
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 var log = ""
 var count = 1
 
@@ -41,5 +40,6 @@ log
 daniel = Attendee(name: "Kimberli")
 daniel.location.city
 log
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+

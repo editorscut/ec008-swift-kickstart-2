@@ -1,5 +1,5 @@
 //: ### Composition
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](00TOC) | [Previous](@previous) | Next
 class Attendee {
     let name: String
     init(name: String) {
@@ -26,4 +26,6 @@ class TutorialAttendee: Attendee {
         return super.nameBadge() + " I'm taking \(tutorial)."
     }
 }
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](00TOC) | [Previous](@previous) | Next
+
+

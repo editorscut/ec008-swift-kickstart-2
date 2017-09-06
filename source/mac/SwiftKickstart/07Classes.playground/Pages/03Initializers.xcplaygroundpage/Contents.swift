@@ -1,8 +1,8 @@
 //: ### Initializers
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 class Attendee {
-    let name : String
-    let hometown : String
+    let name: String
+    let hometown: String
     
     init(name: String, hometown: String = "Cupertino") {
         self.name = name
@@ -17,5 +17,6 @@ daniel.name
 daniel.hometown
 kimberli.name
 kimberli.hometown
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+
