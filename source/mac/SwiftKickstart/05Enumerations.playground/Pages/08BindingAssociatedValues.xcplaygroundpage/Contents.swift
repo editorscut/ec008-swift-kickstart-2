@@ -1,6 +1,5 @@
 //: ### Binding Associated Values
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 enum PrimaryColor : String {
     case red
     case yellow
@@ -22,7 +21,7 @@ enum Desktop {
 }
 
 let backgrounds = [Desktop.color(.yellow), .black,
-                  .color(.red), .color(.blue)]
+                   .color(.red), .color(.blue)]
 
 backgrounds[0].isRed()
 backgrounds[1].isRed()
@@ -48,9 +47,9 @@ colorString(from: backgrounds[3])
 func redOnesDeleted(from startingArray: [Desktop]) -> [PrimaryColor] {
     var tempArray = [PrimaryColor]()
     for case .color(let primaryColor) in startingArray
-                                      where primaryColor != .red {
-        tempArray.append(primaryColor)
-        
+        where primaryColor != .red {
+            tempArray.append(primaryColor)
+            
     }
     return tempArray
 }
@@ -67,5 +66,5 @@ case let .tiled(firstColor, secondColor,
 default:
     print("It's not tiled")
 }
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

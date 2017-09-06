@@ -1,6 +1,5 @@
 //: ### Value Types
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 enum PrimaryColor {
     case red
     case yellow
@@ -19,4 +18,5 @@ let color3 = PrimaryColor.blue
 let color4 = PrimaryColor.blue
 
 color3 == color4
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+

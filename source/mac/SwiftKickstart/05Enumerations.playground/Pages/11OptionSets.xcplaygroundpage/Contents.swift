@@ -1,6 +1,5 @@
 //: ### Option Sets
-//: [TOC](TOC) | [Previous](@previous) | Next
-
+//: [TOC](00TOC) | [Previous](@previous) | Next
 struct ColorsWeLove: OptionSet {
     let rawValue: Int
     static let red = ColorsWeLove(rawValue: 1)
@@ -16,4 +15,5 @@ var twoColors: ColorsWeLove = [.red, .blue]
 twoColors.contains(.red)
 twoColors.contains(.green)
 
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](00TOC) | [Previous](@previous) | Next
+

@@ -1,5 +1,5 @@
 //: ### Binding Associated Values
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 enum PrimaryColor : String {
     case red
     case yellow
@@ -10,4 +10,5 @@ enum Desktop {
     case black
     case color(PrimaryColor)
 }
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+

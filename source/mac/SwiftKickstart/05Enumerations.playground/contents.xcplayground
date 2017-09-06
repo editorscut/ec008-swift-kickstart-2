@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' display-mode='rendered'>
     <pages>
-        <page name='TOC'/>
+        <page name='00TOC'/>
         <page name='01CreateEnumerations'/>
         <page name='02TheSwitchStatement'/>
         <page name='03Methods'/>
@@ -9,7 +9,7 @@
         <page name='05StringRawValues'/>
         <page name='06NumericalRawValues'/>
         <page name='07AssociatedValues'/>
-        <page name='08Binding Associated Values'/>
+        <page name='08BindingAssociatedValues'/>
         <page name='09Previews'/>
         <page name='10ValueTypes'/>
         <page name='11OptionSets'/>

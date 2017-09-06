@@ -1,6 +1,5 @@
 //: ### Associated Values
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 enum PrimaryColor {
     case red
     case yellow
@@ -17,4 +16,6 @@ let blackBackground = Desktop.black
 let whiteBackground = Desktop.white
 let redBackground = Desktop.color(PrimaryColor.red)
 let yellowBackground = Desktop.color(.yellow)
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+

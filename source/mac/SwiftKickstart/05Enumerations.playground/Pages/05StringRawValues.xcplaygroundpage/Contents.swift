@@ -1,17 +1,15 @@
 //: ### String Raw Values
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-enum Color : String {
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+enum Color: String {
     case red = "Maraschino"
-    case green
+    case green 
     case blue = "Blueberry"
 }
 
 let crayon = Color.green
 crayon.rawValue
-
 let paintBrush = Color.red
 paintBrush.rawValue
 
-let marker = Color(rawValue: "Blueberry")
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

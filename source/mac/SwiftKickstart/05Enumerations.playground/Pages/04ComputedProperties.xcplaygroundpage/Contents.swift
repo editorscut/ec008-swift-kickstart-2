@@ -1,6 +1,5 @@
 //: ### Computed Properties
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 import UIKit
 
 enum Color {
@@ -19,7 +18,7 @@ enum Color {
         }
     }
     
-    func swatch(width: Int, height: Int) -> UIView {
+    func swatch(_ width: Int, by height: Int) -> UIView {
         let myView = UIView(frame: CGRect(x: 0,
                                           y: 0,
                                           width: width,
@@ -34,5 +33,5 @@ crayon.uiColor
 
 let paintBrush = Color.red
 paintBrush.uiColor
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

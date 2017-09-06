@@ -1,5 +1,5 @@
 //: ### Methods
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 import UIKit
 
 enum Color {
@@ -8,7 +8,7 @@ enum Color {
     case blue
 }
 
-func actualColor(color: Color) -> UIColor {
+func uiColor(color: Color) -> UIColor {
     switch color {
     case .red:
         return UIColor.red
@@ -19,4 +19,6 @@ func actualColor(color: Color) -> UIColor {
     }
 }
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+

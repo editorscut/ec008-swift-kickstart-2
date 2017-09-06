@@ -1,5 +1,5 @@
 //: ### Previews
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 enum PrimaryColor : String {
     case red
     case yellow
@@ -22,11 +22,13 @@ func colorString(from desktop: Desktop) -> String {
     return colorString
 }
 
-let backgrounds = [Desktop.color(.yellow), .black, .color(.red), .color(.blue)]
+let backgrounds = [Desktop.color(.yellow), .black,
+                   .color(.red), .color(.blue)]
 
 colorString(from: backgrounds[0])
 colorString(from: backgrounds[1])
 colorString(from: backgrounds[2])
 colorString(from: backgrounds[3])
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+

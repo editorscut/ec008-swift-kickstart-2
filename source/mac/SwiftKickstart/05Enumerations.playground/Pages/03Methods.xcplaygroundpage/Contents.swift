@@ -1,12 +1,12 @@
 //: ### Methods
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 import UIKit
 
 enum Color {
     case red
     case green
     case blue
-    
+ 
     func uiColor() -> UIColor {
         switch self {
         case .red:
@@ -18,7 +18,7 @@ enum Color {
         }
     }
     
-    func swatch(width: Int, height: Int) -> UIView {
+    func swatch(_ width: Int, by height: Int) -> UIView {
         let myView = UIView(frame: CGRect(x: 0,
                                           y: 0,
                                           width: width,
@@ -30,10 +30,12 @@ enum Color {
 
 let crayon = Color.blue
 crayon.uiColor()
-crayon.swatch(width: 10, height: 100)
-
+crayon.swatch(10, by: 100)
 let paintBrush = Color.red
 paintBrush.uiColor()
-paintBrush.swatch(width: 100, height: 10)
+paintBrush.swatch(100, by: 10)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+
+
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+

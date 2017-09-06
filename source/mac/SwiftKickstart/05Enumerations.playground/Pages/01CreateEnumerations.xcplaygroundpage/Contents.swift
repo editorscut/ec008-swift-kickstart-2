@@ -1,5 +1,5 @@
 //: ### Create Enumerations
-//: [TOC](TOC) | Previous | [Next](@next)
+//: [TOC](00TOC) | Previous | [Next](@next)
 enum Color {
     case red
     case green
@@ -9,5 +9,4 @@ let paintBrush: Color
 var crayon = Color.red
 crayon = .green
 paintBrush = .blue
-
-//: [TOC](TOC) | Previous | [Next](@next)
+//: [TOC](00TOC) | Previous | [Next](@next)

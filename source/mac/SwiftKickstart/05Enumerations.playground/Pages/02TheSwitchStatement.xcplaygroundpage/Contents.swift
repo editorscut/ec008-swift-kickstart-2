@@ -1,5 +1,5 @@
 //: ### The switch Statement
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 import UIKit
 
 enum Color {
@@ -8,7 +8,7 @@ enum Color {
     case blue
 }
 
-func actualColor(color: Color) -> UIColor {
+func uiColor(from color: Color) -> UIColor {
     switch color {
     case .red:
         return UIColor.red
@@ -19,9 +19,9 @@ func actualColor(color: Color) -> UIColor {
     }
 }
 
-actualColor(color: .red)
-actualColor(color: .green)
-actualColor(color: .blue)
+uiColor(from: .red)
+uiColor(from: .green)
+uiColor(from: .blue)
 
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
