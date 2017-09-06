@@ -1,5 +1,5 @@
-//: ### willSet() didSet()
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: ### willSet didSet
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 import Foundation
 
 struct Vertex {
@@ -17,4 +17,6 @@ struct Vertex {
         }
     }
 }
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+
+var point = Vertex(x: 3.0, y: 4.0)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

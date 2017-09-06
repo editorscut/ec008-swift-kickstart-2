@@ -1,5 +1,5 @@
-//: ###  Value Types
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: ### Value Types
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 struct Vertex {
     let x: Double
     let y: Double
@@ -12,4 +12,4 @@ extension Vertex: CustomStringConvertible {
 }
 
 let point = Vertex(x: 3, y: 4)
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

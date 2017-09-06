@@ -1,15 +1,15 @@
 //: ### Methods
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 import Foundation
 
 //struct Vertex {
 //    var x: Double
 //    let y: Double
-//    
+//
 //    func magnitude() -> Double {
 //        return sqrt(x * x + y * y)
 //    }
-//    
+//
 //    mutating func moveHorizontally(by deltaX: Double) {
 //        x += deltaX
 //    }
@@ -47,5 +47,4 @@ let point = Vertex(x: 3, y: 4)
 let movedPoint = point.movedHorizontally(by: 3)
 point
 movedPoint
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

@@ -1,16 +1,17 @@
 //: ### Stored Properties
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 //struct Vertex {
 //    let x = 3.0
 //    let y = 4.0
 //}
 //
 //let point = Vertex()
+//point.x
+//point.y
 
 struct Vertex {
     let x, y: Double
- 
+    
     init(x: Double = 3.0, y: Double = 4.0) {
         self.x = x
         self.y = y
@@ -25,5 +26,4 @@ let pointThreeFour = Vertex()
 let pointTwoFour = Vertex(x: 2.0)
 let pointThreeFive = Vertex(y: 5.0)
 let pointFiveFive = Vertex(bothXandY: 5.0)
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

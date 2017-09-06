@@ -1,6 +1,5 @@
 //: ### Equatable
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 struct Vertex {
     let x, y: Double
 }
@@ -11,10 +10,10 @@ extension Vertex: CustomStringConvertible {
     }
 }
 
-extension Vertex: Equatable{}
-
-func ==(lhs: Vertex, rhs: Vertex) -> Bool {
-    return lhs.x == rhs.x && lhs.y == rhs.y
+extension Vertex: Equatable{
+    static func ==(lhs: Vertex, rhs: Vertex) -> Bool {
+        return lhs.x == rhs.x && lhs.y == rhs.y
+    }
 }
 
 let pointThreeFour = Vertex(x: 3, y: 4)
@@ -33,5 +32,4 @@ pointThreeFour == anotherPointThreeFour
 
 pointThreeFour != pointTwoFive
 pointThreeFour != anotherPointThreeFour
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

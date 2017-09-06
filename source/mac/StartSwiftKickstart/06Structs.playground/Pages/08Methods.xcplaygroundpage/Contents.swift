@@ -1,5 +1,5 @@
 //: ### Methods
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 import Foundation
 
 struct Vertex {
@@ -12,4 +12,4 @@ extension Vertex: CustomStringConvertible {
         return "(\(x), \(y))"
     }
 }
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

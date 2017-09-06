@@ -1,5 +1,5 @@
 //: ### Computed Properties
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 import Foundation
 
 struct Vertex {
@@ -22,5 +22,7 @@ point.magnitude = 10
 point.magnitude
 point.x
 point.y
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+
+

@@ -1,8 +1,11 @@
 //: ### Computed Properties
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 struct Vertex {
     let x, y: Double
 }
 
-var point = Vertex(x: 3.0, y: 4.0)
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+let point = Vertex(x: 3.0, y: 4.0)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+
+
+

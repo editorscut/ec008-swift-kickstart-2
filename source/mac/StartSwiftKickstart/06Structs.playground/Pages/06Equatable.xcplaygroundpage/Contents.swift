@@ -1,5 +1,5 @@
 //: ### Equatable
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 struct Vertex {
     let x, y: Double
 }
@@ -9,4 +9,5 @@ extension Vertex: CustomStringConvertible {
         return "(\(x), \(y))"
     }
 }
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

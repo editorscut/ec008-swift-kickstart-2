@@ -1,5 +1,5 @@
 //: ### Custom Operators
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](00TOC) | [Previous](@previous) | Next
 import Foundation
 
 struct Vertex {
@@ -48,6 +48,4 @@ let point2 = Vertex(x: -3, y: 12)
 point2~>
 point1 <^> point2
 
-
-
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](00TOC) | [Previous](@previous) | Next
