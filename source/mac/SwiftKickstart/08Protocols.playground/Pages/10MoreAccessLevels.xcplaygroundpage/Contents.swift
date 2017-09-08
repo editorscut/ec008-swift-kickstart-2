@@ -1,5 +1,6 @@
 //: ### More Access Levels
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](00TOC) | [Previous](@previous) | Next
+
 let daniel = SettableName(name: "Daniel")
 daniel.name
 daniel.name = "Kimberli"
@@ -10,7 +11,7 @@ maggie.name
 // maggie.name = "Kimberli"
 
 //class SettableSubclass : SettableName {
-//    
+//
 //}
 
 extension SettableName {
@@ -22,11 +23,11 @@ extension SettableName {
 daniel.fetchTheName()
 
 class OpenSubclass : OpenName {
-
+    
 }
 
 let annabelle = OpenSubclass(name: "Annabelle")
 annabelle.name
 annabelle.name = "Kimberli"
 annabelle.name
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](00TOC) | [Previous](@previous) | Next

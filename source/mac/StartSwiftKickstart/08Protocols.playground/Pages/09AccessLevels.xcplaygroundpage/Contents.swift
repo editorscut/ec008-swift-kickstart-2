@@ -1,5 +1,5 @@
 //: ### Access Levels
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
 let vertex = Vertex(x: 3, y: 4)
 let rectangle = Rectangle(topLeftCorner: vertex, width: 100, height: 50)
@@ -15,5 +15,7 @@ let shiftedLeftRectangle = shiftedLeft(movable: rectangle)
 
 let shiftedRightVertex = vertex.shiftedRight()
 let shiftedRightRectangle = rectangle.shiftedRight()
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+
+

@@ -1,7 +1,7 @@
 /*:
  # Table of Contents
  * [01 Create Protocols](01CreateProtocols)
- * [02 Conform to a Protocol](02ConformToAProtocol)
+ * [02 Conforming to a Protocol](02ConformingToAProtocol)
  * [03 Self](03Self)
  * [04 Properties](04Properties)
  * [05 Polymorphism](05Polymorphism)
@@ -11,3 +11,4 @@
  * [09 Access Levels](09AccessLevels)
  * [10 More Access Levels](10MoreAccessLevels)
  */
+

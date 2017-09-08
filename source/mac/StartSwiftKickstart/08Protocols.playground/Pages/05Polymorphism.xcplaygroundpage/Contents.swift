@@ -1,15 +1,15 @@
 //: ### Polymorphism
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 protocol Movable {
-    var location : Vertex {get}
+    var location: Vertex {get}
     func movedHorizontally(by deltaX: Int) -> Self
 }
 
 struct Vertex {
-    let x, y : Int
+    let x, y: Int
 }
 
-extension Vertex : Movable {
+extension Vertex: Movable {
     public var location: Vertex {
         return self
     }
@@ -18,28 +18,28 @@ extension Vertex : Movable {
     }
 }
 
-extension Vertex : CustomStringConvertible {
+extension Vertex: CustomStringConvertible {
     var description: String {
         return "(\(x), \(y))"
     }
 }
 
 struct Size {
-    let width, height : Int
+    let width, height: Int
 }
 
-extension Size : CustomStringConvertible {
+extension Size: CustomStringConvertible {
     var description: String {
         return "\(width) by \(height)"
     }
 }
 
 struct Rectangle {
-    let topLeftCorner : Vertex
-    let size : Size
+    let topLeftCorner: Vertex
+    let size: Size
 }
 
-extension Rectangle : Movable {
+extension Rectangle: Movable {
     public var location: Vertex {
         let centerX = topLeftCorner.x + size.width/2
         let centerY = topLeftCorner.y + size.height/2
@@ -51,7 +51,7 @@ extension Rectangle : Movable {
     }
 }
 
-extension Rectangle : CustomStringConvertible {
+extension Rectangle: CustomStringConvertible {
     var description: String {
         return "\(size) at \(topLeftCorner)"
     }
@@ -67,4 +67,7 @@ let movedTwiceVertex = movedVertex.movedHorizontally(by: 10)
 vertex.location
 rectangle.location
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+
+
+
