@@ -1,5 +1,5 @@
 //: ### inout Parameters
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
 var two = 2
 
@@ -12,4 +12,4 @@ double(&two)
 double(&two)
 two
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

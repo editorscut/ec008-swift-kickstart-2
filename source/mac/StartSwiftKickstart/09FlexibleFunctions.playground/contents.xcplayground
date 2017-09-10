@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' display-mode='rendered'>
     <pages>
-        <page name='TOC'/>
+        <page name='00TOC'/>
         <page name='01FunctionParameters'/>
         <page name='02ReferenceTypes'/>
         <page name='03InoutParameters'/>
@@ -10,5 +10,6 @@
         <page name='06MutableModel'/>
         <page name='07NonMutableModel'/>
         <page name='08Generics'/>
+        <page name='09ConditionalConformance'/>
     </pages>
 </playground>

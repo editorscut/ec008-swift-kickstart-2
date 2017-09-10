@@ -1,6 +1,5 @@
 //: ### inout Parameters
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 var two = 2
 
 func double(_ input: Int) {
@@ -10,5 +9,4 @@ func double(_ input: Int) {
 
 double(two)
 two
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

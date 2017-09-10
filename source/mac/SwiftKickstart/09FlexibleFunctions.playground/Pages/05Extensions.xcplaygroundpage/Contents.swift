@@ -1,15 +1,19 @@
 //: ### Extensions
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 var number = 2
 
 extension Int {
+    mutating func double() {
+        self = self * 2
+    }
     func doubled() -> Int {
         return self * 2
     }
 }
 
-number = number.doubled()
+number.double()
 number
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+number = number.doubled()
+number
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

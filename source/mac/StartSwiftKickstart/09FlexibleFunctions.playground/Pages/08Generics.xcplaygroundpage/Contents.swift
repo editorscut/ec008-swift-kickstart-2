@@ -1,5 +1,5 @@
 //: ### Generics
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 struct Model {
     fileprivate let privateArray: [String]
     
@@ -24,12 +24,14 @@ extension Model { // Non-Mutating Methods
         mutableArray.remove(at: index)
         return Model(privateArray: mutableArray)
     }
-    func inserted(_ string: String, at index: Int) -> Model {
+    func inserted(_ string: String,
+                  at index: Int) -> Model {
         var mutableArray = privateArray
         mutableArray.insert(string, at: index)
         return Model(privateArray: mutableArray)
     }
-    func moved(from fromIndex: Int, to toIndex: Int) -> Model {
+    func moved(from fromIndex: Int,
+               to toIndex: Int) -> Model {
         return removed(at: fromIndex)
             .inserted(privateArray[fromIndex], at: toIndex)
     }
@@ -41,5 +43,4 @@ model.inserted("Z", at: 1)
 model.moved(from: 0, to: 1)
 model.moved(from: 3, to: 2)
 model.moved(from: 4, to: 4)
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

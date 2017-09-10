@@ -1,5 +1,5 @@
 //: ### Return Values
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 var number = 2
 
 func doubled(_ input: Int) -> Int {
@@ -10,5 +10,6 @@ doubled(number)
 number
 number = doubled(number)
 number
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+

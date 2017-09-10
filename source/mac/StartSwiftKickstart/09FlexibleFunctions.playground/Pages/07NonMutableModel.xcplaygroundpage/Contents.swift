@@ -1,5 +1,5 @@
 //: ### Non-Mutable Model
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 struct Model {
     fileprivate let privateArray: [String]
     
@@ -14,8 +14,7 @@ extension Model : CustomStringConvertible {
     }
 }
 
-
 var model = Model("A", "B", "C", "D", "E")
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

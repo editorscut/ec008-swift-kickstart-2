@@ -1,5 +1,5 @@
 //: ### Mutable Model
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 struct Model {
     fileprivate var privateArray: [String]
     
@@ -36,6 +36,4 @@ model.insert("Z", at: 1)
 model.move(from: 0, to: 1)
 model.move(from: 3, to: 2)
 model.move(from: 4, to: 4)
-
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

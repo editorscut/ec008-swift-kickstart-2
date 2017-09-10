@@ -1,6 +1,5 @@
 //: ### Function Parameters
-//: [TOC](TOC) | Previous | [Next](@next)
-
+//: [TOC](00TOC) | Previous | [Next](@next)
 var two = 2
 //func double(_ input: Int) {
 //    var inputCopy = input
@@ -14,5 +13,4 @@ func double(_ input: Int) {
 
 double(two)
 two
-
-//: [TOC](TOC) | Previous | [Next](@next)
+//: [TOC](00TOC) | Previous | [Next](@next)

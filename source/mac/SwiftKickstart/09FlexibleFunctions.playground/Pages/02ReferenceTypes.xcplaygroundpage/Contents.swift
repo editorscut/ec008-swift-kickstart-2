@@ -1,5 +1,5 @@
 //: ### Reference Types
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 import UIKit
 
 var textField = UITextField()
@@ -20,5 +20,4 @@ replace(textField)
 textField.text
 modify(textField)
 textField.text
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
