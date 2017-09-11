@@ -1,7 +1,5 @@
 //: ### Consuming a Closure
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 func revenueAt199on(_ count: Count) -> USDollar {
     return USDollar(count.asDouble() * 1.99 * 0.70)
 }
@@ -39,5 +37,4 @@ func apply<Input, Output>(to input: Input,
 
 let rev = apply(to: 17){USDollar($0.asDouble() * 1.99 * 0.70)}
 rev
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

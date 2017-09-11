@@ -1,6 +1,5 @@
 //: ### Map
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 let numberSold = [17, 29, 11, 15, 32, 21, 27]
 
 func apply<Input, Output>(to input: [Input],
@@ -31,7 +30,6 @@ apply(to: numberSold){
 //}
 
 extension Sequence {
-    typealias Element = Iterator.Element
     func apply<Output>(using f: (Element) -> Output) -> [Output] {
         var output = [Output]()
         for element in self {
@@ -58,6 +56,9 @@ dailyNumberSold.map{
     USDollar($0.value.asDouble() * 1.99 * 0.70)
     }.description
 
+let result = dailyNumberSold.mapValues{$0.asDouble() * 1.99 * 0.70}
+result
+
 import Foundation
 
 let formatter = NumberFormatter()
@@ -67,6 +68,4 @@ let sales = NSNumber(value: 1.2345)
 let niceSales = formatter.string(from: sales)
 let dollarSales = niceSales.map{"$" + $0}
 dollarSales
-
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

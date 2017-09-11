@@ -1,6 +1,5 @@
 //: ### Flat Map
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 enum Language: String {
     case c, cplusplus
     case objectivec
@@ -34,7 +33,6 @@ let languageFlatMap = dictionary.flatMap{ (key, langArray) in
 let languages = Array(Set(languageFlatMap))
 
 //: map and flatmap for optionals
-
 let firstLanguageMap = dictionary["Joan"].map{$0.first}
 firstLanguageMap
 let firstLanguageFlatMap = dictionary["Joan"].flatMap{$0.first}
@@ -55,7 +53,4 @@ languagesForTeamFlatMap
 
 let languagesDoubleFlatMap = team.flatMap{dictionary[$0]}.flatMap{$0}
 languagesDoubleFlatMap
-
-
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

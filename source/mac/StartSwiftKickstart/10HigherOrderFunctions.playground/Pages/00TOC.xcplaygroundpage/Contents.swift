@@ -9,6 +9,6 @@
  * [07 Map](07Map)
  * [08 Filter](08Filter)
  * [09 Reduce](09Reduce)
- * [10 Flat Map](10FlatMap)
+ * [10 FlatMap](10FlatMap)
  * [11 Capture Lists](11CaptureLists)
  */

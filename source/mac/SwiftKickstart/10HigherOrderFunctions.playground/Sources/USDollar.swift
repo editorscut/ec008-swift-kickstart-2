@@ -17,5 +17,3 @@ extension USDollar : CustomStringConvertible {
 public func +(lhs: USDollar, rhs: USDollar) -> USDollar {
     return USDollar(lhs.value + rhs.value)
 }
-
-

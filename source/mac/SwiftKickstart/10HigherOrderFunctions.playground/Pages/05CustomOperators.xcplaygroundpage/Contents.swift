@@ -1,6 +1,5 @@
 //: ### Custom Operators
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 func apply<Input, Output>(to input: Input,
                           using f: (Input) -> Output) -> Output {
     return f(input)
@@ -22,12 +21,12 @@ let net = less7PercentTax(revenueAt199on(17))
 infix operator >>> : MultiplicationPrecedence
 
 func >>> <Input, Output>(input: Input,
-          f: (Input) -> Output ) -> Output {
+                         f: (Input) -> Output ) -> Output {
     return f(input)
 }
 
 func >>> <T, U, V>(f:  @escaping (T) -> U,
-          g:  @escaping (U) -> V ) -> (T) -> V {
+                   g:  @escaping (U) -> V ) -> (T) -> V {
     return {x in g(f(x)) }
 }
 
@@ -39,5 +38,5 @@ composed(17)
 
 
 17 >>> (revenueAt199on  >>> less7PercentTax)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

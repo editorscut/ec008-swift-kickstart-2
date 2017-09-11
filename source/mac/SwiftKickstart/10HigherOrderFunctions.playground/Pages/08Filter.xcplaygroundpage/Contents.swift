@@ -1,6 +1,5 @@
 //: ### Filter
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 let numberSold = [17, 29, 11, 15, 32, 21, 27]
 
 let dailyNumberSold = ["Mon": 17, "Tue": 29,
@@ -11,7 +10,6 @@ let dailyNumberSold = ["Mon": 17, "Tue": 29,
 let weekendDays = ["Sat", "Sun"]
 
 extension Sequence {
-    typealias Element = Iterator.Element
     func keep(using f: (Element) -> Bool) -> [Element] {
         var output = [Element]()
         for element in self {
@@ -39,8 +37,8 @@ weekdaySales
 
 let revenueFromMoreThan25
     = numberSold.filter{$0 > 25}
-                .map{USDollar($0.asDouble() * 1.99 * 0.70)}
-                .description
+        .map{USDollar($0.asDouble() * 1.99 * 0.70)}
+        .description
 
 revenueFromMoreThan25
 
@@ -53,15 +51,14 @@ func revenueAt199on(_ count: Count) -> USDollar {
 }
 
 numberSold.filter{isMoreThan25($0)}
-          .map{revenueAt199on($0)}
-          .description
+    .map{revenueAt199on($0)}
+    .description
 
 numberSold.filter{count in isMoreThan25(count)}
-          .map{filteredCount in revenueAt199on(filteredCount)}
-          .description
+    .map{filteredCount in revenueAt199on(filteredCount)}
+    .description
 
 numberSold.filter(isMoreThan25)
-          .map(revenueAt199on)
-          .description
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+    .map(revenueAt199on)
+    .description
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

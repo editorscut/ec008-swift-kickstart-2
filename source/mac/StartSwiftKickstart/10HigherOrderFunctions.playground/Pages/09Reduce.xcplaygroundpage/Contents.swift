@@ -1,6 +1,5 @@
 //: ### Reduce
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 let numberSold = [17, 29, 11, 15, 32, 21, 27]
 
 func revenueAt199on(_ count: Count) -> USDollar {
@@ -13,7 +12,4 @@ let dailyNumberSold = ["Mon": 17, "Tue": 29,
                        "Sun": 27]
 
 
-
-
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

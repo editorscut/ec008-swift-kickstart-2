@@ -1,5 +1,5 @@
 //: ### Returning a Closure
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 var sellersShare = 0.70
 
 func revenueGenerator(at pricePerApp: USDollar) -> (Count) -> USDollar {
@@ -17,4 +17,4 @@ revenueGenerator(at: USDollar(2.99))(17)
 sellersShare = 1.0
 
 revenueAt199on(17)
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

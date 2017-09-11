@@ -1,6 +1,5 @@
 //: ### Mapping Arrays
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 func apply<Input, Output>(to input: Input,
                           using f: (Input) -> Output) -> Output {
     return f(input)
@@ -39,4 +38,4 @@ apply(to: numberSold){
 
 apply(to: numberSold, using: revenueAt199on).description
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

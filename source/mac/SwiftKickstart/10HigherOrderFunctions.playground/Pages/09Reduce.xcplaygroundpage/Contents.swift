@@ -1,6 +1,5 @@
 //: ### Reduce
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 let numberSold = [17, 29, 11, 15, 32, 21, 27]
 
 func revenueAt199on(_ count: Count) -> USDollar {
@@ -12,17 +11,15 @@ func combination(runningTotal: USDollar,
     return runningTotal + revenueAt199on(daysSales)
 }
 
-extension Sequence {
-    typealias Element = Iterator.Element
-    
+extension Sequence {    
     func combine<Output>(_ initialResult: Output,
                          _ nextPartialResult:(Output, Element) -> Output)
-                                                                  -> Output {
-        var accumulator = initialResult
-        for element in self {
-            accumulator = nextPartialResult(accumulator, element)
-        }
-        return accumulator
+        -> Output {
+            var accumulator = initialResult
+            for element in self {
+                accumulator = nextPartialResult(accumulator, element)
+            }
+            return accumulator
     }
 }
 
@@ -47,10 +44,10 @@ let dailyNumberSold = ["Mon": 17, "Tue": 29,
 
 
 let dailyTotals = dailyNumberSold
-                 .reduce([String : USDollar]()){(accumulator, entry) in
-    var running = accumulator
-    running[entry.key] = revenueAt199on(entry.value)
-    return running
+    .reduce([String : USDollar]()){(accumulator, entry) in
+        var running = accumulator
+        running[entry.key] = revenueAt199on(entry.value)
+        return running
 }
 
 dailyTotals.description
@@ -73,8 +70,4 @@ extension Sequence {
     }
 }
 numberSold.filterUsingReduce(isMoreThan25)
-
-
-
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

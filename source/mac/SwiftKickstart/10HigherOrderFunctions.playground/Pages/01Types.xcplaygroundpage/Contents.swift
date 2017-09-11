@@ -1,6 +1,5 @@
 //: ### Types
-//: [TOC](TOC) | Previous | [Next](@next)
-
+//: [TOC](00TOC) | Previous | [Next](@next)
 17 * 1.99 * 0.70
 
 let numberSold = 17
@@ -21,5 +20,5 @@ func revenue(on count: Count, at appPrice: USDollar) -> USDollar {
 }
 
 revenue(on: numberSold, at: price)
+//: [TOC](00TOC) | Previous | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

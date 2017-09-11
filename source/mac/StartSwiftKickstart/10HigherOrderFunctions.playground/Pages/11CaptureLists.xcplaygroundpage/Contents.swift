@@ -1,6 +1,5 @@
 //: ### Capture Lists
-//: [TOC](TOC) - [Previous](@previous) - Next
+//: [TOC](00TOC) | [Previous](@previous) | Next
 
+//: [TOC](00TOC) | [Previous](@previous) | Next
 
-
-//: [TOC](TOC) - [Previous](@previous) - Next
