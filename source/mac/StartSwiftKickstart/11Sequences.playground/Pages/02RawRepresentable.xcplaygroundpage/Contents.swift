@@ -1,7 +1,6 @@
 //: ### Raw Representable
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-enum Cardinal : Int {
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+enum Cardinal: Int {
     case zero
     case one
     case two
@@ -10,6 +9,4 @@ enum Cardinal : Int {
 }
 
 let number = Cardinal.three
-
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

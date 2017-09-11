@@ -1,11 +1,10 @@
 //: ### Subscripts
-//: [TOC](TOC) | [Previous](@previous) | Next
-
-protocol EnumIterable : RawRepresentable {
+//: [TOC](00TOC) | [Previous](@previous) | Next
+protocol EnumIterable: RawRepresentable {
     init?(rawValue: Int)
 }
 
-enum Cardinal : Int, EnumIterable {
+enum Cardinal: Int, EnumIterable {
     case zero
     case one
     case two
@@ -14,7 +13,7 @@ enum Cardinal : Int, EnumIterable {
 }
 
 
-struct IterableSequence<IterableValues : EnumIterable> : Sequence, IteratorProtocol {
+struct IterableSequence<IterableValues: EnumIterable>: Sequence, IteratorProtocol {
     private var index = 0
     
     mutating func next() -> IterableValues? {
@@ -46,5 +45,4 @@ sequence[-30]
 
 // arrayFromSequence[30]
 // arrayFromSequence[-30]
-
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](00TOC) | [Previous](@previous) | Next

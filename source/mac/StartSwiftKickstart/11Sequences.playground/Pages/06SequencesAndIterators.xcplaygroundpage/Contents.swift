@@ -1,7 +1,6 @@
-//: ### Generic
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-enum Cardinal : Int {
+//: ### Sequences and Iterators
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+enum Cardinal: Int {
     case zero
     case one
     case two
@@ -9,13 +8,18 @@ enum Cardinal : Int {
     case four
 }
 
-
-struct CardinalSequence : Sequence, IteratorProtocol {
+struct CardinalIterator: IteratorProtocol {
     private var index = 0
     
     mutating func next() -> Cardinal? {
         defer {index += 1}
         return Cardinal(rawValue: index)
+    }
+}
+
+struct CardinalSequence: Sequence {
+    func makeIterator() -> CardinalIterator {
+        return CardinalIterator()
     }
 }
 
@@ -31,6 +35,7 @@ while let cardinal = iterator.next() {
 
 arrayFromIterator
 
+
 var arrayFromSequence = [Cardinal]()
 
 for element in sequence {
@@ -42,4 +47,4 @@ arrayFromSequence
 let mappedArrayFromSequence = sequence.map{$0}
 mappedArrayFromSequence
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

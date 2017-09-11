@@ -1,8 +1,6 @@
 //: ### Raw Representable
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-protocol EnumIterable : RawRepresentable {
-    typealias RawValue = Int
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+protocol EnumIterable: RawRepresentable where RawValue == Int {
     func next() -> Self?
 }
 
@@ -12,7 +10,7 @@ extension EnumIterable {
     }
 }
 
-enum Cardinal : Int, EnumIterable {
+enum Cardinal: Int, EnumIterable {
     case zero
     case one
     case two
@@ -23,5 +21,5 @@ enum Cardinal : Int, EnumIterable {
 let number = Cardinal.three
 let nextNumber = number.next()
 nextNumber?.next()
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+nextNumber?.next()?.next()?.next()
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

@@ -1,6 +1,5 @@
-//: ### Generic
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: ### Generics
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 protocol EnumIterable : RawRepresentable {
     init?(rawValue: Int)
 }
@@ -35,5 +34,4 @@ arrayFromSequence
 
 let mappedArrayFromSequence = sequence.map{$0}
 mappedArrayFromSequence
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

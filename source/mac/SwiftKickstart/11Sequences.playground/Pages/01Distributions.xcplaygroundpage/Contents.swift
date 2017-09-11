@@ -1,6 +1,5 @@
 //: ### Distributions
-//: [TOC](TOC) | Previous | [Next](@next)
-
+//: [TOC](00TOC) | Previous | [Next](@next)
 import GameplayKit
 
 
@@ -42,6 +41,6 @@ randomSample(using: gaussian)
 let shuffled = GKShuffledDistribution(lowestValue: 1, highestValue: 5)
 
 randomSample(using: shuffled)
+//: [TOC](00TOC) | Previous | [Next](@next)
 
 
-//: [TOC](TOC) | Previous | [Next](@next)

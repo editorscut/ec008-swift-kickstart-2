@@ -1,8 +1,7 @@
 //: ### while let
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-protocol EnumIterable : RawRepresentable {
-    typealias RawValue = Int
+protocol EnumIterable: RawRepresentable where RawValue == Int {
     func next() -> Self?
     static var first: Self? {get}
 }
@@ -16,7 +15,7 @@ extension EnumIterable {
     }
 }
 
-enum Cardinal : Int, EnumIterable {
+enum Cardinal: Int, EnumIterable {
     case zero
     case one
     case two
@@ -35,7 +34,4 @@ while let current = currentElement {
 
 cardinalArray
 
-
-
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

@@ -1,7 +1,6 @@
 //: ### Sequences
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-enum Cardinal : Int {
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+enum Cardinal: Int {
     case zero
     case one
     case two
@@ -10,7 +9,7 @@ enum Cardinal : Int {
 }
 
 
-struct CardinalIterator : IteratorProtocol {
+struct CardinalIterator: IteratorProtocol {
     private var index = 0
     
     mutating func next() -> Cardinal? {
@@ -28,4 +27,4 @@ while let cardinal = iterator.next() {
 }
 
 cardinalArray
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

@@ -5,7 +5,7 @@
  * [03 while let](03WhileLet)
  * [04 Iterators](04Iterators)
  * [05 Sequences](05Sequences)
- * [06 Sequence and Iterator](06SequenceAndIterator)
- * [07 Generic](07Generic)
- * [08 Subscripts](07Subscripts)
+ * [06 Sequences and Iterators](06SequencesAndIterators)
+ * [07 Generics](07Generics)
+ * [08 Subscripts](08Subscripts)
  */

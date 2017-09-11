@@ -1,6 +1,5 @@
 //: ### Sequences
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 enum Cardinal : Int {
     case zero
     case one
@@ -47,4 +46,4 @@ arrayFromSequence
 
 let mappedArrayFromSequence = sequence.map{$0}
 mappedArrayFromSequence
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

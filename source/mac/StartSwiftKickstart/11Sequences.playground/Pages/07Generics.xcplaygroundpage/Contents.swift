@@ -1,7 +1,6 @@
-//: ### Sequence and Iterator
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-enum Cardinal : Int {
+//: ### Generics
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+enum Cardinal: Int {
     case zero
     case one
     case two
@@ -10,7 +9,7 @@ enum Cardinal : Int {
 }
 
 
-struct CardinalSequence : Sequence, IteratorProtocol {
+struct CardinalSequence: Sequence, IteratorProtocol {
     private var index = 0
     
     mutating func next() -> Cardinal? {
@@ -42,4 +41,4 @@ arrayFromSequence
 let mappedArrayFromSequence = sequence.map{$0}
 mappedArrayFromSequence
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
