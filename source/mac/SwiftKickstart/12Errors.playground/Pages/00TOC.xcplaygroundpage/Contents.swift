@@ -5,9 +5,10 @@
  * [03 Asserts](03Asserts)
  * [04 Throwing Errors](04ThrowingErrors)
  * [05 Catching Errors](05CatchingErrors)
- * [06 defer](06Defer)
+ * [06 Defer](06Defer)
  * [07 Structs](07Structs)
  * [08 Enumerations](08Enumerations)
  * [09 Multiple Catches](09MultipleCatches)
- * [10 rethrows](10Rethrows)
+ * [10 Rethrows](10Rethrows)
  */
+

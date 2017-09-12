@@ -1,20 +1,14 @@
 //: ### Asserts
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 extension Forecast {
-    static func number(_ index: Int) -> String? {
-        if case 0 ..< count = index {
-            return Forecast()[index]
-        } else {
-            return nil
-        }
+    static func number(_ index: Int) -> String {
+        assert(index >= 0 && index < count, "Out of bounds")
+        return Forecast()[index]
     }
 }
+
 
 Forecast.number(0)
 //Forecast.number(-2)
 //Forecast.number(20)
-
-
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

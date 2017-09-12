@@ -1,6 +1,5 @@
 //: ### Throwing Errors
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 //extension Forecast {
 //    static func number(_ index: Int) -> String {
 //        if index < 0 || index >= count {
@@ -12,7 +11,7 @@
 //}
 
 
-struct SubscriptOutOfBoundsError : Error {
+struct SubscriptOutOfBoundsError: Error {
 }
 
 extension Forecast {
@@ -36,8 +35,8 @@ let forecast20 = try? Forecast.number(20)
 
 func forecastNumber(_ index: Int) -> String {
     guard let forecast = try? Forecast.number(index),
-                         index < 3 else {
-        return "error: can't get forecast for index \(index)"
+        index < 3 else {
+            return "error: can't get forecast for index \(index)"
     }
     return "forecast number \(index) is \(forecast)"
 }
@@ -47,5 +46,5 @@ forecastNumber(20)
 forecastNumber(-2)
 forecastNumber(3)
 
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

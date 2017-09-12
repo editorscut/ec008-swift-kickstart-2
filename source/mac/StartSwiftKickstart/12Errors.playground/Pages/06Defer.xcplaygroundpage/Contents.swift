@@ -1,8 +1,6 @@
 //: ### Defer
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-
-struct SubscriptOutOfBoundsError : Error {
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+struct SubscriptOutOfBoundsError: Error {
 }
 
 extension Forecast {
@@ -29,6 +27,8 @@ func forecastNumber(_ index: Int) -> String {
     }
 }
 
+
+
 forecastNumber(0)
 
 forecastNumber(20)
@@ -36,4 +36,5 @@ forecastNumber(20)
 forecastNumber(-2)
 
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+status
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

@@ -1,7 +1,5 @@
 //: ### Examples
-//: [TOC](TOC) | Previous | [Next](@next)
-
-
+//: [TOC](00TOC) | Previous | [Next](@next)
 //let dictionary = ["one": 1, "two": 2]
 //
 //let two = dictionary["two"]
@@ -11,19 +9,12 @@
 //array[2]
 //array[7]
 
-//let myInt = 5
-//
-//let myIntAsDouble = myInt as? Double
-
-//let notDefined = 60 / 0
-
-
 //import Foundation
 //
 //
 //setUp()
 //
-//let url = URL(string: "https://editorscut.com/")
+//let url = URL(string: "http://editorscut.c/")
 //
 //
 //let task = URLSession
@@ -46,7 +37,4 @@
 //Forecast.number(-2)
 //Forecast.number(20)
 
-
-
-
-//: [TOC](TOC) | Previous | [Next](@next)
+//: [TOC](00TOC) | Previous | [Next](@next)

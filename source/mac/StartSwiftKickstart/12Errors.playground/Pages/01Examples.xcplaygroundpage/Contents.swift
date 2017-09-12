@@ -1,6 +1,5 @@
-//: ### Subscripts
-//: [TOC](TOC) | Previous | [Next](@next)
-
+//: ### Examples
+//: [TOC](00TOC) | Previous | [Next](@next)
 
 
 //import Foundation
@@ -8,20 +7,18 @@
 //
 //setUp()
 //
-//let url = URL(string: "https://editorscut.com/")
+//let url = URL(string: "http://editorscut.c/")
 //
 //
-//let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+//let task = URLSession
+//          .shared
+//          .dataTask(with: url!) { (data, response, error) in
 //    print("response", response ?? "no response")
 //    print(error ?? "no error")
 //    shutDown()
 //}
 //
 //task.resume()
-//
 
 
-
-
-
-//: [TOC](TOC) | Previous | [Next](@next)
+//: [TOC](00TOC) | Previous | [Next](@next)

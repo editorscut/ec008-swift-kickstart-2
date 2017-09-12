@@ -1,6 +1,5 @@
 //: ### Throwing Errors
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 extension Forecast {
     static func number(_ index: Int) -> String {
         if index < 0 || index >= count {
@@ -12,4 +11,5 @@ extension Forecast {
 }
 
 
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+

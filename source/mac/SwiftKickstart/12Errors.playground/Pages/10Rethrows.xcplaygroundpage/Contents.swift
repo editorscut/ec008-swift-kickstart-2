@@ -1,12 +1,11 @@
-//: ### rethrows
-//: [TOC](TOC) | [Previous](@previous) | Next
-
-enum SubscriptOutOfBoundsError : Error {
+//: ### Rethrows
+//: [TOC](00TOC) | [Previous](@previous) | Next
+enum SubscriptOutOfBoundsError: Error {
     case negativeIndexError
     case indexIsTooLargeError(amountOver: Int)
 }
 
-extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
+extension SubscriptOutOfBoundsError: CustomDebugStringConvertible {
     var debugDescription: String {
         switch self {
         case .negativeIndexError:
@@ -64,9 +63,4 @@ func sayHi(_ repeating: Int) -> String {
 sayHi(5)
 
 rethrowsExample(3, using: sayHi)
-
-
-
-
-
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](00TOC) | [Previous](@previous) | Next

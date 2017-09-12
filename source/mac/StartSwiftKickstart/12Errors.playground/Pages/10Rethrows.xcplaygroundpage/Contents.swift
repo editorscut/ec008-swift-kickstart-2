@@ -1,6 +1,5 @@
-//: ### rethrows
-//: [TOC](TOC) | [Previous](@previous) | Next
-
+//: ### Rethrows
+//: [TOC](00TOC) | [Previous](@previous) | Next
 enum SubscriptOutOfBoundsError : Error {
     case negativeIndexError
     case indexIsTooLargeError(amountOver: Int)
@@ -29,6 +28,4 @@ extension Forecast {
         return Forecast()[index]
     }
 }
-
-
-//: [TOC](TOC) | [Previous](@previous) | Next
+//: [TOC](00TOC) | [Previous](@previous) | Next

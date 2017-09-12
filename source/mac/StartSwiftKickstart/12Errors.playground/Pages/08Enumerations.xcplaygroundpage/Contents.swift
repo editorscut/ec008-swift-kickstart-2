@@ -1,7 +1,5 @@
 //: ### Enumerations
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 struct SubscriptOutOfBoundsError : Error {
     let reason: String
 }
@@ -39,5 +37,4 @@ forecastNumber(0)
 forecastNumber(20)
 
 forecastNumber(-2)
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

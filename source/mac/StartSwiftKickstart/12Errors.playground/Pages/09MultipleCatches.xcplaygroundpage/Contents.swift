@@ -1,7 +1,5 @@
 //: ### Multiple Catches
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 enum SubscriptOutOfBoundsError : Error {
     case negativeIndexError
     case indexIsTooLargeError(amountOver: Int)
@@ -46,5 +44,4 @@ forecastNumber(20)
 forecastNumber(-2)
 forecastNumber(7)
 
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

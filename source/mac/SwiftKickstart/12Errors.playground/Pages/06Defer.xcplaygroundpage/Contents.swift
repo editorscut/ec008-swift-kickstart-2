@@ -1,8 +1,6 @@
 //: ### Defer
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-
-struct SubscriptOutOfBoundsError : Error {
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+struct SubscriptOutOfBoundsError: Error {
 }
 
 extension Forecast {
@@ -65,6 +63,4 @@ forecastNumber(-2)
 
 
 status
-
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

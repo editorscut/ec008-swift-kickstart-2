@@ -1,9 +1,6 @@
 //: ### Catching Errors
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-
-
-struct SubscriptOutOfBoundsError : Error {
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+struct SubscriptOutOfBoundsError: Error {
 }
 
 extension Forecast {
@@ -52,6 +49,5 @@ forecastNumber(20)
 
 forecastNumber(-2)
 
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)

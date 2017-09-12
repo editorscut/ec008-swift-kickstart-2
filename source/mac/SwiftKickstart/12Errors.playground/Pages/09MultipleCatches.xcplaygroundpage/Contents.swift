@@ -1,7 +1,5 @@
 //: ### Multiple Catches
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 enum SubscriptOutOfBoundsError : Error {
     case negativeIndexError
     case indexIsTooLargeError(amountOver: Int)
@@ -84,14 +82,14 @@ func forecastNumber(_ index: Int) -> String {
         return "too small: \(index) \(error)"
     }
     catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess)
-                                                         where excess < 5 {
-        let error = SubscriptOutOfBoundsError
-                   .indexIsTooLargeError(amountOver: excess)
-        return "slightly over: \(index) \(error)"
+        where excess < 5 {
+            let error = SubscriptOutOfBoundsError
+                .indexIsTooLargeError(amountOver: excess)
+            return "slightly over: \(index) \(error)"
     }
     catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess) {
         let error = SubscriptOutOfBoundsError
-                   .indexIsTooLargeError(amountOver: excess)
+            .indexIsTooLargeError(amountOver: excess)
         return "too big: \(index) " + "\(error))"
     }
     catch {
@@ -108,6 +106,4 @@ forecastNumber(20)
 forecastNumber(-2)
 
 forecastNumber(7)
-
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

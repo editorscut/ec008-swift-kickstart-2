@@ -1,7 +1,5 @@
 //: ### Enumerations
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 enum SubscriptOutOfBoundsError : Error {
     case negativeIndexError
     case indexIsTooLargeError(amountOver: Int)
@@ -26,7 +24,7 @@ extension Forecast {
         } else if index >= Forecast.count {
             let excess = index - Forecast.count + 1
             throw SubscriptOutOfBoundsError
-                 .indexIsTooLargeError(amountOver: excess)
+                .indexIsTooLargeError(amountOver: excess)
         }
         return Forecast()[index]
     }
@@ -47,5 +45,4 @@ forecastNumber(0)
 forecastNumber(20)
 
 forecastNumber(-2)
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

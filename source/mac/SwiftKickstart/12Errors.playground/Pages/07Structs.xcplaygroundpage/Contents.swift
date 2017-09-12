@@ -1,12 +1,10 @@
 //: ### Structs
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
-
-
-struct SubscriptOutOfBoundsError : Error {
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+struct SubscriptOutOfBoundsError: Error {
     let reason: String
 }
 
-extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
+extension SubscriptOutOfBoundsError: CustomDebugStringConvertible {
     var debugDescription: String {
         return "Subscript out of bounds - \(reason)"
     }
@@ -16,7 +14,7 @@ extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
 //extension Forecast {
 //    static func number(_ index: Int) throws -> String {
 //        if index < 0 || index >= Forecast.count {
-//            throw SubscriptOutOfBoundsError(reason: 
+//            throw SubscriptOutOfBoundsError(reason:
 //                                              "Index out of bounds")
 //        }
 //        return Forecast()[index]
@@ -27,10 +25,10 @@ extension Forecast {
     static func number(_ index: Int) throws -> String {
         if index < 0 {
             throw SubscriptOutOfBoundsError(reason:
-                                              "\(index) is less than zero")
+                "\(index) is less than zero")
         } else if index >= Forecast.count {
             throw SubscriptOutOfBoundsError(reason:
-                                              "\(index) is greater than \(count)")
+                "\(index) is greater than \(count)")
         }
         return Forecast()[index]
     }
@@ -52,5 +50,4 @@ forecastNumber(0)
 forecastNumber(20)
 
 forecastNumber(-2)
-
-//: [TOC](TOC) | [Previous](@previous) | [Next](@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
