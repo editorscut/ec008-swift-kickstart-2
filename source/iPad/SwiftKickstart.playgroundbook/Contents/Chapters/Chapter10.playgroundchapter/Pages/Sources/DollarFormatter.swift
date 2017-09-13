@@ -14,3 +14,4 @@ struct DollarFormatter {
         return "$" + (formatter.string(from: dollarNumber) ?? "0.00")
     }
 }
+

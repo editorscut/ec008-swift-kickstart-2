@@ -1,4 +1,3 @@
-
 let numberSold = [17, 29, 11, 15, 32, 21, 27]
 
 let dailyNumberSold = ["Mon": 17, "Tue": 29,
@@ -9,7 +8,6 @@ let dailyNumberSold = ["Mon": 17, "Tue": 29,
 let weekendDays = ["Sat", "Sun"]
 
 extension Sequence {
-    typealias Element = Iterator.Element
     func keep(using f: (Element) -> Bool) -> [Element] {
         var output = [Element]()
         for element in self {

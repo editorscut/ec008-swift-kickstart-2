@@ -3,6 +3,6 @@ class Attendee {
     let hometown = "Shaker Heights"
 }
 
-let person1 = Attendee()
-person1.name
-person1.hometown
+let person = Attendee()
+person.name
+person.hometown

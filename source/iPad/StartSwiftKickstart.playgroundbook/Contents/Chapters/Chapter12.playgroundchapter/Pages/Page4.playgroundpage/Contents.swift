@@ -9,7 +9,7 @@
 //}
 
 
-struct SubscriptOutOfBoundsError : Error {
+struct SubscriptOutOfBoundsError: Error {
 }
 
 extension Forecast {

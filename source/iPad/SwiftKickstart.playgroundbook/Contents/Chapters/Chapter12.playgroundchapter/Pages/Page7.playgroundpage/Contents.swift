@@ -1,8 +1,8 @@
-struct SubscriptOutOfBoundsError : Error {
+struct SubscriptOutOfBoundsError: Error {
     let reason: String
 }
 
-extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
+extension SubscriptOutOfBoundsError: CustomDebugStringConvertible {
     var debugDescription: String {
         return "Subscript out of bounds - \(reason)"
     }
@@ -12,7 +12,8 @@ extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
 //extension Forecast {
 //    static func number(_ index: Int) throws -> String {
 //        if index < 0 || index >= Forecast.count {
-//            throw SubscriptOutOfBoundsError(reason: "Index out of bounds")
+//            throw SubscriptOutOfBoundsError(reason:
+//                                              "Index out of bounds")
 //        }
 //        return Forecast()[index]
 //    }
@@ -21,9 +22,11 @@ extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
 extension Forecast {
     static func number(_ index: Int) throws -> String {
         if index < 0 {
-            throw SubscriptOutOfBoundsError(reason: "\(index) is less than zero")
+            throw SubscriptOutOfBoundsError(reason:
+                "\(index) is less than zero")
         } else if index >= Forecast.count {
-            throw SubscriptOutOfBoundsError(reason: "\(index) is greater than \(count)")
+            throw SubscriptOutOfBoundsError(reason:
+                "\(index) is greater than \(count)")
         }
         return Forecast()[index]
     }

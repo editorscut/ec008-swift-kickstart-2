@@ -22,12 +22,14 @@ extension Model { // Non-Mutating Methods
         mutableArray.remove(at: index)
         return Model(privateArray: mutableArray)
     }
-    func inserted(_ string: String, at index: Int) -> Model {
+    func inserted(_ string: String,
+                  at index: Int) -> Model {
         var mutableArray = privateArray
         mutableArray.insert(string, at: index)
         return Model(privateArray: mutableArray)
     }
-    func moved(from fromIndex: Int, to toIndex: Int) -> Model {
+    func moved(from fromIndex: Int,
+               to toIndex: Int) -> Model {
         return removed(at: fromIndex)
             .inserted(privateArray[fromIndex], at: toIndex)
     }

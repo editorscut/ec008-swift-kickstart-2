@@ -8,11 +8,12 @@ typealias Count = Int
 typealias EarningsCalculator = (Count) -> USDollars
 
 func revenue(for numberSold: Count) -> USDollars {
-    return Double(numberSold) * 0.99 * 0.70
+    return USDollars(numberSold) * 0.99 * 0.70
 }
 revenue(for: 10)
 
-func earnings(for numbersSold: Count, using calculation: EarningsCalculator) -> USDollars {
+func earnings(for numbersSold: Count,
+              using calculation: EarningsCalculator) -> USDollars {
     return calculation(numbersSold)
 }
 

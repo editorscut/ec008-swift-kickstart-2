@@ -1,4 +1,4 @@
-enum Color : String {
+enum Color: String {
     case red = "Maraschino"
     case green
     case blue = "Blueberry"
@@ -6,8 +6,5 @@ enum Color : String {
 
 let crayon = Color.green
 crayon.rawValue
-
 let paintBrush = Color.red
 paintBrush.rawValue
-
-let marker = Color(rawValue: "Blueberry")

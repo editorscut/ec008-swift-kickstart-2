@@ -18,7 +18,8 @@ enum Desktop {
     }
 }
 
-let backgrounds = [Desktop.color(.yellow), .black, .color(.red), .color(.blue)]
+let backgrounds = [Desktop.color(.yellow), .black,
+                   .color(.red), .color(.blue)]
 
 backgrounds[0].isRed()
 backgrounds[1].isRed()
@@ -43,9 +44,10 @@ colorString(from: backgrounds[3])
 
 func redOnesDeleted(from startingArray: [Desktop]) -> [PrimaryColor] {
     var tempArray = [PrimaryColor]()
-    for case .color(let primaryColor) in startingArray where primaryColor != .red {
-        tempArray.append(primaryColor)
-        
+    for case .color(let primaryColor) in startingArray
+        where primaryColor != .red {
+            tempArray.append(primaryColor)
+            
     }
     return tempArray
 }
@@ -55,8 +57,10 @@ redOnesDeleted(from: backgrounds)
 let tiledBackground = Desktop.tiled(.red, .yellow, 5, 3)
 
 switch tiledBackground {
-case let .tiled(firstColor, secondColor, numberOfRows, numberOfColumns):
-    print("The \(numberOfRows) x \(numberOfColumns) grid is \(firstColor) and \(secondColor)")
+case let .tiled(firstColor, secondColor,
+                numberOfRows, numberOfColumns):
+    print("The \(numberOfRows) x \(numberOfColumns) grid "
+        + "is \(firstColor) and \(secondColor)")
 default:
     print("It's not tiled")
 }

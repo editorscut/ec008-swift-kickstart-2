@@ -1,5 +1,8 @@
-func hello(name: String) -> String {
-    return "Hello, \(name)!"
+func hello(_ name: String = "World",
+           from city: String = "Cupertino") -> String {
+    return "Hello, \(name) who comes from \(city)!"
 }
-
-hello(name: "my friend")
+hello()
+hello("my friend", from: "London")
+hello("my friend")
+hello(from: "London")

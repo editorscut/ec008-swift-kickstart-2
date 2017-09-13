@@ -5,7 +5,7 @@ enum Color {
     case green
     case blue
     
-    func uiColor() -> UIColor {
+    var uiColor: UIColor {
         switch self {
         case .red:
             return UIColor.red
@@ -16,15 +16,18 @@ enum Color {
         }
     }
     
-    func swatch(width: Int, height: Int) -> UIView {
-        let myView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: height))
-        myView.backgroundColor = uiColor()
+    func swatch(_ width: Int, by height: Int) -> UIView {
+        let myView = UIView(frame: CGRect(x: 0,
+                                          y: 0,
+                                          width: width,
+                                          height: height))
+        myView.backgroundColor = uiColor
         return myView
     }
 }
 
 let crayon = Color.blue
-crayon.uiColor()
+crayon.uiColor
 
 let paintBrush = Color.red
-paintBrush.uiColor()
+paintBrush.uiColor

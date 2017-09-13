@@ -35,4 +35,3 @@ extension Forecast {
 Forecast.number(0)
 //Forecast.number(-2)
 //Forecast.number(20)
-

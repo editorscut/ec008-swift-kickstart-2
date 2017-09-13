@@ -1,4 +1,4 @@
-struct Model <Element : CustomStringConvertible & Equatable> {
+struct Model <Element> {
     fileprivate let privateArray: [Element]
     
     init(_ elements: Element...) {
@@ -22,12 +22,14 @@ extension Model { // Non-Mutating Methods
         mutableArray.remove(at: index)
         return Model(privateArray: mutableArray)
     }
-    func inserted(_ element: Element, at index: Int) -> Model {
+    func inserted(_ element: Element,
+                  at index: Int) -> Model {
         var mutableArray = privateArray
         mutableArray.insert(element, at: index)
         return Model(privateArray: mutableArray)
     }
-    func moved(from fromIndex: Int, to toIndex: Int) -> Model {
+    func moved(from fromIndex: Int,
+               to toIndex: Int) -> Model {
         return removed(at: fromIndex)
             .inserted(privateArray[fromIndex], at: toIndex)
     }

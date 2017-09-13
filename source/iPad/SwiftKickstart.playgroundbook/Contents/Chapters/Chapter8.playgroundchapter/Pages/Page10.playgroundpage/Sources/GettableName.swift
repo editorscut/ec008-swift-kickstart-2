@@ -5,3 +5,4 @@ public class GettableName {
         self.name = name
     }
 }
+

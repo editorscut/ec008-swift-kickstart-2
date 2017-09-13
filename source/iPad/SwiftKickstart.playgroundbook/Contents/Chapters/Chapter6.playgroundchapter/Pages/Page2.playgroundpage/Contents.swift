@@ -4,6 +4,8 @@
 //}
 //
 //let point = Vertex()
+//point.x
+//point.y
 
 struct Vertex {
     let x, y: Double

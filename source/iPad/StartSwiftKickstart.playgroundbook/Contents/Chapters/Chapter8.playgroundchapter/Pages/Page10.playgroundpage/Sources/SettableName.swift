@@ -5,3 +5,4 @@ public class SettableName {
         self.name = name
     }
 }
+

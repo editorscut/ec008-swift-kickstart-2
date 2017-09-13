@@ -1,14 +1,18 @@
 let numbers = ["one":1, "two":2, "three":3]
 
-let numbersKeys = numbers.keys
+let two = numbers["two"]
 
-for key in numbersKeys {
+
+if numbers.keys.contains("one") {
+    let one = numbers["one"]!
+    print(one)
+}
+
+for key in numbers.keys {
     print(key, ":", numbers[key]!)
 }
 
-let numbersValues = numbers.values
-
-for value in numbersValues {
+for value in numbers.values {
     print(value)
 }
 

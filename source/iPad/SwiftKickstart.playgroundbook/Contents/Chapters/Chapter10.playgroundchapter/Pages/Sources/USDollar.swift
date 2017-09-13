@@ -8,7 +8,7 @@ public struct USDollar {
     }
 }
 
-extension USDollar : CustomStringConvertible {
+extension USDollar: CustomStringConvertible {
     public var description: String {
         return formatter.format(self)
     }
@@ -17,5 +17,3 @@ extension USDollar : CustomStringConvertible {
 public func +(lhs: USDollar, rhs: USDollar) -> USDollar {
     return USDollar(lhs.value + rhs.value)
 }
-
-

@@ -1,8 +1,8 @@
-protocol EnumIterable : RawRepresentable {
+protocol EnumIterable: RawRepresentable {
     init?(rawValue: Int)
 }
 
-enum Cardinal : Int, EnumIterable {
+enum Cardinal: Int, EnumIterable {
     case zero
     case one
     case two
@@ -11,7 +11,7 @@ enum Cardinal : Int, EnumIterable {
 }
 
 
-struct IterableSequence<IterableValues : EnumIterable> : Sequence, IteratorProtocol {
+struct IterableSequence<IterableValues: EnumIterable>: Sequence, IteratorProtocol {
     private var index = 0
     
     mutating func next() -> IterableValues? {

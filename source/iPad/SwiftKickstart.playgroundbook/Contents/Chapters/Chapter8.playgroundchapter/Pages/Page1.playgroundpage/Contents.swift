@@ -3,40 +3,42 @@ protocol Movable {
 }
 
 struct Vertex {
-    let x, y : Int
+    let x, y: Int
     
     func movedHorizontally(by deltaX: Int) -> Vertex {
         return Vertex(x: x + deltaX, y: y)
     }
 }
 
-extension Vertex : CustomStringConvertible {
+extension Vertex: CustomStringConvertible {
     var description: String {
         return "(\(x), \(y))"
     }
 }
 
 struct Size {
-    let width, height : Int
+    let width, height: Int
 }
 
-extension Size : CustomStringConvertible {
+extension Size: CustomStringConvertible {
     var description: String {
         return "\(width) by \(height)"
     }
 }
 
 struct Rectangle {
-    let topLeftCorner : Vertex
-    let size : Size
+    let topLeftCorner: Vertex
+    let size: Size
     
     func movedHorizontally(by deltaX: Int) -> Rectangle {
-        let movedTopLeftCorner = topLeftCorner.movedHorizontally(by: deltaX)
-        return Rectangle(topLeftCorner: movedTopLeftCorner, size: size)
+        let movedTopLeftCorner
+            = topLeftCorner.movedHorizontally(by: deltaX)
+        return Rectangle(topLeftCorner: movedTopLeftCorner,
+                         size: size)
     }
 }
 
-extension Rectangle : CustomStringConvertible {
+extension Rectangle: CustomStringConvertible {
     var description: String {
         return "\(size) at \(topLeftCorner)"
     }
@@ -44,4 +46,5 @@ extension Rectangle : CustomStringConvertible {
 
 let vertex = Vertex(x: 3, y: 4)
 let size = Size(width: 100, height: 50)
-let rectangle = Rectangle(topLeftCorner: vertex, size: size)
+let rectangle = Rectangle(topLeftCorner: vertex,
+                          size: size)

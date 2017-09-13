@@ -1,4 +1,4 @@
-enum Cardinal : Int {
+enum Cardinal: Int {
     case zero
     case one
     case two
@@ -7,7 +7,7 @@ enum Cardinal : Int {
 }
 
 
-struct CardinalSequence : Sequence, IteratorProtocol {
+struct CardinalSequence: Sequence, IteratorProtocol {
     private var index = 0
     
     mutating func next() -> Cardinal? {

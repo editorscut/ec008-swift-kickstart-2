@@ -1,6 +1,6 @@
 //: ### Capture Lists
 //: [TOC](00TOC) | [Previous](@previous) | Next
-class FirstView : LoggingView {
+class FirstView: LoggingView {
 
     var secondView: SecondView?
 
@@ -15,7 +15,7 @@ class FirstView : LoggingView {
 }
 
 
-//class FirstView : LoggingView {
+//class FirstView: LoggingView {
 //
 //    var secondView: SecondView?
 //
@@ -28,7 +28,7 @@ class FirstView : LoggingView {
 //    }
 //}
 
-class SecondView : LoggingView {
+class SecondView: LoggingView {
     var dismiss: (() -> () )?
     
     func returnToFirst() {

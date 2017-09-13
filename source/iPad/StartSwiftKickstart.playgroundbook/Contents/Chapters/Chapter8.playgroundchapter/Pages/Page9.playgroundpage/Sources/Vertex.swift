@@ -1,5 +1,5 @@
 public struct Vertex {
-    let x, y : Int
+    let x, y: Int
     
     public init(x: Int, y: Int) {
         self.x = x
@@ -7,7 +7,7 @@ public struct Vertex {
     }
 }
 
-extension Vertex : Movable {
+extension Vertex: Movable {
     public var location: Vertex {
         return self
     }
@@ -16,8 +16,9 @@ extension Vertex : Movable {
     }
 }
 
-extension Vertex : CustomStringConvertible {
+extension Vertex: CustomStringConvertible {
     public var description: String {
         return "(\(x), \(y))"
     }
 }
+

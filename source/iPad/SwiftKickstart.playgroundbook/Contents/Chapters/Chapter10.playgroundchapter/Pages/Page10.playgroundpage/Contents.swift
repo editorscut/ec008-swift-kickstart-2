@@ -31,7 +31,6 @@ let languageFlatMap = dictionary.flatMap{ (key, langArray) in
 let languages = Array(Set(languageFlatMap))
 
 //: map and flatmap for optionals
-
 let firstLanguageMap = dictionary["Joan"].map{$0.first}
 firstLanguageMap
 let firstLanguageFlatMap = dictionary["Joan"].flatMap{$0.first}

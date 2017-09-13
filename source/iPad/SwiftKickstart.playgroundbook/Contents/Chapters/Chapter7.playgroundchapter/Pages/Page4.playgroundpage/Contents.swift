@@ -1,27 +1,33 @@
 class Attendee {
-    let name : String
-    let hometown : String
+    let name: String
+    let hometown: String
     
-    required init(name: String, hometown: String = "Cupertino") {
+    required init(name: String,
+                  hometown: String = "Cupertino") {
         self.name = name
         self.hometown = hometown
     }
 }
 
 class TutorialAttendee : Attendee {
-    let tutorial : String
-    init(name: String, tutorial: String, hometown : String = "Cupertino"){
+    let tutorial: String
+    init(name: String,
+         tutorial: String,
+         hometown : String = "Cupertino"){
         self.tutorial = tutorial
         super.init(name: name, hometown: hometown)
     }
-    required init(name: String, hometown: String = "Cupertino"){
+    required init(name: String,
+                  hometown: String = "Cupertino"){
         tutorial = "iOS Development"
         super.init(name: name, hometown: hometown)
     }
 }
 
-let daniel = Attendee(name: "Daniel", hometown: "Shaker Heights")
-let kimberli = TutorialAttendee(name: "Kimberli", tutorial: "Swiftiness")
+let daniel = Attendee(name: "Daniel",
+                      hometown: "Shaker Heights")
+let kimberli = TutorialAttendee(name: "Kimberli",
+                                tutorial: "Swiftiness")
 daniel.name
 daniel.hometown
 kimberli.name

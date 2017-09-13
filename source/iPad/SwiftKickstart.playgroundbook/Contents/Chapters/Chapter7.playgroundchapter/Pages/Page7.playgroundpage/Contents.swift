@@ -3,8 +3,8 @@ let nameKey = "name"
 let hometownKey = "hometown"
 
 class Attendee {
-    let name : String
-    let hometown : String
+    let name: String
+    let hometown: String
     
     init?(dictionary: AttendeeInput) {
         guard let name = dictionary[nameKey],

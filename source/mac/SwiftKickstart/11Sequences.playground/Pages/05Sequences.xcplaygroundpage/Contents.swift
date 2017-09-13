@@ -1,6 +1,6 @@
 //: ### Sequences
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-enum Cardinal : Int {
+enum Cardinal: Int {
     case zero
     case one
     case two
@@ -8,7 +8,7 @@ enum Cardinal : Int {
     case four
 }
 
-struct CardinalIterator : IteratorProtocol {
+struct CardinalIterator: IteratorProtocol {
     private var index = 0
     
     mutating func next() -> Cardinal? {
@@ -17,7 +17,7 @@ struct CardinalIterator : IteratorProtocol {
     }
 }
 
-struct CardinalSequence : Sequence {
+struct CardinalSequence: Sequence {
     func makeIterator() -> CardinalIterator {
         return CardinalIterator()
     }

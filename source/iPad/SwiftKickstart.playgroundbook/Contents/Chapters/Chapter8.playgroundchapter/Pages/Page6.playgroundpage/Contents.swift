@@ -1,17 +1,17 @@
 protocol Movable {
-    var location : Vertex {get}
+    var location: Vertex {get}
     func movedHorizontally(by deltaX: Int) -> Self
 }
 
-func shiftedLeft<T : Movable>(movable: T) -> T {
+func shiftedLeft<T: Movable>(movable: T) -> T {
     return movable.movedHorizontally(by: -1)
 }
 
 struct Vertex {
-    let x, y : Int
+    let x, y: Int
 }
 
-extension Vertex : Movable {
+extension Vertex: Movable {
     public var location: Vertex {
         return self
     }
@@ -20,28 +20,28 @@ extension Vertex : Movable {
     }
 }
 
-extension Vertex : CustomStringConvertible {
+extension Vertex: CustomStringConvertible {
     var description: String {
         return "(\(x), \(y))"
     }
 }
 
 struct Size {
-    let width, height : Int
+    let width, height: Int
 }
 
-extension Size : CustomStringConvertible {
+extension Size: CustomStringConvertible {
     var description: String {
         return "\(width) by \(height)"
     }
 }
 
 struct Rectangle {
-    let topLeftCorner : Vertex
-    let size : Size
+    let topLeftCorner: Vertex
+    let size: Size
 }
 
-extension Rectangle : Movable {
+extension Rectangle: Movable {
     public var location: Vertex {
         let centerX = topLeftCorner.x + size.width/2
         let centerY = topLeftCorner.y + size.height/2
@@ -53,7 +53,7 @@ extension Rectangle : Movable {
     }
 }
 
-extension Rectangle : CustomStringConvertible {
+extension Rectangle: CustomStringConvertible {
     var description: String {
         return "\(size) at \(topLeftCorner)"
     }

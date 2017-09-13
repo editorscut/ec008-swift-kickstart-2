@@ -1,15 +1,18 @@
-protocol EnumIterable : RawRepresentable {
-    typealias RawValue = Int
+protocol EnumIterable: RawRepresentable where RawValue == Int {
     func next() -> Self?
+    static var first: Self? {get}
 }
 
 extension EnumIterable {
     func next() -> Self? {
         return Self(rawValue: rawValue + 1)
     }
+    static var first: Self? {
+        return Self(rawValue: 0)
+    }
 }
 
-enum Cardinal : Int, EnumIterable {
+enum Cardinal: Int, EnumIterable {
     case zero
     case one
     case two
@@ -17,6 +20,14 @@ enum Cardinal : Int, EnumIterable {
     case four
 }
 
-let number = Cardinal.three
-let nextNumber = number.next()
-nextNumber?.next()
+var cardinalArray = [Cardinal]()
+
+var currentElement = Cardinal.first
+
+while let current = currentElement {
+    cardinalArray.append(current)
+    currentElement = currentElement?.next()
+}
+
+cardinalArray
+

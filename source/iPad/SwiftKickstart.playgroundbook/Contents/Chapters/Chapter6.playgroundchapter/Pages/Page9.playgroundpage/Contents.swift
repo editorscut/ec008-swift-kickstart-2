@@ -33,7 +33,8 @@ postfix func ~>(vertex: Vertex) -> Vertex {
 infix operator <^>
 
 func <^>(vertexOne: Vertex, vertexTwo: Vertex) -> Double {
-    let difference = Vertex(x: vertexOne.x - vertexTwo.x, y: vertexOne.y - vertexTwo.y)
+    let difference = Vertex(x: vertexOne.x - vertexTwo.x,
+                            y: vertexOne.y - vertexTwo.y)
     return difference.magnitude()
 }
 

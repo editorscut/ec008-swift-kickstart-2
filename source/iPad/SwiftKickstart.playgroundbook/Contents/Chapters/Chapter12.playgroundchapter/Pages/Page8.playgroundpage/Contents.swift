@@ -43,3 +43,5 @@ forecastNumber(0)
 forecastNumber(20)
 
 forecastNumber(-2)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+

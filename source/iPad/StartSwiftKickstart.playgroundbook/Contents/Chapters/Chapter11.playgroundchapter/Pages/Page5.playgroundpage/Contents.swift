@@ -1,4 +1,4 @@
-enum Cardinal : Int {
+enum Cardinal: Int {
     case zero
     case one
     case two
@@ -6,8 +6,7 @@ enum Cardinal : Int {
     case four
 }
 
-
-struct CardinalIterator : IteratorProtocol {
+struct CardinalIterator: IteratorProtocol {
     private var index = 0
     
     mutating func next() -> Cardinal? {
@@ -16,12 +15,32 @@ struct CardinalIterator : IteratorProtocol {
     }
 }
 
-var iterator = CardinalIterator()
-
-var cardinalArray = [Cardinal]()
-
-while let cardinal = iterator.next() {
-    cardinalArray.append(cardinal)
+struct CardinalSequence: Sequence {
+    func makeIterator() -> CardinalIterator {
+        return CardinalIterator()
+    }
 }
 
-cardinalArray
+let sequence = CardinalSequence()
+
+var iterator = sequence.makeIterator()
+
+var arrayFromIterator = [Cardinal]()
+
+while let cardinal = iterator.next() {
+    arrayFromIterator.append(cardinal)
+}
+
+arrayFromIterator
+
+
+var arrayFromSequence = [Cardinal]()
+
+for element in sequence {
+    arrayFromSequence.append(element)
+}
+
+arrayFromSequence
+
+let mappedArrayFromSequence = sequence.map{$0}
+mappedArrayFromSequence

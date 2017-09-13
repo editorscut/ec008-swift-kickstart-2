@@ -1,6 +1,6 @@
 //: ### Iterators
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-enum Cardinal : Int {
+enum Cardinal: Int {
     case zero
     case one
     case two

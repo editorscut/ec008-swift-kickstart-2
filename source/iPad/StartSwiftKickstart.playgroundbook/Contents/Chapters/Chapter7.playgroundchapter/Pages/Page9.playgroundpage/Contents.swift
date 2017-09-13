@@ -13,14 +13,28 @@ class Location {
         self.city = city
         updateLog(with: "Create Location")
     }
+    deinit {
+        updateLog(with: "Destroy Location")
+    }
 }
 
 class Attendee {
     let name: String
-    var location = Location(city: "San Francisco")
+    lazy var location = Location(city: "San Francisco")
     
     init(name: String) {
         self.name = name
         updateLog(with: "Create Attendee")
     }
+    deinit {
+        updateLog(with: "Destroy Attendee")
+    }
 }
+
+var daniel = Attendee(name: "Daniel")
+log
+daniel.location.city
+log
+daniel = Attendee(name: "Kimberli")
+daniel.location.city
+log

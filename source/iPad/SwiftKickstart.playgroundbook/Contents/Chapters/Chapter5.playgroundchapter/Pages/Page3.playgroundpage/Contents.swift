@@ -16,8 +16,11 @@ enum Color {
         }
     }
     
-    func swatch(width: Int, height: Int) -> UIView {
-        let myView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+    func swatch(_ width: Int, by height: Int) -> UIView {
+        let myView = UIView(frame: CGRect(x: 0,
+                                          y: 0,
+                                          width: width,
+                                          height: height))
         myView.backgroundColor = uiColor()
         return myView
     }
@@ -25,8 +28,7 @@ enum Color {
 
 let crayon = Color.blue
 crayon.uiColor()
-crayon.swatch(width: 10, height: 100)
-
+crayon.swatch(10, by: 100)
 let paintBrush = Color.red
 paintBrush.uiColor()
-paintBrush.swatch(width: 100, height: 10)
+paintBrush.swatch(100, by: 10)

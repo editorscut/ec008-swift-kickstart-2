@@ -7,22 +7,17 @@
 //array[2]
 //array[7]
 
-//let myInt = 5
-//
-//let myIntAsDouble = myInt as? Double
-
-//let notDefined = 60 / 0
-
-
 //import Foundation
 //
 //
 //setUp()
 //
-//let url = URL(string: "https://editorscut.com/")
+//let url = URL(string: "http://editorscut.c/")
 //
 //
-//let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+//let task = URLSession
+//          .shared
+//          .dataTask(with: url!) { (data, response, error) in
 //    print("response", response ?? "no response")
 //    print(error ?? "no error")
 //    shutDown()
