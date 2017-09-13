@@ -1,32 +1,24 @@
-enum SubscriptOutOfBoundsError : Error {
-    case negativeIndexError
-    case indexIsTooLargeError(amountOver: Int)
+struct SubscriptOutOfBoundsError: Error {
+    let reason: String
 }
 
-
-extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
+extension SubscriptOutOfBoundsError: CustomDebugStringConvertible {
     var debugDescription: String {
-        switch self {
-        case .negativeIndexError:
-            return "is less than zero"
-        case .indexIsTooLargeError(let excess):
-            return "is greater than \(Forecast.count) by \(excess)"
-        }
+        return "Subscript out of bounds - \(reason)"
     }
 }
 
 extension Forecast {
     static func number(_ index: Int) throws -> String {
         if index < 0 {
-            throw SubscriptOutOfBoundsError.negativeIndexError
+            throw SubscriptOutOfBoundsError(reason: "\(index) is less than zero")
         } else if index >= Forecast.count {
-            let excess = index - Forecast.count + 1
-            throw SubscriptOutOfBoundsError
-                .indexIsTooLargeError(amountOver: excess)
+            throw SubscriptOutOfBoundsError(reason: "\(index) is greater than \(count)")
         }
         return Forecast()[index]
     }
 }
+
 
 func forecastNumber(_ index: Int) -> String {
     do {
@@ -34,7 +26,7 @@ func forecastNumber(_ index: Int) -> String {
         return "Success!: forecast number \(index) is \(forecast)"
     }
     catch {
-        return  "Error: \(index) \(error)"
+        return  "Error: \(error)"
     }
 }
 
@@ -43,5 +35,3 @@ forecastNumber(0)
 forecastNumber(20)
 
 forecastNumber(-2)
-//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-

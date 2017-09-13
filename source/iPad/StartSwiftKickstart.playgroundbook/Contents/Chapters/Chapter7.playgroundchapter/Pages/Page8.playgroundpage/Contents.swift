@@ -3,7 +3,6 @@ class StreetInformation {
     let name: String?
     let apartment: String?
     
-    
     init(number: String? = nil,
          name: String? = nil,
          apartment: String? = nil){
@@ -35,35 +34,4 @@ class Attendee {
         self.name = name
         self.address = address
     }
-}
-typealias Apartment = String
-
-func pyramidOfDoom(attendee: Attendee) -> Apartment? {
-    if let validAddress = attendee.address {
-        if let validStreetInformation = validAddress.streetInformation {
-            return validStreetInformation.apartment
-        }
-    }
-    return nil
-}
-
-func flatPyramid(attendee: Attendee) -> Apartment? {
-    if let validAddress = attendee.address,
-        let validStreetInformation = validAddress.streetInformation {
-        return validStreetInformation.apartment
-    }
-    return nil
-}
-
-func flatGuard(attendee: Attendee) -> Apartment? {
-    guard let validAddress = attendee.address,
-        let validStreetInformation = validAddress.streetInformation else {
-            return nil
-    }
-    return validStreetInformation.apartment
-}
-
-func optionalChaining(attendee: Attendee) -> Apartment? {
-    let info = attendee.address?.streetInformation?.apartment
-    return info
 }

@@ -1,11 +1,11 @@
 //: ### Multiple Catches
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-enum SubscriptOutOfBoundsError : Error {
+enum SubscriptOutOfBoundsError: Error {
     case negativeIndexError
     case indexIsTooLargeError(amountOver: Int)
 }
 
-extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
+extension SubscriptOutOfBoundsError: CustomDebugStringConvertible {
     var debugDescription: String {
         switch self {
         case .negativeIndexError:

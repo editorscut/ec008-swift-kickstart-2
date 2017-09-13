@@ -1,8 +1,8 @@
 //: ### Methods
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 class Attendee {
-    let name : String
-    let hometown : String
+    let name: String
+    let hometown: String
     
     init(name: String,
          hometown: String = "Cupertino") {
@@ -11,8 +11,8 @@ class Attendee {
     }
 }
 
-class TutorialAttendee : Attendee {
-    let tutorial : String
+class TutorialAttendee: Attendee {
+    let tutorial: String
     init(name: String,
          tutorial: String,
          hometown : String = "Cupertino"){

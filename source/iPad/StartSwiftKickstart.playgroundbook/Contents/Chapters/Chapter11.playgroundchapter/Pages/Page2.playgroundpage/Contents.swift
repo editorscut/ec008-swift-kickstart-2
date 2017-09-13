@@ -1,14 +1,4 @@
-protocol EnumIterable: RawRepresentable where RawValue == Int {
-    func next() -> Self?
-}
-
-extension EnumIterable {
-    func next() -> Self? {
-        return Self(rawValue: rawValue + 1)
-    }
-}
-
-enum Cardinal: Int, EnumIterable {
+enum Cardinal: Int {
     case zero
     case one
     case two
@@ -17,6 +7,3 @@ enum Cardinal: Int, EnumIterable {
 }
 
 let number = Cardinal.three
-let nextNumber = number.next()
-nextNumber?.next()
-nextNumber?.next()?.next()?.next()

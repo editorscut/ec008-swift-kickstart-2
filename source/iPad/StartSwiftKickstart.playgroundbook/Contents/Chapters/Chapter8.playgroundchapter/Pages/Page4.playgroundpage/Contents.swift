@@ -1,5 +1,4 @@
 protocol Movable {
-    var location: Vertex {get}
     func movedHorizontally(by deltaX: Int) -> Self
 }
 
@@ -8,9 +7,6 @@ struct Vertex {
 }
 
 extension Vertex: Movable {
-    public var location: Vertex {
-        return self
-    }
     func movedHorizontally(by deltaX: Int) -> Vertex {
         return Vertex(x: x + deltaX, y: y)
     }
@@ -38,16 +34,9 @@ struct Rectangle {
 }
 
 extension Rectangle: Movable {
-    public var location: Vertex {
-        let centerX = topLeftCorner.x + size.width/2
-        let centerY = topLeftCorner.y + size.height/2
-        return Vertex(x: centerX, y: centerY)
-    }
     func movedHorizontally(by deltaX: Int) -> Rectangle {
-        let movedTopLeftCorner
-            = topLeftCorner.movedHorizontally(by: deltaX)
-        return Rectangle(topLeftCorner:movedTopLeftCorner,
-                         size: size)
+        let movedTopLeftCorner  = topLeftCorner.movedHorizontally(by: deltaX)
+        return Rectangle(topLeftCorner:movedTopLeftCorner, size: size)
     }
 }
 
@@ -63,6 +52,3 @@ let rectangle = Rectangle(topLeftCorner: vertex, size: size)
 
 let movedVertex = vertex.movedHorizontally(by: 10)
 let movedTwiceVertex = movedVertex.movedHorizontally(by: 10)
-
-vertex.location
-rectangle.location

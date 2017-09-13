@@ -3,10 +3,6 @@ protocol Movable {
     func movedHorizontally(by deltaX: Int) -> Self
 }
 
-func shiftedLeft(movable: Movable) -> Movable {
-    return movable.movedHorizontally(by: -1)
-}
-
 struct Vertex {
     let x, y: Int
 }
@@ -68,6 +64,3 @@ let movedTwiceVertex = movedVertex.movedHorizontally(by: 10)
 
 vertex.location
 rectangle.location
-
-let shiftedLeftVertex = shiftedLeft(movable: vertex)
-let shiftedLeftRectangle = shiftedLeft(movable: rectangle)

@@ -1,5 +1,5 @@
 protocol Movable {
-    func movedHorizontally(by deltaX: Int) -> Self
+    func movedHorizontally(by deltaX: Int) -> Movable
 }
 
 struct Vertex {
@@ -7,7 +7,7 @@ struct Vertex {
 }
 
 extension Vertex: Movable {
-    func movedHorizontally(by deltaX: Int) -> Vertex {
+    func movedHorizontally(by deltaX: Int) -> Movable {
         return Vertex(x: x + deltaX, y: y)
     }
 }
@@ -31,14 +31,12 @@ extension Size: CustomStringConvertible {
 struct Rectangle {
     let topLeftCorner: Vertex
     let size: Size
-}
-
-extension Rectangle: Movable {
+    
     func movedHorizontally(by deltaX: Int) -> Rectangle {
-        let movedTopLeftCorner
-            = topLeftCorner.movedHorizontally(by: deltaX)
-        return Rectangle(topLeftCorner:movedTopLeftCorner,
-                         size: size)
+        guard let movedTopLeftCorner  = topLeftCorner.movedHorizontally(by: deltaX) as? Vertex else {
+            return self
+        }
+        return Rectangle(topLeftCorner:movedTopLeftCorner, size: size)
     }
 }
 

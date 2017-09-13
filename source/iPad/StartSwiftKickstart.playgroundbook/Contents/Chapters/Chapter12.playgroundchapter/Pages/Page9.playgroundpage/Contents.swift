@@ -1,9 +1,9 @@
-enum SubscriptOutOfBoundsError : Error {
+enum SubscriptOutOfBoundsError: Error {
     case negativeIndexError
     case indexIsTooLargeError(amountOver: Int)
 }
 
-extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
+extension SubscriptOutOfBoundsError: CustomDebugStringConvertible {
     var debugDescription: String {
         switch self {
         case .negativeIndexError:
@@ -27,80 +27,17 @@ extension Forecast {
     }
 }
 
-//func forecastNumber(_ index: Int) -> String {
-//    do {
-//        let forecast = try Forecast.number(index)
-//        return "Success!: forecast number \(index) is \(forecast)"
-//    }
-//    catch {
-//        return  "Error: \(index) \(error)"
-//    }
-//}
-
-//func forecastNumber(_ index: Int) -> String {
-//    do {
-//        let forecast = try Forecast.number(index)
-//        return "Success!: forecast number \(index) is \(forecast)"
-//    }
-//    catch SubscriptOutOfBoundsError.negativeIndexError {
-//        let error = SubscriptOutOfBoundsError.negativeIndexError
-//        return "too small: \(index) \(error)"
-//    }
-//    catch {
-//        return  "Error: \(index) \(error)"
-//    }
-//}
-
-//func forecastNumber(_ index: Int) -> String {
-//    do {
-//        let forecast = try Forecast.number(index)
-//        return "Success!: forecast number \(index) is \(forecast)"
-//    }
-//    catch SubscriptOutOfBoundsError.negativeIndexError {
-//        let error = SubscriptOutOfBoundsError.negativeIndexError
-//        return "too small: \(index) \(error)"
-//    }
-//    catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess) {
-//        let error = SubscriptOutOfBoundsError
-//                   .indexIsTooLargeError(amountOver: excess)
-//        return "too big: \(index) " + "\(error))"
-//    }
-//    catch {
-//        return  "Error: \(index) \(error)"
-//    }
-//}
-
 func forecastNumber(_ index: Int) -> String {
     do {
         let forecast = try Forecast.number(index)
         return "Success!: forecast number \(index) is \(forecast)"
-    }
-    catch SubscriptOutOfBoundsError.negativeIndexError {
-        let error = SubscriptOutOfBoundsError.negativeIndexError
-        return "too small: \(index) \(error)"
-    }
-    catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess)
-        where excess < 5 {
-            let error = SubscriptOutOfBoundsError
-                .indexIsTooLargeError(amountOver: excess)
-            return "slightly over: \(index) \(error)"
-    }
-    catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess) {
-        let error = SubscriptOutOfBoundsError
-            .indexIsTooLargeError(amountOver: excess)
-        return "too big: \(index) " + "\(error))"
     }
     catch {
         return  "Error: \(index) \(error)"
     }
 }
 
-
-
 forecastNumber(3)
-
 forecastNumber(20)
-
 forecastNumber(-2)
-
 forecastNumber(7)

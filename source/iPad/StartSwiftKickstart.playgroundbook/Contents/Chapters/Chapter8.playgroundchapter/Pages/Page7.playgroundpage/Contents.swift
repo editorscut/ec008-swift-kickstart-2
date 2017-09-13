@@ -1,13 +1,6 @@
 protocol Movable {
     var location: Vertex {get}
     func movedHorizontally(by deltaX: Int) -> Self
-    func shiftedRight() -> Self
-}
-
-extension Movable {
-    func shiftedRight() -> Self {
-        return movedHorizontally(by: 1)
-    }
 }
 
 func shiftedLeft<T: Movable>(movable: T) -> T {
@@ -78,6 +71,3 @@ rectangle.location
 
 let shiftedLeftVertex = shiftedLeft(movable: vertex)
 let shiftedLeftRectangle = shiftedLeft(movable: rectangle)
-
-let shiftedRightVertex = vertex.shiftedRight()
-let shiftedRightRectangle = rectangle.shiftedRight()

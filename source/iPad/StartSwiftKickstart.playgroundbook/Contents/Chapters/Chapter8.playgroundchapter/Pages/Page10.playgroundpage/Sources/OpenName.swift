@@ -5,4 +5,3 @@ open class OpenName {
         self.name = name
     }
 }
-

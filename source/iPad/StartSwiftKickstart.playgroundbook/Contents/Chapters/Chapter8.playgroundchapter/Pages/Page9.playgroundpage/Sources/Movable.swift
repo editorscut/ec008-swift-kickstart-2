@@ -13,4 +13,3 @@ extension Movable {
 public func shiftedLeft<T: Movable>(movable: T) -> T {
     return movable.movedHorizontally(by: -1)
 }
-

@@ -18,9 +18,6 @@ struct IterableSequence<IterableValues: EnumIterable>: Sequence, IteratorProtoco
         defer {index += 1}
         return IterableValues(rawValue: index)
     }
-    subscript(index: Int) -> IterableValues?  {
-        return IterableValues(rawValue: index)
-    }
 }
 
 let sequence = IterableSequence<Cardinal>()
@@ -35,11 +32,3 @@ arrayFromSequence
 
 let mappedArrayFromSequence = sequence.map{$0}
 mappedArrayFromSequence
-
-sequence[2]
-sequence[3]
-sequence[30]
-sequence[-30]
-
-// arrayFromSequence[30]
-// arrayFromSequence[-30]

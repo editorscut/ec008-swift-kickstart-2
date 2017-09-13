@@ -21,4 +21,3 @@ extension Vertex: CustomStringConvertible {
         return "(\(x), \(y))"
     }
 }
-

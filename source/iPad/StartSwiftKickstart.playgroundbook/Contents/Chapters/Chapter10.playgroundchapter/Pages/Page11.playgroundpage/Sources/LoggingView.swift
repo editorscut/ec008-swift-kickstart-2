@@ -18,4 +18,3 @@ open class LoggingView {
         updateLog(with: "Destroyed: \(name)")
     }
 }
-

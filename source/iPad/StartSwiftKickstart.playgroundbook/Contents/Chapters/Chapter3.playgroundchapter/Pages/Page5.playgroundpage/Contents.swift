@@ -11,7 +11,3 @@ let result = hello(peopleNamed: "Thing One", "Thing Two")
 
 result.count
 result.greeting
-
-let greetingFunction = hello
-
-greetingFunction("A", "B")

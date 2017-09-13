@@ -9,19 +9,6 @@ enum Desktop {
     case color(PrimaryColor)
 }
 
-extension Desktop: CustomStringConvertible {
-    var description: String {
-        let colorString : String
-        switch  self {
-        case .color(let primaryColor):
-            colorString = primaryColor.rawValue
-        default:
-            colorString = "black"
-        }
-        return colorString
-    }
-}
-
 func colorString(from desktop: Desktop) -> String {
     let colorString : String
     switch  desktop {
@@ -36,5 +23,7 @@ func colorString(from desktop: Desktop) -> String {
 let backgrounds = [Desktop.color(.yellow), .black,
                    .color(.red), .color(.blue)]
 
-let colorStrings = backgrounds.map{$0.description}
-colorStrings
+colorString(from: backgrounds[0])
+colorString(from: backgrounds[1])
+colorString(from: backgrounds[2])
+colorString(from: backgrounds[3])

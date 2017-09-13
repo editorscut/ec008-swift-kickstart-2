@@ -1,10 +1,10 @@
 //: ### Enumerations
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-struct SubscriptOutOfBoundsError : Error {
+struct SubscriptOutOfBoundsError: Error {
     let reason: String
 }
 
-extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
+extension SubscriptOutOfBoundsError: CustomDebugStringConvertible {
     var debugDescription: String {
         return "Subscript out of bounds - \(reason)"
     }

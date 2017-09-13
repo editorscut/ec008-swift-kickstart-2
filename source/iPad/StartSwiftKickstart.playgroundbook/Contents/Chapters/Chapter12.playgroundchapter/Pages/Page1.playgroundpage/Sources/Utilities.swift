@@ -12,3 +12,4 @@ public func setUp() {
 public func shutDown() {
     PlaygroundPage.current.finishExecution()
 }
+

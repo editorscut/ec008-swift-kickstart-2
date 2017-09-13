@@ -1,5 +1,5 @@
 struct Vertex {
-    var x: Double
+    let x: Double
     let y: Double
 }
 
@@ -9,11 +9,4 @@ extension Vertex: CustomStringConvertible {
     }
 }
 
-var pointOne = Vertex(x: 3, y: 4)
-var pointTwo = pointOne
-pointOne.x = 7
-pointOne
-pointTwo
-pointTwo.x = 9
-pointOne
-pointTwo
+let point = Vertex(x: 3, y: 4)

@@ -1,5 +1,7 @@
-func hello(to name: String = "World") -> String {
+func hello(name: String = "World") -> String {
     return "Hello, \(name)!"
 }
+
 hello()
-hello(to: "my friend")
+
+hello(name: "my friend")

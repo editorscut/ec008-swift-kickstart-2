@@ -1,8 +1,4 @@
-protocol EnumIterable: RawRepresentable {
-    init?(rawValue: Int)
-}
-
-enum Cardinal: Int, EnumIterable {
+enum Cardinal: Int {
     case zero
     case one
     case two
@@ -11,16 +7,26 @@ enum Cardinal: Int, EnumIterable {
 }
 
 
-struct IterableSequence<IterableValues: EnumIterable>: Sequence, IteratorProtocol {
+struct CardinalSequence: Sequence, IteratorProtocol {
     private var index = 0
     
-    mutating func next() -> IterableValues? {
+    mutating func next() -> Cardinal? {
         defer {index += 1}
-        return IterableValues(rawValue: index)
+        return Cardinal(rawValue: index)
     }
 }
 
-let sequence = IterableSequence<Cardinal>()
+let sequence = CardinalSequence()
+
+var iterator = sequence.makeIterator()
+
+var arrayFromIterator = [Cardinal]()
+
+while let cardinal = iterator.next() {
+    arrayFromIterator.append(cardinal)
+}
+
+arrayFromIterator
 
 var arrayFromSequence = [Cardinal]()
 

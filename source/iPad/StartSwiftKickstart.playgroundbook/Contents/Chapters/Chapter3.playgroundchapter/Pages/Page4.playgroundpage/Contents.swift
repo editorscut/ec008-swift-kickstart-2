@@ -1,12 +1,8 @@
 func hello(peopleNamed people: String...) -> (count: Int,
     greeting: String) {
-        var tempGreeting = ""
-        for person in people {
-            tempGreeting += "\nHello, \(person)!"
-        }
-        return (people.count, tempGreeting)
+        return (people.count, people.reduce(""){
+            $0 + "\nHello, " + $1 + "!"
+        })
 }
 
-let result = hello(peopleNamed: "Thing One", "Thing Two")
-result.count
-result.greeting
+hello(peopleNamed: "Thing One", "Thing Two")

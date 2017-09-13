@@ -35,23 +35,13 @@ extension Model { // Non-Mutating Methods
     }
 }
 
-extension Model where Element: Equatable {
-    func removed(_ element: Element) -> Model {
-        guard let location = privateArray.index(of: element)
-            else {return self}
-        return removed(at: location)
-    }
-}
-
 
 let model = Model("A", "B", "C", "D", "E")
-model.removed("B")
-model.removed("Z")
+model.removed(at: 3)
+model.inserted("Z", at: 1)
+model.moved(from: 0, to: 1)
+model.moved(from: 3, to: 2)
+model.moved(from: 4, to: 4)
 
-struct Vertex {
-    let x, y: Int
-}
-
-let vertexModel = Model(Vertex(x: 3, y: 4), Vertex(x: 6, y: 8), Vertex(x: 9, y: 12))
-//vertexModel.removed(Vertex(x: 3, y: 4))
-vertexModel.removed(at: 1)
+let intModel = Model(1, 2, 3)
+intModel.moved(from: 1, to: 2)

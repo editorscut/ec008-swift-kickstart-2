@@ -12,45 +12,19 @@ extension Forecast {
 
 var status = ""
 
-//func forecastNumber(_ index: Int) -> String {
-//    status += "\nBegin for index = \(index)\n"
-//    do {
-//        let forecast = try Forecast.number(index)
-//        status += "Success\n"
-//        return "Success!: forecast number \(index) is \(forecast)"
-//    }
-//    catch {
-//        status += "Error\n"
-//        return "Error: \(error)"
-//    }
-//}
-
-
-//func forecastNumber(_ index: Int) -> String {
-//    status += "\nBegin for index = \(index)\n"
-//    defer {
-//        status += "In defer block\n"
-//    }
-//    do {
-//        let forecast = try Forecast.number(index)
-//        status += "Success\n"
-//        return "Success!: forecast number \(index) is \(forecast)"
-//    }
-//    catch {
-//        status += "Error\n"
-//        return "Error: \(error)"
-//    }
-//}
-
 func forecastNumber(_ index: Int) -> String {
+    status += "\nBegin for index = \(index)\n"
     do {
         let forecast = try Forecast.number(index)
+        status += "Success\n"
         return "Success!: forecast number \(index) is \(forecast)"
     }
     catch {
-        return  "Error: \(error)"
+        status += "Error\n"
+        return "Error: \(error)"
     }
 }
+
 
 
 forecastNumber(0)
