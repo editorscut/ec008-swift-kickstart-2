@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Version</key>
-	<string>3.0</string>
+	<string>1.0</string>
 	<key>ContentVersion</key>
 	<string>2.0</string>
 	<key>Name</key>
@@ -26,7 +26,7 @@
 		<string>Chapter8.playgroundchapter</string>
 		<string>Chapter9.playgroundchapter</string>
 		<string>Chapter10.playgroundchapter</string>
-	    <string>Chapter11.playgroundchapter</string>
+		<string>Chapter11.playgroundchapter</string>
 		<string>Chapter12.playgroundchapter</string>
 	</array>
 </dict>
