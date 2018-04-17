@@ -3,6 +3,8 @@ struct ColorsWeLove: OptionSet {
     static let red = ColorsWeLove(rawValue: 1)
     static let green = ColorsWeLove(rawValue: 2)
     static let blue = ColorsWeLove(rawValue: 4)
+    
+    static let notRed = [ColorsWeLove.green, .blue]
 }
 
 let noColors : ColorsWeLove = []
@@ -12,3 +14,5 @@ noColors.isEmpty
 var twoColors: ColorsWeLove = [.red, .blue]
 twoColors.contains(.red)
 twoColors.contains(.green)
+
+ColorsWeLove.notRed.contains(.blue)
