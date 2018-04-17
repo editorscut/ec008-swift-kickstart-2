@@ -25,3 +25,14 @@ func filterVowels(from input: String) -> String {
 }
 
 filterVowels(from: title)
+
+
+let firstSpace = title.index(of: " ") ?? title.endIndex
+let firstWord = title[...firstSpace]
+let trimmedFirstWord = title[..<firstSpace]
+let secondWord = title[firstSpace...]
+
+let altTitle = """
+Swift
+Programmer
+"""

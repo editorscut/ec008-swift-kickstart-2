@@ -1,46 +1,48 @@
-enum Cardinal: Int {
-    case zero
-    case one
-    case two
-    case three
-    case four
+struct SubscriptOutOfBoundsError: Error {
 }
 
-struct CardinalIterator: IteratorProtocol {
-    private var index = 0
-    
-    mutating func next() -> Cardinal? {
-        defer {index += 1}
-        return Cardinal(rawValue: index)
+extension Forecast {
+    static func number(_ index: Int) throws -> String {
+        if index < 0 || index >= Forecast.count {
+            throw SubscriptOutOfBoundsError()
+        }
+        return Forecast()[index]
     }
 }
 
-struct CardinalSequence: Sequence {
-    func makeIterator() -> CardinalIterator {
-        return CardinalIterator()
+//try Forecast.number(0)
+//try Forecast.number(20)
+//try Forecast.number(-2)
+
+do {
+    try Forecast.number(0)
+    try Forecast.number(20)
+}
+catch {
+    print("error")
+}
+
+//func forecastNumber(_ index: Int) -> String {
+//    guard let forecast = try? Forecast.number(index),
+//        index < 3 else {
+//            return "error: can't get forecast for index \(index)"
+//    }
+//    return "forecast number \(index) is \(forecast)"
+//}
+
+
+func forecastNumber(_ index: Int) -> String {
+    do {
+        let forecast = try Forecast.number(index)
+        return "Success!: forecast number \(index) is \(forecast)"
+    }
+    catch {
+        return "Error: \(error)"
     }
 }
 
-let sequence = CardinalSequence()
+forecastNumber(0)
 
-var iterator = sequence.makeIterator()
+forecastNumber(20)
 
-var arrayFromIterator = [Cardinal]()
-
-while let cardinal = iterator.next() {
-    arrayFromIterator.append(cardinal)
-}
-
-arrayFromIterator
-
-
-var arrayFromSequence = [Cardinal]()
-
-for element in sequence {
-    arrayFromSequence.append(element)
-}
-
-arrayFromSequence
-
-let mappedArrayFromSequence = sequence.map{$0}
-mappedArrayFromSequence
+forecastNumber(-2)

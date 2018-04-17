@@ -1,21 +1,11 @@
-protocol EnumIterable: RawRepresentable where RawValue == Int {
-    func next() -> Self?
-}
-
-extension EnumIterable {
-    func next() -> Self? {
-        return Self(rawValue: rawValue + 1)
+extension Forecast {
+    static func number(_ index: Int) -> String {
+        assert(index >= 0 && index < count, "Out of bounds")
+        return Forecast()[index]
     }
 }
 
-enum Cardinal: Int, EnumIterable {
-    case zero
-    case one
-    case two
-    case three
-    case four
-}
 
-let number = Cardinal.three
-let nextNumber = number.next()
-nextNumber?.next()
+Forecast.number(0)
+//Forecast.number(-2)
+//Forecast.number(20)

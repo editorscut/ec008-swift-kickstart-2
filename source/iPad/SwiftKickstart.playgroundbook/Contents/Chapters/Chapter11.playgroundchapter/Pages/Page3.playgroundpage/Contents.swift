@@ -1,33 +1,37 @@
-protocol EnumIterable: RawRepresentable where RawValue == Int {
-    func next() -> Self?
-    static var first: Self? {get}
-}
+//extension Forecast {
+//    static func number(_ index: Int) -> String {
+//        assert(index >= 0 && index < count, "Out of bounds")
+//        return Forecast()[index]
+//    }
+//}
 
-extension EnumIterable {
-    func next() -> Self? {
-        return Self(rawValue: rawValue + 1)
+//extension Forecast {
+//    static func number(_ index: Int) -> String {
+//        precondition(index >= 0 && index < count, "Out of bounds")
+//        return Forecast()[index]
+//    }
+//}
+
+//extension Forecast {
+//    static func number(_ index: Int) -> String {
+//        if index < 0 || index >= count {
+//            assertionFailure("\(index) is out of bounds. "
+//                + "Must be between 0 and \(count).")
+//        }
+//        return Forecast()[index]
+//    }
+//}
+
+extension Forecast {
+    static func number(_ index: Int) -> String {
+        if index < 0 || index >= count {
+            preconditionFailure("\(index) is out of bounds. "
+                + "Must be between 0 and \(count).")
+        }
+        return Forecast()[index]
     }
-    static var first: Self? {
-        return Self(rawValue: 0)
-    }
 }
 
-enum Cardinal: Int, EnumIterable {
-    case zero
-    case one
-    case two
-    case three
-    case four
-}
-
-var cardinalArray = [Cardinal]()
-
-var currentElement = Cardinal.first
-
-while let current = currentElement {
-    cardinalArray.append(current)
-    currentElement = currentElement?.next()
-}
-
-cardinalArray
-
+Forecast.number(0)
+//Forecast.number(-2)
+//Forecast.number(20)

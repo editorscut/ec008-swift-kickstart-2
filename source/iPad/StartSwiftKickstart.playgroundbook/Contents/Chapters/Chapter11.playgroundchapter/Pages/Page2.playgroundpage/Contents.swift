@@ -1,9 +1,5 @@
-enum Cardinal: Int {
-    case zero
-    case one
-    case two
-    case three
-    case four
+extension Forecast {
+    static func number(_ index: Int) -> String {
+        return Forecast()[index]
+    }
 }
-
-let number = Cardinal.three

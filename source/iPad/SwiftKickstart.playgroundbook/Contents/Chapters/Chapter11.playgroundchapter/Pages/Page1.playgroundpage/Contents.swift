@@ -1,41 +1,36 @@
-import GameplayKit
+//let dictionary = ["one": 1, "two": 2]
+//
+//let two = dictionary["two"]
+//let three = dictionary["three"]
+//
+//let array = [0, 1, 2]
+//array[2]
+//array[7]
 
-
-//: Random Distribution
-
-
-let random = GKRandomDistribution(lowestValue: 1, highestValue: 5)
-
-
-for _ in 1 ... 10 {
-    random.nextInt()
-}
-
-func randomSample(using distribution: GKRandomDistribution) -> [Int] {
-    var tally = Array(repeating: 0, count: 5)
-    
-    for _ in 1 ... 1001 {
-        let randomNumber = distribution.nextInt()
-        tally[randomNumber - 1] += 1
-    }
-    return tally
-}
-
-
-
-
-randomSample(using: random)
-
-
-//: Gaussian Distribution
-
-let gaussian = GKGaussianDistribution(lowestValue: 1, highestValue: 5)
-
-
-randomSample(using: gaussian)
-
-//: Shuffled Distribution
-
-let shuffled = GKShuffledDistribution(lowestValue: 1, highestValue: 5)
-
-randomSample(using: shuffled)
+//import Foundation
+//
+//
+//setUp()
+//
+//let url = URL(string: "http://editorscut.c/")
+//
+//
+//let task = URLSession
+//          .shared
+//          .dataTask(with: url!) { (data, response, error) in
+//    print("response", response ?? "no response")
+//    print(error ?? "no error")
+//    shutDown()
+//}
+//
+//task.resume()
+//
+//extension Forecast {
+//    static func number(_ index: Int) -> String {
+//        return Forecast()[index]
+//    }
+//}
+//
+//Forecast.number(0)
+//Forecast.number(-2)
+//Forecast.number(20)

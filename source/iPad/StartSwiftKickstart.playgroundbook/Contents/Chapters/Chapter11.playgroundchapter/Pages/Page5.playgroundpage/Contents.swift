@@ -1,27 +1,15 @@
-enum Cardinal: Int {
-    case zero
-    case one
-    case two
-    case three
-    case four
+struct SubscriptOutOfBoundsError: Error {
 }
 
-
-struct CardinalIterator: IteratorProtocol {
-    private var index = 0
-    
-    mutating func next() -> Cardinal? {
-        defer {index += 1}
-        return Cardinal(rawValue: index)
+extension Forecast {
+    static func number(_ index: Int) throws -> String {
+        if index < 0 || index >= Forecast.count {
+            throw SubscriptOutOfBoundsError()
+        }
+        return Forecast()[index]
     }
 }
 
-var iterator = CardinalIterator()
-
-var cardinalArray = [Cardinal]()
-
-while let cardinal = iterator.next() {
-    cardinalArray.append(cardinal)
-}
-
-cardinalArray
+//try Forecast.number(0)
+//try Forecast.number(20)
+//try Forecast.number(-2)

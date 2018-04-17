@@ -1,45 +1,47 @@
-protocol EnumIterable: RawRepresentable {
-    init?(rawValue: Int)
-}
-
-enum Cardinal: Int, EnumIterable {
-    case zero
-    case one
-    case two
-    case three
-    case four
+enum SubscriptOutOfBoundsError : Error {
+    case negativeIndexError
+    case indexIsTooLargeError(amountOver: Int)
 }
 
 
-struct IterableSequence<IterableValues: EnumIterable>: Sequence, IteratorProtocol {
-    private var index = 0
-    
-    mutating func next() -> IterableValues? {
-        defer {index += 1}
-        return IterableValues(rawValue: index)
-    }
-    subscript(index: Int) -> IterableValues?  {
-        return IterableValues(rawValue: index)
+extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
+    var debugDescription: String {
+        switch self {
+        case .negativeIndexError:
+            return "is less than zero"
+        case .indexIsTooLargeError(let excess):
+            return "is greater than \(Forecast.count) by \(excess)"
+        }
     }
 }
 
-let sequence = IterableSequence<Cardinal>()
-
-var arrayFromSequence = [Cardinal]()
-
-for element in sequence {
-    arrayFromSequence.append(element)
+extension Forecast {
+    static func number(_ index: Int) throws -> String {
+        if index < 0 {
+            throw SubscriptOutOfBoundsError.negativeIndexError
+        } else if index >= Forecast.count {
+            let excess = index - Forecast.count + 1
+            throw SubscriptOutOfBoundsError
+                .indexIsTooLargeError(amountOver: excess)
+        }
+        return Forecast()[index]
+    }
 }
 
-arrayFromSequence
+func forecastNumber(_ index: Int) -> String {
+    do {
+        let forecast = try Forecast.number(index)
+        return "Success!: forecast number \(index) is \(forecast)"
+    }
+    catch {
+        return  "Error: \(index) \(error)"
+    }
+}
 
-let mappedArrayFromSequence = sequence.map{$0}
-mappedArrayFromSequence
+forecastNumber(0)
 
-sequence[2]
-sequence[3]
-sequence[30]
-sequence[-30]
+forecastNumber(20)
 
-// arrayFromSequence[30]
-// arrayFromSequence[-30]
+forecastNumber(-2)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+

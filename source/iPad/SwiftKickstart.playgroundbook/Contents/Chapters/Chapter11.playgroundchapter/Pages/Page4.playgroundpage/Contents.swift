@@ -1,37 +1,45 @@
-enum Cardinal: Int {
-    case zero
-    case one
-    case two
-    case three
-    case four
-}
-
-//struct CardinalIterator: IteratorProtocol {
-//    private var index = 0
-//    private(set) var cardinal: Cardinal?
-//
-//    mutating func next() -> Cardinal? {
-//        cardinal = Cardinal(rawValue: index)
-//        index += 1
-//        return cardinal
+//extension Forecast {
+//    static func number(_ index: Int) -> String {
+//        if index < 0 || index >= count {
+//            preconditionFailure("\(index) is out of bounds. "
+//                + "Must be between 0 and \(count).")
+//        }
+//        return Forecast()[index]
 //    }
 //}
 
-struct CardinalIterator: IteratorProtocol {
-    private var index = 0
-    
-    mutating func next() -> Cardinal? {
-        defer {index += 1}
-        return Cardinal(rawValue: index)
+
+struct SubscriptOutOfBoundsError: Error {
+}
+
+extension Forecast {
+    static func number(_ index: Int) throws -> String {
+        if index < 0 || index >= Forecast.count {
+            throw SubscriptOutOfBoundsError()
+        }
+        return Forecast()[index]
     }
 }
 
-var iterator = CardinalIterator()
+//try Forecast.number(0)
+//try Forecast.number(20)
+//try Forecast.number(-2)
 
-var cardinalArray = [Cardinal]()
+//try! Forecast.number(0)
+//try! Forecast.number(20)
 
-while let cardinal = iterator.next() {
-    cardinalArray.append(cardinal)
+let forecast0 =  try? Forecast.number(0)
+let forecast20 = try? Forecast.number(20)
+
+func forecastNumber(_ index: Int) -> String {
+    guard let forecast = try? Forecast.number(index),
+        index < 3 else {
+            return "error: can't get forecast for index \(index)"
+    }
+    return "forecast number \(index) is \(forecast)"
 }
 
-cardinalArray
+forecastNumber(0)
+forecastNumber(20)
+forecastNumber(-2)
+forecastNumber(3)

@@ -1,4 +1,4 @@
-struct Vertex {
+struct Vertex: Equatable {
     let x, y: Double
 }
 
@@ -8,11 +8,11 @@ extension Vertex: CustomStringConvertible {
     }
 }
 
-extension Vertex: Equatable{
-    static func ==(lhs: Vertex, rhs: Vertex) -> Bool {
-        return lhs.x == rhs.x && lhs.y == rhs.y
-    }
-}
+//extension Vertex: Equatable{
+//    static func ==(lhs: Vertex, rhs: Vertex) -> Bool {
+//        return lhs.x == rhs.x && lhs.y == rhs.y
+//    }
+//}
 
 let pointThreeFour = Vertex(x: 3, y: 4)
 let pointTwoFive = Vertex(x: 2, y: 5)

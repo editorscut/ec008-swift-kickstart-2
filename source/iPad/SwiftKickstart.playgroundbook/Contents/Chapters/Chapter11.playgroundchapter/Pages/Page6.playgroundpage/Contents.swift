@@ -1,40 +1,63 @@
-enum Cardinal: Int {
-    case zero
-    case one
-    case two
-    case three
-    case four
+struct SubscriptOutOfBoundsError: Error {
 }
 
-
-struct CardinalSequence: Sequence, IteratorProtocol {
-    private var index = 0
-    
-    mutating func next() -> Cardinal? {
-        defer {index += 1}
-        return Cardinal(rawValue: index)
+extension Forecast {
+    static func number(_ index: Int) throws -> String {
+        if index < 0 || index >= Forecast.count {
+            throw SubscriptOutOfBoundsError()
+        }
+        return Forecast()[index]
     }
 }
 
-let sequence = CardinalSequence()
+var status = ""
 
-var iterator = sequence.makeIterator()
+//func forecastNumber(_ index: Int) -> String {
+//    status += "\nBegin for index = \(index)\n"
+//    do {
+//        let forecast = try Forecast.number(index)
+//        status += "Success\n"
+//        return "Success!: forecast number \(index) is \(forecast)"
+//    }
+//    catch {
+//        status += "Error\n"
+//        return "Error: \(error)"
+//    }
+//}
 
-var arrayFromIterator = [Cardinal]()
 
-while let cardinal = iterator.next() {
-    arrayFromIterator.append(cardinal)
+//func forecastNumber(_ index: Int) -> String {
+//    status += "\nBegin for index = \(index)\n"
+//    defer {
+//        status += "In defer block\n"
+//    }
+//    do {
+//        let forecast = try Forecast.number(index)
+//        status += "Success\n"
+//        return "Success!: forecast number \(index) is \(forecast)"
+//    }
+//    catch {
+//        status += "Error\n"
+//        return "Error: \(error)"
+//    }
+//}
+
+func forecastNumber(_ index: Int) -> String {
+    do {
+        let forecast = try Forecast.number(index)
+        return "Success!: forecast number \(index) is \(forecast)"
+    }
+    catch {
+        return  "Error: \(error)"
+    }
 }
 
-arrayFromIterator
 
-var arrayFromSequence = [Cardinal]()
+forecastNumber(0)
 
-for element in sequence {
-    arrayFromSequence.append(element)
-}
+forecastNumber(20)
 
-arrayFromSequence
+forecastNumber(-2)
 
-let mappedArrayFromSequence = sequence.map{$0}
-mappedArrayFromSequence
+
+status
