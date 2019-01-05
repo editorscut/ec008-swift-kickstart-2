@@ -14,27 +14,25 @@
 //
 //setUp()
 //
-//let url = URL(string: "http://editorscut.c/")
+//let url = URL(string: "http://editorscut.com/")
 //
 //
-//let task = URLSession
+//URLSession
 //          .shared
 //          .dataTask(with: url!) { (data, response, error) in
 //    print("response", response ?? "no response")
 //    print(error ?? "no error")
 //    shutDown()
-//}
+//}.resume()
 //
-//task.resume()
-//
-//extension Forecast {
-//    static func number(_ index: Int) -> String {
-//        return Forecast()[index]
-//    }
-//}
-//
+extension Forecast {
+    static func number(_ index: Int) -> String {
+        return Forecast()[index]
+    }
+}
+
 //Forecast.number(0)
-//Forecast.number(-2)
+Forecast.number(-2)
 //Forecast.number(20)
 
 //: [TOC](00TOC) | Previous | [Next](@next)
