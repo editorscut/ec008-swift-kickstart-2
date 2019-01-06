@@ -13,8 +13,26 @@ func hello(peopleNamed people: String...) {
 hello()
 hello(peopleNamed: "Thing One", "Thing Two")
 
-//: This version returns a String instead of printing
+//: This version returns a String
+
 func hello2(peopleNamed people: String...) -> String {
+    if people.isEmpty {
+        return "There's no one to greet."
+    } else {
+        var response = ""
+        for person in people {
+            response += "Hello, \(person)!\n"
+        }
+        return response
+    }
+}
+
+hello2()
+hello2(peopleNamed: "Thing One", "Thing Two")
+
+
+//: This version returns a String using reduce
+func hello3(peopleNamed people: String...) -> String {
     if people.isEmpty {
         return "There's no one to greet."
     } else {
@@ -22,6 +40,6 @@ func hello2(peopleNamed people: String...) -> String {
     }
 }
 
-hello2()
-hello2(peopleNamed: "Thing One", "Thing Two")
+hello3()
+hello3(peopleNamed: "Thing One", "Thing Two")
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
