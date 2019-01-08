@@ -1,6 +1,10 @@
 //: ### Equatable
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-struct Vertex: Equatable {
+//struct Vertex: Equatable {
+//    let x, y: Double
+//}
+
+struct Vertex {
     let x, y: Double
 }
 
@@ -9,6 +13,8 @@ extension Vertex: CustomStringConvertible {
         return "(\(x), \(y))"
     }
 }
+
+extension Vertex: Equatable{}
 
 //extension Vertex: Equatable{
 //    static func ==(lhs: Vertex, rhs: Vertex) -> Bool {
