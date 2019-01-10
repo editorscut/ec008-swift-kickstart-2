@@ -47,10 +47,10 @@ let team = ["Joan", "Mike", "Dave", "Anna"]
 let languagesForTeamMap = team.map{dictionary[$0]}
 languagesForTeamMap
 
-let languagesForTeamFlatMap = team.flatMap{dictionary[$0]}
+let languagesForTeamFlatMap = team.compactMap{dictionary[$0]}
 languagesForTeamFlatMap
 
 
-let languagesDoubleFlatMap = team.flatMap{dictionary[$0]}.flatMap{$0}
+let languagesDoubleFlatMap = team.compactMap{dictionary[$0]}.flatMap{$0}
 languagesDoubleFlatMap
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

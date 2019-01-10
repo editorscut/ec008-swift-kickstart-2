@@ -8,8 +8,8 @@ class FirstView: LoggingView {
         secondView = SecondView(name: "Second View")
         updateLog(with: "Presented: \(secondView?.name ?? "nil")")
         secondView?.dismiss = {  [weak self] in
-            guard let strongSelf = self else {return}
-            updateLog(with: "Presented: \(strongSelf.name)")
+            guard let self = self else {return}
+            updateLog(with: "Presented: \(self.name)")
         }
     }
 }
