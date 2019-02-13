@@ -21,7 +21,6 @@ enum Color : Int {
 //crayon.hue
 //crayon.uiColor
 
-import UIKit
 
 enum Color2 : CGFloat {
     case yellow = 0.16666

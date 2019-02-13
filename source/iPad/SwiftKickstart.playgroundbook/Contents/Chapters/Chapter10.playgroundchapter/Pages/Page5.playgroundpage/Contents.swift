@@ -14,14 +14,24 @@ func less7PercentTax(_ income: USDollar) -> USDollar {
 
 let net = less7PercentTax(revenueAt199on(17))
 
+precedencegroup Application {
+    associativity: left
+}
 
+infix operator |> : Application
 
-infix operator >>> : MultiplicationPrecedence
-
-func >>> <Input, Output>(input: Input,
-                         f: (Input) -> Output ) -> Output {
+func |> <Input, Output>(input: Input,
+                        f: (Input) -> Output ) -> Output {
     return f(input)
 }
+
+precedencegroup Compose {
+    associativity: right
+    higherThan: Application
+}
+
+infix operator >>> : Compose
+
 
 func >>> <T, U, V>(f:  @escaping (T) -> U,
                    g:  @escaping (U) -> V ) -> (T) -> V {
@@ -32,9 +42,7 @@ let composed = revenueAt199on  >>> less7PercentTax
 
 composed(17)
 
-17 >>> revenueAt199on  >>> less7PercentTax
+17 |> revenueAt199on  |> less7PercentTax
 
 
-17 >>> (revenueAt199on  >>> less7PercentTax)
-//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-
+17 |> revenueAt199on  >>> less7PercentTax

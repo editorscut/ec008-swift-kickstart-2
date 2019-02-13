@@ -1,7 +1,11 @@
 public struct Forecast  {
-    private let conditionIcons = ["☀️", "⛅️", "☁️", "🌧", "🌨"]
-    private let conditionDescriptions = ["sunny", "partially sunny",
-                                         "overcast", "rain", "snow"]
+    private let conditionIcons = ["☀️", "⛅️",
+                                  "☁️", "🌧",
+                                  "🌨"]
+    private let conditionDescriptions = ["sunny",
+                                         "partially sunny",
+                                         "overcast",
+                                         "rain", "snow"]
     public static let count = 5
     public init(){}
     

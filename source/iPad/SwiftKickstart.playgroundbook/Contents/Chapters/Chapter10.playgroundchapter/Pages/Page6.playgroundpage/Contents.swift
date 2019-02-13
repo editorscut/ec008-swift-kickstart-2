@@ -35,4 +35,3 @@ apply(to: numberSold){
     }.description
 
 apply(to: numberSold, using: revenueAt199on).description
-

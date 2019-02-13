@@ -71,4 +71,3 @@ rectangle.location
 
 let shiftedLeftVertex = shiftedLeft(movable: vertex)
 let shiftedLeftRectangle = shiftedLeft(movable: rectangle)
-

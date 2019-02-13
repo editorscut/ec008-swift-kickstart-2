@@ -31,5 +31,3 @@ crayon.uiColor()
 
 let paintBrush = Color.red
 paintBrush.uiColor()
-//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-

@@ -39,7 +39,7 @@ extension Model { // Non-Mutating Methods
 
 extension Model where Element: Equatable {
     func removed(_ element: Element) -> Model {
-        guard let location = privateArray.index(of: element)
+        guard let location = privateArray.firstIndex(of: element)
             else {return self}
         return removed(at: location)
     }

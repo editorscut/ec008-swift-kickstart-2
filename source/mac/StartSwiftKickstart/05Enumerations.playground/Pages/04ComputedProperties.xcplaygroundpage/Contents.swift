@@ -2,7 +2,7 @@
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 import UIKit
 
-enum Col    or {
+enum Color {
     case red
     case green
     case blue

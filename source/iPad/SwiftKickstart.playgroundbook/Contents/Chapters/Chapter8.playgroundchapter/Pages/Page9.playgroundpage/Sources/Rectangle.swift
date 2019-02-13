@@ -41,4 +41,3 @@ extension Rectangle: CustomStringConvertible {
         return "\(size) at \(topLeftCorner)"
     }
 }
-

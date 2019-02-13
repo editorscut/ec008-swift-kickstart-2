@@ -5,4 +5,3 @@ extension Count {
         return Double(self)
     }
 }
-
