@@ -4,7 +4,7 @@ struct Vertex {
     let x, y: Int
     
     func movedHorizontally(by deltaX: Int) -> Vertex {
-        return Vertex(x: x + deltaX, y: y)
+        Vertex(x: x + deltaX, y: y)
     }
 }
 

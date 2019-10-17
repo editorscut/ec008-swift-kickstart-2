@@ -5,7 +5,7 @@ protocol NameBadgeable: CustomStringConvertible {
 }
 extension NameBadgeable {
     var description: String {
-        return nameBadge()
+        nameBadge()
     }
 }
 
@@ -15,7 +15,7 @@ struct Attendee: NameBadgeable {
         self.name = name
     }
     func nameBadge() -> String {
-        return "Hi, I'm \(name)."
+        "Hi, I'm \(name)."
     }
 }
 
@@ -23,7 +23,7 @@ struct TutorialAttendee: NameBadgeable {
     let tutorial: String
     private let attendee: Attendee
     var name: String {
-        return attendee.name
+        attendee.name
     }
     init(name: String,
          tutorial: String) {
@@ -31,7 +31,7 @@ struct TutorialAttendee: NameBadgeable {
         self.attendee = Attendee(name: name)
     }
     func nameBadge() -> String {
-        return attendee.nameBadge() + " I'm taking \(tutorial)."
+        attendee.nameBadge() + " I'm taking \(tutorial)."
     }
 }
 

@@ -1,7 +1,7 @@
 //: ### Default Values
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 func hello(name: String = "World") -> String {
-    return "Hello, \(name)!"
+    "Hello, \(name)!"
 }
 
 hello()

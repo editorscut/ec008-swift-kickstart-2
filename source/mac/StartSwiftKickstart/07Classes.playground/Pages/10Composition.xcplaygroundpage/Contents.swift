@@ -6,13 +6,13 @@ class Attendee {
         self.name = name
     }
     func nameBadge() -> String {
-        return "Hi, I'm \(name)."
+        "Hi, I'm \(name)."
     }
 }
 
 extension Attendee: CustomStringConvertible {
     var description: String {
-        return nameBadge()
+        nameBadge()
     }
 }
 
@@ -23,7 +23,7 @@ class TutorialAttendee: Attendee {
         super.init(name: name)
     }
     override func nameBadge() -> String {
-        return super.nameBadge() + " I'm taking \(tutorial)."
+        super.nameBadge() + " I'm taking \(tutorial)."
     }
 }
 //: [TOC](00TOC) | [Previous](@previous) | Next

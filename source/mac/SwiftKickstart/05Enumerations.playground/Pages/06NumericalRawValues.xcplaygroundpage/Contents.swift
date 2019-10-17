@@ -1,41 +1,50 @@
 //: ### Numerical Raw Values
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-import UIKit
+import SwiftUI
 
-enum Color : Int {
-    case yellow = 1
-    case green
+enum PrimaryColor: Int {
+    case red
+    case yellow
     case blue = 4
-    case purple
     
-    var hue : CGFloat {
-        return CGFloat(rawValue)/6
+    var hue: Double {
+        Double(rawValue)/6
     }
-    var uiColor : UIColor {
-        return UIColor(hue: hue, saturation: 1, brightness: 1, alpha: 1)
+    
+    var color: Color {
+        Color(hue: hue,
+              saturation: 1.0,
+              brightness: 1.0)
     }
 }
 
-//let crayon = Color.green
-//crayon.rawValue
-//crayon.hue
-//crayon.uiColor
-
-
-enum Color2 : CGFloat {
-    case yellow = 0.16666
-    case green  = 0.333333
-    case blue   = 0.666667
-    case purple = 0.833333
-    
-    var uiColor : UIColor {
-        return UIColor(hue: rawValue, saturation: 1, brightness: 1, alpha: 1)
-    }
-}
-
-let crayon = Color.green
+let crayon = PrimaryColor.yellow
 crayon.rawValue
-crayon.uiColor
+crayon.hue
+crayon.color
+
+let paintBrush = PrimaryColor.blue
+paintBrush.rawValue
+paintBrush.hue
+paintBrush.color
+
+
+enum PrimaryColor2: Double {
+    case red = 0
+    case yellow = 0.16666
+    case blue   = 0.666667
+    
+    var color : Color {
+        Color(hue: rawValue,
+              saturation: 1.0,
+              brightness: 1.0)
+    }
+}
+
+let crayon2 = PrimaryColor.yellow
+crayon2.rawValue
+crayon2.hue
+crayon2.color
 
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 

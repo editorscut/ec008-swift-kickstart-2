@@ -6,7 +6,7 @@ protocol Movable {
 }
 
 func shiftedLeft<T: Movable>(movable: T) -> T {
-    return movable.movedHorizontally(by: -1)
+    movable.movedHorizontally(by: -1)
 }
 
 struct Vertex {
@@ -15,16 +15,16 @@ struct Vertex {
 
 extension Vertex: Movable {
     public var location: Vertex {
-        return self
+        self
     }
     func movedHorizontally(by deltaX: Int) -> Vertex {
-        return Vertex(x: x + deltaX, y: y)
+        Vertex(x: x + deltaX, y: y)
     }
 }
 
 extension Vertex: CustomStringConvertible {
     var description: String {
-        return "(\(x), \(y))"
+        "(\(x), \(y))"
     }
 }
 
@@ -34,7 +34,7 @@ struct Size {
 
 extension Size: CustomStringConvertible {
     var description: String {
-        return "\(width) by \(height)"
+        "\(width) by \(height)"
     }
 }
 
@@ -57,7 +57,7 @@ extension Rectangle: Movable {
 
 extension Rectangle: CustomStringConvertible {
     var description: String {
-        return "\(size) at \(topLeftCorner)"
+        "\(size) at \(topLeftCorner)"
     }
 }
 

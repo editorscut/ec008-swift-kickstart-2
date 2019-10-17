@@ -1,8 +1,8 @@
 //: ### The switch Statement
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-enum Color {
+enum PrimaryColor {
     case red
-    case green
+    case yellow
     case blue
 }
 

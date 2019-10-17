@@ -29,7 +29,7 @@ struct Vertex {
 
     var magnitude: Double {
         get {
-            return sqrt(x * x + y * y)
+            sqrt(x * x + y * y)
         }
         set {
             let multiplier = newValue / magnitude

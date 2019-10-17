@@ -1,11 +1,11 @@
 //: ### Overloading
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 func hello() -> String {
-    return "Hello, World!"
+    "Hello, World!"
 }
 
 func hello(name: String) -> String {
-    return "Hello, \(name)!"
+    "Hello, \(name)!"
 }
 
 hello()

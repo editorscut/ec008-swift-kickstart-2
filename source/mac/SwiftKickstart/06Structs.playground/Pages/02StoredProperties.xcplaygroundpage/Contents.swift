@@ -11,7 +11,7 @@
 
 struct Vertex {
     let x, y: Double
-    
+
     init(x: Double = 3.0, y: Double = 4.0) {
         self.x = x
         self.y = y

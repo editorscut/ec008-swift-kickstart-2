@@ -16,7 +16,7 @@ maggie.name
 
 extension SettableName {
     func fetchTheName() -> String {
-        return name
+        name
     }
 }
 

@@ -7,7 +7,7 @@ import Foundation
 //    let y: Double
 //
 //    func magnitude() -> Double {
-//        return sqrt(x * x + y * y)
+//        sqrt(x * x + y * y)
 //    }
 //
 //    mutating func moveHorizontally(by deltaX: Double) {
@@ -17,7 +17,7 @@ import Foundation
 //
 //extension Vertex: CustomStringConvertible {
 //    var description: String {
-//        return "(\(x), \(y))"
+//        "(\(x), \(y))"
 //    }
 //}
 //
@@ -29,17 +29,17 @@ struct Vertex {
     let y: Double
     
     func magnitude() -> Double {
-        return sqrt(x * x + y * y)
+        sqrt(x * x + y * y)
     }
     
     func movedHorizontally(by deltaX: Double) -> Vertex {
-        return Vertex(x: x + deltaX, y: y)
+        Vertex(x: x + deltaX, y: y)
     }
 }
 
 extension Vertex: CustomStringConvertible {
     var description: String {
-        return "(\(x), \(y))"
+        "(\(x), \(y))"
     }
 }
 

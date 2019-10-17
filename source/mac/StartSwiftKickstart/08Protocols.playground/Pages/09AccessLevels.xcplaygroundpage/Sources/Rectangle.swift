@@ -4,7 +4,7 @@ fileprivate struct Size {
 
 extension Size: CustomStringConvertible {
     fileprivate var description: String {
-        return "\(width) by \(height)"
+        "\(width) by \(height)"
     }
 }
 
@@ -38,6 +38,6 @@ extension Rectangle: Movable {
 
 extension Rectangle: CustomStringConvertible {
     public var description: String {
-        return "\(size) at \(topLeftCorner)"
+        "\(size) at \(topLeftCorner)"
     }
 }

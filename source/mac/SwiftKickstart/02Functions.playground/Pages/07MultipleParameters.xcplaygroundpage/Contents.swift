@@ -2,7 +2,7 @@
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 func hello(name: String,
            city: String) -> String {
-    return "Hello, \(name) who comes from \(city)!"
+    "Hello, \(name) who comes from \(city)!"
 }
 
 hello(name: "my friend", city: "London")
@@ -11,7 +11,7 @@ hello(name: "my friend", city: "London")
 
 func hello2(_ name: String,
             from city: String) -> String {
-    return "Hello, \(name) who comes from \(city)!"
+    "Hello, \(name) who comes from \(city)!"
 }
 
 hello2("my friend", from: "London")
@@ -20,7 +20,7 @@ hello2("my friend", from: "London")
 
 func hello3(_ name: String = "World",
             from city: String = "Cupertino") -> String {
-    return "Hello, \(name) who comes from \(city)!"
+    "Hello, \(name) who comes from \(city)!"
 }
 
 hello3()

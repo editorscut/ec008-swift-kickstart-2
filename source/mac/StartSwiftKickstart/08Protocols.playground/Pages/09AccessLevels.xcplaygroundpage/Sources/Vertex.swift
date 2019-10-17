@@ -9,15 +9,15 @@ public struct Vertex {
 
 extension Vertex: Movable {
     public var location: Vertex {
-        return self
+        self
     }
     public func movedHorizontally(by deltaX: Int) -> Vertex {
-        return Vertex(x: x + deltaX, y: y)
+        Vertex(x: x + deltaX, y: y)
     }
 }
 
 extension Vertex: CustomStringConvertible {
     public var description: String {
-        return "(\(x), \(y))"
+        "(\(x), \(y))"
     }
 }

@@ -7,7 +7,7 @@ struct Vertex {
 
 extension Vertex: CustomStringConvertible {
     var description: String {
-        return "(\(x), \(y))"
+        "(\(x), \(y))"
     }
 }
 

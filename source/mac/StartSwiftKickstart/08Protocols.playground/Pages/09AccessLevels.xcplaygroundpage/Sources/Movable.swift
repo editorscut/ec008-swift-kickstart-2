@@ -6,10 +6,10 @@ public protocol Movable {
 
 extension Movable {
     public func shiftedRight() -> Self {
-        return movedHorizontally(by: 1)
+        movedHorizontally(by: 1)
     }
 }
 
 public func shiftedLeft<T: Movable>(movable: T) -> T {
-    return movable.movedHorizontally(by: -1)
+    movable.movedHorizontally(by: -1)
 }

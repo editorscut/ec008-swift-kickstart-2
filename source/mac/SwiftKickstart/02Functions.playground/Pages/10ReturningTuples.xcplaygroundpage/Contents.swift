@@ -2,7 +2,7 @@
 //: [TOC](00TOC) | [Previous](@previous) | Next
 
 func hello(peopleNamed people: String...) -> (count: Int, greeting: String) {
-    return (people.count, people.reduce(""){
+    (people.count, people.reduce(""){
         $0 + "\nHello, " + $1 + "!"
     })
 }

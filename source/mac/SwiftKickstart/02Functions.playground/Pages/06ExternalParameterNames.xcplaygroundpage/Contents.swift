@@ -1,7 +1,7 @@
 //: ### External Parameter Names
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 func hello(name: String = "World") -> String {
-    return "Hello, \(name)!"
+    "Hello, \(name)!"
 }
 
 hello()
@@ -12,7 +12,7 @@ hello(name: "my friend")
 //: so you can see both versions
 
 func hello2(_ name: String = "World") -> String {
-    return "Hello, \(name)!"
+    "Hello, \(name)!"
 }
 
 hello2()
@@ -23,7 +23,7 @@ hello2("my friend")
 //: external names so you can see both versions
 
 func hello3(to name: String = "World") -> String {
-    return "Hello, \(name)!"
+    "Hello, \(name)!"
 }
 
 hello3()

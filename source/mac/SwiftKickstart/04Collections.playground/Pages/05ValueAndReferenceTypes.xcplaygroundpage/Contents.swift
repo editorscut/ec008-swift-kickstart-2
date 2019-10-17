@@ -7,8 +7,7 @@ x = 5
 x
 y
 
-import UIKit
-let xField = UITextField()
+let xField = TextField()
 xField.text = "x"
 
 let yField = xField
@@ -27,7 +26,7 @@ yNumbers
 var xFields = [xField, yField]
 var yFields = xFields
 
-var zField = UITextField()
+var zField = TextField()
 zField.text = "z"
 yFields[0] = zField
 
