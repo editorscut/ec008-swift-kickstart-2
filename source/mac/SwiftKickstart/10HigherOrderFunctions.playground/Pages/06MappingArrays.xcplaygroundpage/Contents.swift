@@ -2,7 +2,7 @@
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 func apply<Input, Output>(to input: Input,
                           using f: (Input) -> Output) -> Output {
-    return f(input)
+    f(input)
 }
 
 
@@ -25,7 +25,7 @@ apply(to: numberSold){
 }
 
 func revenueAt199on(_ count: Count) -> USDollar {
-    return USDollar(count.asDouble() * 1.99 * 0.70)
+    USDollar(count.asDouble() * 1.99 * 0.70)
 }
 
 apply(to: numberSold){

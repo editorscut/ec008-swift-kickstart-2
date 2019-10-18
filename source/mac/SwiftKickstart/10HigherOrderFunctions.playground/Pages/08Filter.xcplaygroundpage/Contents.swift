@@ -43,11 +43,11 @@ let revenueFromMoreThan25
 revenueFromMoreThan25
 
 func isMoreThan25(_ count: Count) -> Bool {
-    return count > 25
+    count > 25
 }
 
 func revenueAt199on(_ count: Count) -> USDollar {
-    return USDollar(count.asDouble() * 1.99 * 0.70)
+    USDollar(count.asDouble() * 1.99 * 0.70)
 }
 
 numberSold.filter{isMoreThan25($0)}

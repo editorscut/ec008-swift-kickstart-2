@@ -3,12 +3,12 @@
 let numberSold = [17, 29, 11, 15, 32, 21, 27]
 
 func revenueAt199on(_ count: Count) -> USDollar {
-    return USDollar(count.asDouble() * 1.99 * 0.70)
+    USDollar(count.asDouble() * 1.99 * 0.70)
 }
 
 func combination(runningTotal: USDollar,
                  daysSales: Count) -> USDollar {
-    return runningTotal + revenueAt199on(daysSales)
+    runningTotal + revenueAt199on(daysSales)
 }
 
 extension Sequence {    
@@ -54,19 +54,19 @@ dailyTotals.description
 
 extension Sequence {
     func mapUsingReduce<Output>(_ f: (Element) -> Output) -> [Output] {
-        return reduce([Output]()){$0 + [f($1)]}
+        reduce([Output]()){$0 + [f($1)]}
     }
 }
 numberSold.mapUsingReduce(revenueAt199on).description
 
 
 func isMoreThan25(_ count: Count) -> Bool {
-    return count > 25
+    count > 25
 }
 
 extension Sequence {
     func filterUsingReduce(_ condition: (Element) -> Bool ) -> [Element] {
-        return reduce([Element]()){return condition($1) ? $0 + [$1] : $0 }
+        reduce([Element]()){condition($1) ? $0 + [$1] : $0 }
     }
 }
 numberSold.filterUsingReduce(isMoreThan25)
