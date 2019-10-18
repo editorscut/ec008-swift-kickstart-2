@@ -42,7 +42,7 @@
             \cf4 \cb3 "title"\cf2 \cb3 : \cf4 \cb3 \'93Playground Template for A Swift Kickstart\'94\cf2 \cb3 ,\
             \cf4 \cb3 "overviewSubtitle"\cf2 \cb3 : \cf4 \cb3 \'93This is the start version\'94\cf2 \cb3 ,\
             \cf4 \cb3 "description"\cf2 \cb3 : \cf4 \cb3 \'93Companion starting playground for the book A Swift Kickstart."\cf2 \cb3 ,\
-            \cf4 \cb3 "contentIdentifier"\cf2 \cb3 : \cf4 \cb3 "com.github.editorscut.ec008-swift-kickstart-2.playground\'94\cf2 \cb3 ,\
+            \cf4 \cb3 "contentIdentifier"\cf2 \cb3 : \cf4 \cb3 "com.github.editorscut.ec008-swift-kickstart-2.startplayground\'94\cf2 \cb3 ,\
             \cf4 \cb3 "contentVersion"\cf2 \cb3 : \cf4 \cb3 \'930.8\'94\cf2 \cb3 ,\
             \cf4 \cb3 "url"\cf2 \cb3 : \cf4 \cb3 \'93iPad/StartSwiftKickstart.playgroundbook.zip"\cf2 \cb3 ,\
             \cf4 \cb3 "publishedDate"\cf2 \cb3 : \cf4 \cb3 "2019-10-17T21:13:57+00:00"\cf2 \cb3 ,\
