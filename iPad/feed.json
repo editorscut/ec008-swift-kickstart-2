@@ -10,13 +10,13 @@
             "title": "Playground for A Swift Kickstart",
             "overviewSubtitle": "This is the finished version",
             "description": "Companion playground for the book A Swift Kickstart.",
-            "contentIdentifier": "com.github.editorscut.ec008-swift-kickstart-2.playground",
+            "contentIdentifier": "com.github.editorscut.ec008-swift-kickstart-2.end",
             "contentVersion": "0.8",
-            "url": "iPad/SwiftKickstart.playgroundbook.zip",
+            "url": "end/SwiftKickstart.playgroundbook.zip",
             "publishedDate": "2019-10-17T21:13:57+00:00",
             "lastUpdatedDate": "2019-10-17T21:13:57+00:00",
-            "thumbnailURL": "iPad/thumbnail.png",
-            "bannerImageURL": "iPad/banner.png",
+            "thumbnailURL": "end/thumbnail.png",
+            "bannerImageURL": "end/banner.png",
             "additionalInformation": [
                 {
                     "name": "Languages",
@@ -24,7 +24,7 @@
                 }
             ],
             "previewImageURLs": [
-                "iPad/preview.png"
+                "end/preview.png"
             ]
         },
         {
@@ -33,11 +33,11 @@
             "description": "Companion starting playground for the book A Swift Kickstart.",
             "contentIdentifier": "com.github.editorscut.ec008-swift-kickstart-2.startplayground",
             "contentVersion": "0.8",
-            "url": "iPad/StartSwiftKickstart.playgroundbook.zip",
+            "url": "start/StartSwiftKickstart.playgroundbook.zip",
             "publishedDate": "2019-10-17T21:13:57+00:00",
             "lastUpdatedDate": "2019-10-17T21:13:57+00:00",
-            "thumbnailURL": "iPad/startthumbnail.png",
-            "bannerImageURL": "iPad/startbanner.png",
+            "thumbnailURL": "start/thumbnail.png",
+            "bannerImageURL": "start/banner.png",
             "additionalInformation": [
                 {
                     "name": "Languages",
@@ -45,7 +45,7 @@
                 }
             ],
             "previewImageURLs": [
-                "iPad/preview.png"
+                "start/preview.png"
             ]
         }
     ]
