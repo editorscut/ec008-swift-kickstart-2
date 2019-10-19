@@ -5,7 +5,7 @@ extension Int {
         self = self * 2
     }
     func doubled() -> Int {
-        return self * 2
+        self * 2
     }
 }
 

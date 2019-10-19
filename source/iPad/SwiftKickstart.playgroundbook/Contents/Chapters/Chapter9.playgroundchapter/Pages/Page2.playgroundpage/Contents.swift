@@ -1,16 +1,18 @@
-import UIKit
+class TextField {
+    var text = ""
+}
 
-var textField = UITextField()
+var textField = TextField()
 textField.text = "Hello"
 
-func replace(_ field: UITextField) {
+func replace(_ field: TextField) {
     var field = field
-    field = UITextField()
+    field = TextField()
     field.text = "Goodbye"
     field.text
 }
 
-func modify(_ field: UITextField) {
+func modify(_ field: TextField) {
     field.text = "Changed"
 }
 

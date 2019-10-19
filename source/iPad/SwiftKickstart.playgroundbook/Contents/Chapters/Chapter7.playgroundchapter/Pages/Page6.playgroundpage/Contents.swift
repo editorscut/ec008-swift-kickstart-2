@@ -8,7 +8,7 @@ class Attendee {
         self.hometown = hometown
     }
     func nameBadge() -> String {
-        return "Hello, I'm \(name)" + possibleLocation() + "."
+        "Hello, I'm \(name)" + possibleLocation() + "."
     }
     private func possibleLocation() -> String {
         guard let place = hometown else {
@@ -20,7 +20,7 @@ class Attendee {
 
 extension Attendee: CustomStringConvertible {
     var description: String {
-        return nameBadge()
+        nameBadge()
     }
 }
 

@@ -1,18 +1,18 @@
-import UIKit
+import SwiftUI
 
-enum Color {
+enum PrimaryColor {
     case red
-    case green
+    case yellow
     case blue
 }
 
-func uiColor(color: Color) -> UIColor {
-    switch color {
+func color(from primaryColor: PrimaryColor) -> Color {
+    switch primaryColor {
     case .red:
-        return UIColor.red
-    case .green:
-        return UIColor.green
+        return Color.red
+    case .yellow:
+        return Color.yellow
     case .blue:
-        return UIColor.blue
+        return Color.blue
     }
 }

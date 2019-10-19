@@ -8,6 +8,6 @@ class Attendee {
         self.hometown = hometown
     }
     func nameBadge() -> String {
-        return "Hello, I'm \(name) from \(hometown)."
+        "Hello, I'm \(name) from \(hometown)."
     }
 }

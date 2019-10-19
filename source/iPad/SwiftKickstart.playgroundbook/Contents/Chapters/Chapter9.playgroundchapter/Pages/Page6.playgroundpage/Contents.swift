@@ -8,7 +8,7 @@ struct Model {
 
 extension Model : CustomStringConvertible {
     var description: String {
-        return privateArray.description
+        privateArray.description
     }
 }
 

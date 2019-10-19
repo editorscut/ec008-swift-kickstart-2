@@ -13,3 +13,4 @@ extension Forecast {
 //try Forecast.number(0)
 //try Forecast.number(20)
 //try Forecast.number(-2)
+

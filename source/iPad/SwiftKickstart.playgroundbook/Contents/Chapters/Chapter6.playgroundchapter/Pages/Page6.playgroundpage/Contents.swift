@@ -8,7 +8,7 @@ struct Vertex {
 
 extension Vertex: CustomStringConvertible {
     var description: String {
-        return "(\(x), \(y))"
+        "(\(x), \(y))"
     }
 }
 
@@ -16,7 +16,7 @@ extension Vertex: Equatable{}
 
 //extension Vertex: Equatable{
 //    static func ==(lhs: Vertex, rhs: Vertex) -> Bool {
-//        return lhs.x == rhs.x && lhs.y == rhs.y
+//        lhs.x == rhs.x && lhs.y == rhs.y
 //    }
 //}
 

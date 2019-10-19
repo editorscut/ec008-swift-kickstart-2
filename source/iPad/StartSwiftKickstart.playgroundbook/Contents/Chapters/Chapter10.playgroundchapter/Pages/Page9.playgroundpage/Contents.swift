@@ -1,7 +1,7 @@
 let numberSold = [17, 29, 11, 15, 32, 21, 27]
 
 func revenueAt199on(_ count: Count) -> USDollar {
-    return USDollar(count.asDouble() * 1.99 * 0.70)
+    USDollar(count.asDouble() * 1.99 * 0.70)
 }
 
 let dailyNumberSold = ["Mon": 17, "Tue": 29,

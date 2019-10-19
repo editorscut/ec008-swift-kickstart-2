@@ -1,3 +1,18 @@
+func hello(peopleNamed people: String...) -> (count: Int,
+    greeting: String) {
+        (people.count, people.reduce(""){
+            $0 + "\nHello, " + $1 + "!"
+        })
+}
+
+hello(peopleNamed: "Thing One", "Thing Two")
+
+let result = hello(peopleNamed: "Thing One", "Thing Two")
+result.count
+result.greeting
+
+//: Introduce a local var and replace reduce() with a for loop
+
 func hello2(peopleNamed people: String...) -> (count: Int,
     greeting: String) {
         var tempGreeting = ""

@@ -1,7 +1,7 @@
 class FirstView: LoggingView {
-    
+
     var secondView: SecondView?
-    
+
     func presentView() {
         secondView = SecondView(name: "Second View")
         updateLog(with: "Presented: \(secondView?.name ?? "nil")")

@@ -1,41 +1,41 @@
-import UIKit
-let viewer = UIImageView()
-let image = UIImage(named: "Kickstart.jpg")
+import SwiftUI
 
-//if image != nil {
-//    let validImage = image!
-//    viewer.image = validImage
-//} else {
-//    print("There is no image to display")
-//}
-//viewer.image
+let fileURL = Bundle
+    .main
+    .urlForImageResource("Kickstart.jpg")
 
-//if let validImage = image {
-//    viewer.image = validImage
+//if fileURL != nil {
+//    let validFileURL = fileURL!
+//    print("Found file at: ", validFileURL.path)
 //} else {
-//    print("There is no image to display")
-//}
-//viewer.image
-
-//if let image = image {
-//    viewer.image = image
-//} else {
-//    print("There is no image to display")
+//    print("No file found")
 //}
 
-//func display(image: UIImage?) {
-//    if let image = image {
-//        viewer.image = image
-//    } else {
-//        print("There is no image to display")
+//if let validFileURL = fileURL {
+//    print("Found file at: ", validFileURL.path)
+//} else {
+//    print("No file found")
+//}
+
+//if let fileURL = fileURL {
+//    print("Found file at: ", fileURL.path)
+//} else {
+//    print("No file found")
+//}
+
+//func validate(url: URL?) {
+//    guard let url = url else {     print("No file found")
+//        return
 //    }
+//    print("Found file at: ", url.path)
 //}
-func display(image: UIImage?) {
-    guard let image = image else {
-        print("There is no image to display")
-        return
+//
+//validate(url: fileURL)
+
+func validate(url: URL?) -> String {
+    guard let url = url else {     return "No file found"
     }
-    viewer.image = image
+    return "Found file at: \(url.path)"
 }
-display(image: image)
-viewer.image
+
+validate(url: fileURL)

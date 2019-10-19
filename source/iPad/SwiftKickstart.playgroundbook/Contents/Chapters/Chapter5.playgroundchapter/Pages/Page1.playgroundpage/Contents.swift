@@ -1,12 +1,12 @@
-enum Color: CaseIterable {
+enum PrimaryColor: CaseIterable {
     case red
-    case green
+    case yellow
     case blue
 }
-let paintBrush: Color
-var crayon = Color.red
-crayon = .green
+let paintBrush: PrimaryColor
+var crayon = PrimaryColor.red
+crayon = .yellow
 paintBrush = .blue
 
-let colors = Color.allCases
+let colors = PrimaryColor.allCases
 let number = colors.count

@@ -35,3 +35,14 @@ forecastNumber(-2)
 
 
 status
+
+
+
+forecastNumber(0)
+
+forecastNumber(20)
+
+forecastNumber(-2)
+
+
+status

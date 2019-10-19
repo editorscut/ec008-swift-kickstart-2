@@ -10,7 +10,7 @@ public struct Forecast  {
     public init(){}
     
     public subscript(index: Int) -> String {
-        return "\(conditionIcons[index])"
+        "\(conditionIcons[index])"
             + "(\(conditionDescriptions[index]))"
     }
 }

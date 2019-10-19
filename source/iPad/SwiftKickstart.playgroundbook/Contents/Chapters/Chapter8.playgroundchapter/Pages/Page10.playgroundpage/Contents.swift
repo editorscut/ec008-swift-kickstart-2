@@ -1,4 +1,3 @@
-
 let daniel = SettableName(name: "Daniel")
 daniel.name
 daniel.name = "Kimberli"
@@ -14,7 +13,7 @@ maggie.name
 
 extension SettableName {
     func fetchTheName() -> String {
-        return name
+        name
     }
 }
 
@@ -28,3 +27,4 @@ let annabelle = OpenSubclass(name: "Annabelle")
 annabelle.name
 annabelle.name = "Kimberli"
 annabelle.name
+//: [TOC](00TOC) | [Previous](@previous) | Next

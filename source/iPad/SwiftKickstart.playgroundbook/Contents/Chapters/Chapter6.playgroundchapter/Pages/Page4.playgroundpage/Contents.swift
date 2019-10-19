@@ -19,15 +19,15 @@ struct Vertex {
         }
     }
     private(set) var count = 0
-    
+
     init(x: Double, y: Double) {
         self.x = x
         self.y = y
     }
-    
+
     var magnitude: Double {
         get {
-            return sqrt(x * x + y * y)
+            sqrt(x * x + y * y)
         }
         set {
             let multiplier = newValue / magnitude

@@ -15,3 +15,4 @@ result.greeting
 let greetingFunction = hello
 
 greetingFunction("A", "B")
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

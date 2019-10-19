@@ -8,13 +8,13 @@ struct Vertex {
 
 extension Vertex: Movable {
     func movedHorizontally(by deltaX: Int) -> Movable {
-        return Vertex(x: x + deltaX, y: y)
+        Vertex(x: x + deltaX, y: y)
     }
 }
 
 extension Vertex: CustomStringConvertible {
     var description: String {
-        return "(\(x), \(y))"
+        "(\(x), \(y))"
     }
 }
 
@@ -24,7 +24,7 @@ struct Size {
 
 extension Size: CustomStringConvertible {
     var description: String {
-        return "\(width) by \(height)"
+        "\(width) by \(height)"
     }
 }
 
@@ -45,7 +45,7 @@ struct Rectangle {
 
 extension Rectangle: CustomStringConvertible {
     var description: String {
-        return "\(size) at \(topLeftCorner)"
+        "\(size) at \(topLeftCorner)"
     }
 }
 

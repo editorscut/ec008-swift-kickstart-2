@@ -8,7 +8,7 @@ struct Model {
 
 extension Model : CustomStringConvertible {
     var description: String {
-        return privateArray.description
+        privateArray.description
     }
 }
 
@@ -30,7 +30,7 @@ extension Model { // Non-Mutating Methods
     }
     func moved(from fromIndex: Int,
                to toIndex: Int) -> Model {
-        return removed(at: fromIndex)
+        removed(at: fromIndex)
             .inserted(privateArray[fromIndex], at: toIndex)
     }
 }

@@ -4,11 +4,11 @@ primes = [2, 3, 5, 7]
 let primeNames = ["two", "three", "five", "seven"]
 
 func hello(name: String) -> String {
-    return "Hello, \(name)!"
+    "Hello, \(name)!"
 }
 
 func bonjour(name: String) -> String {
-    return "Bonjour, \(name)!"
+    "Bonjour, \(name)!"
 }
 
 let greetings = [hello, bonjour]

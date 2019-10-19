@@ -1,10 +1,10 @@
-enum Color: String {
+enum PrimaryColor: String {
     case red = "Maraschino"
-    case green
+    case yellow
     case blue = "Blueberry"
 }
 
-let crayon = Color.green
+let crayon = PrimaryColor.yellow
 crayon.rawValue
-let paintBrush = Color.red
+let paintBrush = PrimaryColor.red
 paintBrush.rawValue

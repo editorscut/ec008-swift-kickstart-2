@@ -10,10 +10,10 @@ public struct USDollar {
 
 extension USDollar : CustomStringConvertible {
     public var description: String {
-        return formatter.format(self)
+        formatter.format(self)
     }
 }
 
 public func +(lhs: USDollar, rhs: USDollar) -> USDollar {
-    return USDollar(lhs.value + rhs.value)
+    USDollar(lhs.value + rhs.value)
 }

@@ -1,33 +1,32 @@
-import UIKit
+import SwiftUI
 
-enum Color {
+enum PrimaryColor {
     case red
-    case green
+    case yellow
     case blue
-    
-    var uiColor: UIColor {
+ 
+    var color: Color {
         switch self {
         case .red:
-            return UIColor.red
-        case .green:
-            return UIColor.green
+            return Color.red
+        case .yellow:
+            return Color.yellow
         case .blue:
-            return UIColor.blue
+            return Color.blue
         }
     }
     
-    func swatch(_ width: Int, by height: Int) -> UIView {
-        let myView = UIView(frame: CGRect(x: 0,
-                                          y: 0,
-                                          width: width,
-                                          height: height))
-        myView.backgroundColor = uiColor
-        return myView
+    func circle() -> some View {
+        Circle()
+            .foregroundColor(color)
     }
 }
 
-let crayon = Color.blue
-crayon.uiColor
+Circle().foregroundColor(.red)
 
-let paintBrush = Color.red
-paintBrush.uiColor
+
+let crayon = PrimaryColor.blue
+crayon.color
+
+let paintBrush = PrimaryColor.red
+paintBrush.color
