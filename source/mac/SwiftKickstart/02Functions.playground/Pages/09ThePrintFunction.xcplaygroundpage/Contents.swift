@@ -3,9 +3,10 @@
 
 let name = "Swift Programmer"
 
-print("Hello, \(name)!")
+print("Hello, \(name)")
+
 print("""
-Hello,
+Hello, \
 \(name),
 my friend!
 """)
@@ -13,9 +14,8 @@ my friend!
 print(#"Hello,  "\(name)", \n my friend!"#)
 
 print("Hello,", name, "!")
-print("Hello,", name, "!", separator:"^-^")
-print("Hello, ", name, "!", separator:"", terminator: "")
-print("Hello, ", name, separator:"", terminator: "!")
 
+print("Hello, ", name, separator: "", terminator: "!\n")
+print("Hi")
 
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

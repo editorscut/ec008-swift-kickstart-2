@@ -1,5 +1,5 @@
 /*:
- # Table of Contents
+ # Chapter 2 Functions
  * [01 No Parameter No Return](01NoParameterNoReturn)
  * [02 Return Values](02ReturnValues)
  * [03 Single Parameter](03SingleParameter)

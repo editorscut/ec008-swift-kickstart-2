@@ -5,6 +5,6 @@ func hello(name: String = "World") -> String {
 }
 
 hello()
-
 hello(name: "my friend")
+
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
