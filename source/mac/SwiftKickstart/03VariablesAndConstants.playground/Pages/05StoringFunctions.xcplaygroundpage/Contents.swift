@@ -1,7 +1,7 @@
 //: ### Storing Functions
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-func hello(peopleNamed people: String...) -> (count: Int,
-    greeting: String) {
+func hello(to people: String...) -> (count: Int,
+                                    greeting: String) {
         var tempGreeting = ""
         for person in people {
             tempGreeting += "\nHello, \(person)!"
@@ -9,12 +9,16 @@ func hello(peopleNamed people: String...) -> (count: Int,
         return (people.count, tempGreeting)
 }
 
-let result = hello(peopleNamed: "Thing One", "Thing Two")
+let result = hello(to: "Thing One", "Thing Two")
 
 result.count
 result.greeting
 
-let greetingFunction = hello
+func hello() -> String {
+  "Hello, World!"
+}
+
+let greetingFunction = hello(to:)
 
 greetingFunction("A", "B")
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

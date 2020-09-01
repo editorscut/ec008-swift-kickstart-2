@@ -1,5 +1,5 @@
 /*:
- # Table of Contents
+ # Chapter 3 Variables and Constants
  * [01 Inferring Type](01InferringType)
  * [02 Let](02Let)
  * [03 Var](03Var)

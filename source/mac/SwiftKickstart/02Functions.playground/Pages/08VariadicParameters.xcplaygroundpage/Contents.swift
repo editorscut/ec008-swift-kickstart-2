@@ -1,7 +1,7 @@
 //: ### Variadic Parameters
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 // if version
-//func hello(peopleNamed people: String...) {
+//func hello(_ people: String...) {
 //    if people.isEmpty {
 //        print("There's no one to greet.")
 //    } else {
@@ -12,7 +12,7 @@
 //}
 
 // guard version
-func hello(peopleNamed people: String...) -> String {
+func hello(_ people: String...) -> String {
   guard !people.isEmpty  else {
     return "There's no one to greet."
   }
@@ -23,6 +23,6 @@ func hello(peopleNamed people: String...) -> String {
   return response
 }
 
-hello(peopleNamed: "Thing One", "Thing Two")
+hello("Thing One", "Thing Two")
 
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
