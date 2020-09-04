@@ -1,5 +1,5 @@
 /*:
- # Table of Contents
+ # Chapter 4 Collections
 * [01 Create Arrays](01CreateArrays)
 * [02 Create Modifiable Arrays](02CreateModifiableArrays)
 * [03 Modify Arrays](03ModifyArrays)

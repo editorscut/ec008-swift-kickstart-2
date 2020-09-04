@@ -16,8 +16,10 @@ func bonjour(name: String) -> String {
 let greetings = [hello, bonjour]
 
 primes[2]
+
 primeNames[1]
+
 greetings[0]("World")
-//: [TOC](00TOC) | Previous | [Next](@next)
 
-
+//primes[2] = 11
+////: [TOC](00TOC) | Previous | [Next](@next)

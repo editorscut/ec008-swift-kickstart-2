@@ -1,6 +1,5 @@
 //: ### Strings
 //: [TOC](00TOC) | [Previous](@previous) | Next
-
 var vowels = "aeiou"
 
 vowels.contains("b")
@@ -24,20 +23,23 @@ func removeVowels(from input: String) -> String {
 removeVowels(from: title)
 
 func filterVowels(from input: String) -> String {
-    return input.filter{!vowels.contains($0)}
+  input.filter{char in
+    !vowels.contains(char)
+  }
 }
 
 filterVowels(from: title)
 
-let firstSpace = title.firstIndex(of: " ") ?? title.endIndex
+let firstSpace = title.index(of: " ") ?? title.endIndex
+
 let firstWord = title[...firstSpace]
 let trimmedFirstWord = title[..<firstSpace]
 let secondWord = title[firstSpace...]
+let result
+  = String(firstWord.uppercased()
+            + "-"
+            + secondWord.reversed())
 
-let altTitle = """
-Swift 
-Programmer
-"""
 //: [TOC](00TOC) | [Previous](@previous) | Next
 
 

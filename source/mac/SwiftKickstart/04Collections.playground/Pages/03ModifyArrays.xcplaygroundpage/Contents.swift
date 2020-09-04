@@ -6,7 +6,7 @@ evens.append(8)
 evens += [12, 6, 10]
 evens.insert(14, at: 1)
 evens[1...5] = [100, 200]
-evens[2...2] = [22, 20, 18]
+evens[2 ... 2] = [22, 20, 18]
 evens[...2] = [110, 120, 130]
 evens[5...] = [210, 220]
 evens.removeLast()
@@ -16,10 +16,6 @@ evens.removeAll(keepingCapacity: true)
 if !evens.isEmpty{
     evens.removeLast()
 }
-
 evens
 evens.count
-
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-
-

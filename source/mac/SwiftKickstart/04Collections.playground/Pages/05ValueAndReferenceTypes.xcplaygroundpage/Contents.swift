@@ -3,7 +3,6 @@
 var x = 7
 var y = x
 x = 5
-
 x
 y
 
@@ -32,11 +31,7 @@ yFields[0] = zField
 
 xFields[0].text
 yFields[0].text
-
 yFields[1].text = "Changed"
 xFields[1].text
 yFields[1].text
-
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-
-
