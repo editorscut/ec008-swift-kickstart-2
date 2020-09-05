@@ -1,5 +1,5 @@
 /*:
- # Table of Contents
+ # Chapter 5 Enumerations
  * [01 Create Enumerations](01CreateEnumerations)
  * [02 The switch Statement](02TheSwitchStatement)
  * [03 Methods](03Methods)

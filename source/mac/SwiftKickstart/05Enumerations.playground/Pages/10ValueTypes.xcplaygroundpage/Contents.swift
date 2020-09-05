@@ -28,23 +28,19 @@ var color1 = PrimaryColor.red
 var color2 = color1
 color1 = .yellow
 color2 = .blue
-
 color1
 color2
 
-let color3 = PrimaryColor.blue
-let color4 = PrimaryColor.blue
+color1 == color2
 
-color3 == color4
+let color3 = PrimaryColor.yellow
+color1 == color3
 
 let desktop1 = Desktop.black
 let desktop2 = Desktop.color(color1)
 let desktop3 = Desktop.color(color3)
-let desktop4 = Desktop.color(color4)
 
 desktop1 == desktop2
 desktop2 == desktop3
-desktop3 == desktop4
-
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 

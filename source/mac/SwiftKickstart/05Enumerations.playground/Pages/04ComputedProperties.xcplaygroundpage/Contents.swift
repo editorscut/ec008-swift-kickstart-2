@@ -1,13 +1,14 @@
 //: ### Computed Properties
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+
 import SwiftUI
 
 enum PrimaryColor {
     case red
     case yellow
     case blue
- 
-    var color: Color {
+
+  var color: Color {
         switch self {
         case .red:
             return Color.red
@@ -32,4 +33,7 @@ crayon.color
 
 let paintBrush = PrimaryColor.red
 paintBrush.color
+
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+
 
