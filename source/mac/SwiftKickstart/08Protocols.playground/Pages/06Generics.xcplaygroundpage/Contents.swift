@@ -75,3 +75,6 @@ let shiftedLeftVertex = shiftedLeft(movable: vertex)
 let shiftedLeftRectangle = shiftedLeft(movable: rectangle)
 
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+
+
+

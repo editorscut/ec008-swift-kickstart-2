@@ -1,84 +1,85 @@
 //: ### Protocol Extensions Gotcha
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 protocol Movable {
-    var location : Vertex {get}
-    func movedHorizontally(by deltaX: Int) -> Self
-    //   func shiftedRight() -> Self
+  var location: Vertex {get}
+  func movedHorizontally(by deltaX: Int) -> Self
+  func shiftedRight() -> Self
 }
 
 extension Movable {
-    func shiftedRight() -> Self {
-        movedHorizontally(by: 1)
-    }
+  func shiftedRight() -> Self {
+    movedHorizontally(by: 1)
+  }
 }
 
 func shiftedLeft<T: Movable>(movable: T) -> T {
-    movable.movedHorizontally(by: -1)
+  movable.movedHorizontally(by: -1)
 }
 
 struct Vertex {
-    let x, y : Int
+  let x, y: Int
 }
 
 extension Vertex: Movable {
-    public var location: Vertex {
-        self
-    }
-    func movedHorizontally(by deltaX: Int) -> Vertex {
-        Vertex(x: x + deltaX, y: y)
-    }
+  public var location: Vertex {
+    self
+  }
+  func movedHorizontally(by deltaX: Int) -> Vertex {
+    Vertex(x: x + deltaX, y: y)
+  }
 }
 
 extension Vertex: CustomStringConvertible {
-    var description: String {
-        "(\(x), \(y))"
-    }
+  var description: String {
+    "(\(x), \(y))"
+  }
 }
 
 struct Size {
-    let width, height : Int
+  let width, height: Int
 }
 
 extension Size: CustomStringConvertible {
-    var description: String {
-        "\(width) by \(height)"
-    }
+  var description: String {
+    "\(width) by \(height)"
+  }
 }
 
 struct Rectangle {
-    let topLeftCorner : Vertex
-    let size : Size
+  let topLeftCorner: Vertex
+  let size: Size
 }
 
 extension Rectangle: Movable {
-    public var location: Vertex {
-        let centerX = topLeftCorner.x + size.width/2
-        let centerY = topLeftCorner.y + size.height/2
-        return Vertex(x: centerX, y: centerY)
-    }
-    func movedHorizontally(by deltaX: Int) -> Rectangle {
-        let movedTopLeftCorner
-            = topLeftCorner.movedHorizontally(by: deltaX)
-        return Rectangle(topLeftCorner:movedTopLeftCorner,
-                         size: size)
-    }
-    func shiftedRight() -> Rectangle {
-        return Rectangle(topLeftCorner:
-            topLeftCorner.shiftedRight(),
-                         size: Size(width: 5, height: 5))
-    }
+  public var location: Vertex {
+    let centerX = topLeftCorner.x + size.width/2
+    let centerY = topLeftCorner.y + size.height/2
+    return Vertex(x: centerX,
+                  y: centerY)
+  }
+  func movedHorizontally(by deltaX: Int) -> Rectangle {
+    let movedTopLeftCorner
+      = topLeftCorner.movedHorizontally(by: deltaX)
+    return Rectangle(topLeftCorner:movedTopLeftCorner,
+                     size: size)
+  }
+  func shiftedRight() -> Rectangle {
+    Rectangle(topLeftCorner:
+                topLeftCorner.shiftedRight(),
+              size: Size(width: 5,
+                         height: 5))
+  }
 }
 
 extension Rectangle: CustomStringConvertible {
-    var description: String {
-        "\(size) at \(topLeftCorner)"
-    }
+  var description: String {
+    "\(size) at \(topLeftCorner)"
+  }
 }
 
 let vertex = Vertex(x: 3, y: 4)
 let size = Size(width: 100, height: 50)
 let rectangle = Rectangle(topLeftCorner: vertex, size: size)
-let movable = rectangle as Movable
 
 let movedVertex = vertex.movedHorizontally(by: 10)
 let movedTwiceVertex = movedVertex.movedHorizontally(by: 10)
@@ -91,5 +92,8 @@ let shiftedLeftRectangle = shiftedLeft(movable: rectangle)
 
 let shiftedRightVertex = vertex.shiftedRight()
 let shiftedRightRectangle = rectangle.shiftedRight()
-let shiftedRightMovable = movable.shiftedRight()
+
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+
+
+

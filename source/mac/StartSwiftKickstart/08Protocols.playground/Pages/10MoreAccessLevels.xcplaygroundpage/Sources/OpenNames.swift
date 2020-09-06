@@ -1,3 +1,5 @@
+import Foundation
+
 open class OpenName {
     public var name: String
     

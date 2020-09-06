@@ -1,5 +1,5 @@
 /*:
- # Table of Contents
+ # Chapter 8 Protocols
  * [01 Create Protocols](01CreateProtocols)
  * [02 Conforming to a Protocol](02ConformingToAProtocol)
  * [03 Self](03Self)

@@ -36,12 +36,12 @@ struct Rectangle {
 }
 
 extension Rectangle: Movable {
-    func movedHorizontally(by deltaX: Int) -> Rectangle {
-        let movedTopLeftCorner
-            = topLeftCorner.movedHorizontally(by: deltaX)
-        return Rectangle(topLeftCorner:movedTopLeftCorner,
-                         size: size)
-    }
+  func movedHorizontally(by deltaX: Int) -> Rectangle {
+    let movedTopLeftCorner
+      = topLeftCorner.movedHorizontally(by: deltaX)
+    return Rectangle(topLeftCorner:movedTopLeftCorner,
+                     size: size)
+  }
 }
 
 extension Rectangle: CustomStringConvertible {
@@ -58,3 +58,6 @@ let movedVertex = vertex.movedHorizontally(by: 10)
 let movedTwiceVertex = movedVertex.movedHorizontally(by: 10)
 
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+
+
+
