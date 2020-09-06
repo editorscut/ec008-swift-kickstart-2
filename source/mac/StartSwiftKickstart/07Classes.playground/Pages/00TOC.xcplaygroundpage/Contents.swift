@@ -1,5 +1,5 @@
 /*:
- # Table of Contents
+ # Chapter 7 Classes
  * [01 Create Classes](01CreateClasses)
  * [02 Reference Types](02ReferenceTypes)
  * [03 Initializers](03Initializers)

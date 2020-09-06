@@ -1,12 +1,11 @@
 //: ### Custom Operators
 //: [TOC](00TOC) | [Previous](@previous) | Next
-import Foundation
 
 struct Vertex {
     let x, y : Double
     
     func magnitude() -> Double {
-        sqrt(x * x + y * y)
+      (x * x + y * y).squareRoot()
     }
     
     func movedHorizontally(by deltaX: Double) -> Vertex {

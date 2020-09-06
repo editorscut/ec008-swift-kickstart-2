@@ -13,6 +13,11 @@ class Attendee {
         "Hello, I'm \(name) from \(hometown)."
     }
 }
+
+let daniel = Attendee(name: "Daniel",
+                      hometown: "Shaker Heights")
+let kimberli = Attendee(name: "Kimberli")
+
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
 

@@ -1,5 +1,5 @@
 /*:
- # Table of Contents
+ # Chapter 6 Structs
  * [01 Create Structs](01CreateStructs)
  * [02 Stored Properties](02StoredProperties)
  * [03 Computed Properties](03ComputedProperties)

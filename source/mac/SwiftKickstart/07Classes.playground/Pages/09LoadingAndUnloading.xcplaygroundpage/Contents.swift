@@ -15,9 +15,9 @@ class Location {
         self.city = city
         updateLog(with: "Create Location")
     }
-    deinit {
-        updateLog(with: "Destroy Location")
-    }
+  deinit {
+    updateLog(with: "Destroy Location")
+  }
 }
 
 class Attendee {
@@ -28,18 +28,23 @@ class Attendee {
         self.name = name
         updateLog(with: "Create Attendee")
     }
-    deinit {
-        updateLog(with: "Destroy Attendee")
-    }
+  deinit {
+    updateLog(with: "Destroy Attendee")
+  }
 }
 
 var daniel = Attendee(name: "Daniel")
 log
+print(log)
 daniel.location.city
 log
+print(log)
+
 daniel = Attendee(name: "Kimberli")
 daniel.location.city
 log
+print(log)
+
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
 
