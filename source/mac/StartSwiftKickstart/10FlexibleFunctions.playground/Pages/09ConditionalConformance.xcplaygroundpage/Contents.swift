@@ -4,7 +4,7 @@ struct Model <Element> {
     fileprivate let privateArray: [Element]
     
     init(_ elements: Element...) {
-        privateArray = elements
+      self.init(privateArray: elements)
     }
 }
 

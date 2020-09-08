@@ -1,5 +1,5 @@
 /*:
- # Table of Contents
+ # Chapter 10 Flexible Functions
  * [01 Function Parameters](01FunctionParameters)
  * [02 Reference Types](02ReferenceTypes)
  * [03 inout Parameters](03InoutParameters)

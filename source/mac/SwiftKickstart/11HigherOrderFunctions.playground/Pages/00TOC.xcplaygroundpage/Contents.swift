@@ -1,5 +1,5 @@
 /*:
- # Table of Contents
+ # Chapter 11 Higher-Order Functions
  * [01 Types](01Types)
  * [02 Returning a Function](02ReturningAFunction)
  * [03 Returning a Closure](03ReturningAClosure)

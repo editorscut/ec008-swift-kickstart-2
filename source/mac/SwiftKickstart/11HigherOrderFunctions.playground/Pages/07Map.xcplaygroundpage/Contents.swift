@@ -2,44 +2,28 @@
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 let numberSold = [17, 29, 11, 15, 32, 21, 27]
 
-func apply<Input, Output>(to input: [Input],
-                          using f: (Input) -> Output) -> [Output] {
+func myMap<Input, Output>(to input: [Input],
+                          using f: (Input) -> Output)
+                                           -> [Output] {
+  var output = [Output]()
+  for element in input {
+    output.append(f(element))
+  }
+  return output
+}
+
+extension Array {
+  func myMap<Output>(transform f: (Element) -> Output)
+                                        -> [Output] {
     var output = [Output]()
-    for element in input {
-        output.append(f(element))
+    for element in self {
+      output.append(f(element))
     }
     return output
+  }
 }
 
-
-apply(to: numberSold){
-    USDollar($0.asDouble() * 1.99 * 0.70)
-}
-apply(to: numberSold){
-    USDollar($0.asDouble() * 1.99 * 0.70).description
-}
-
-//extension Array {
-//    func apply<Output>(using f: (Element) -> Output) -> [Output] {
-//        var output = [Output]()
-//        for element in self {
-//            output.append(f(element))
-//        }
-//        return output
-//    }
-//}
-
-extension Sequence {
-    func apply<Output>(using f: (Element) -> Output) -> [Output] {
-        var output = [Output]()
-        for element in self {
-            output.append(f(element))
-        }
-        return output
-    }
-}
-
-numberSold.apply{
+numberSold.myMap{
     USDollar($0.asDouble() * 1.99 * 0.70).description
 }
 
@@ -58,14 +42,4 @@ dailyNumberSold.map{
 
 let result = dailyNumberSold.mapValues{$0.asDouble() * 1.99 * 0.70}
 result
-
-import Foundation
-
-let formatter = NumberFormatter()
-formatter.maximumFractionDigits = 2
-let sales = NSNumber(value: 1.2345)
-
-let niceSales = formatter.string(from: sales)
-let dollarSales = niceSales.map{"$" + $0}
-dollarSales
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

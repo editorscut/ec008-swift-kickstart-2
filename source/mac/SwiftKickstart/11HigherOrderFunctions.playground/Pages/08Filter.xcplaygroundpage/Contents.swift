@@ -10,35 +10,33 @@ let dailyNumberSold = ["Mon": 17, "Tue": 29,
 let weekendDays = ["Sat", "Sun"]
 
 extension Sequence {
-    func keep(using f: (Element) -> Bool) -> [Element] {
-        var output = [Element]()
-        for element in self {
-            if f(element) {
-                output.append(element)
-            }
-        }
-        return output
+  func myFilter(using f: (Element) -> Bool)
+                                   -> [Element] {
+    var output = [Element]()
+    for element in self {
+      if f(element) {
+        output.append(element)
+      }
     }
+    return output
+  }
 }
 
-numberSold.keep{
+numberSold.myFilter{
     $0 > 25
 }
 
-dailyNumberSold.keep{
+dailyNumberSold.myFilter{
     !weekendDays.contains($0.key)
 }
 
 let moreThan25 = numberSold.filter{$0 > 25}
 moreThan25
 
-let weekdaySales = dailyNumberSold.filter{!weekendDays.contains($0.key)}
-weekdaySales
-
 let revenueFromMoreThan25
     = numberSold.filter{$0 > 25}
-        .map{USDollar($0.asDouble() * 1.99 * 0.70)}
-        .description
+                .map{USDollar($0.asDouble() * 1.99 * 0.70)}
+                .description
 
 revenueFromMoreThan25
 
@@ -51,14 +49,15 @@ func revenueAt199on(_ count: Count) -> USDollar {
 }
 
 numberSold.filter{isMoreThan25($0)}
-    .map{revenueAt199on($0)}
-    .description
+          .map{revenueAt199on($0)}
+          .description
 
 numberSold.filter{count in isMoreThan25(count)}
-    .map{filteredCount in revenueAt199on(filteredCount)}
-    .description
+          .map{numberSold in revenueAt199on(numberSold)}
+          .description
 
 numberSold.filter(isMoreThan25)
-    .map(revenueAt199on)
-    .description
+          .map(revenueAt199on)
+          .description
+
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

@@ -19,8 +19,6 @@ let dictionary = ["Joan"  : joansLanguages,
                   "Mary"  : marysLanguages,
                   "Fred"  : fredsLanguages]
 
-//: map and flatmap for arrays
-
 let languageMap = dictionary.map{ (key, langArray) in
     langArray
 }
@@ -30,28 +28,4 @@ let languageFlatMap = dictionary.flatMap{ (key, langArray) in
 }
 
 
-let languages = Array(Set(languageFlatMap))
-
-//: map and flatmap for optionals
-let firstLanguageMap = dictionary["Joan"].map{$0.first}
-firstLanguageMap
-let firstLanguageFlatMap = dictionary["Joan"].flatMap{$0.first}
-firstLanguageFlatMap
-
-
-
-//: Using flatMap
-
-let team = ["Joan", "Mike", "Dave", "Anna"]
-
-let languagesForTeamMap = team.map{dictionary[$0]}
-languagesForTeamMap
-
-let languagesForTeamFlatMap = team.compactMap{dictionary[$0]}
-languagesForTeamFlatMap
-
-
-let languagesDoubleFlatMap = team.compactMap{dictionary[$0]}.flatMap{$0}
-languagesDoubleFlatMap
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-

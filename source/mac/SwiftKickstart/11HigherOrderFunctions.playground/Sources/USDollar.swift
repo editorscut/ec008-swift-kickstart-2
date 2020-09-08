@@ -8,7 +8,7 @@ public struct USDollar {
     }
 }
 
-extension USDollar: CustomStringConvertible {
+extension USDollar : CustomStringConvertible {
     public var description: String {
         formatter.format(self)
     }
