@@ -1,22 +1,41 @@
-class TextField {
-    var text = ""
+//extension Forecast {
+//  static func number(_ index: Int) -> String? {
+//    if  range.contains(index) {
+//      return Forecast()[index]
+//    } else {
+//      return nil
+//    }
+//  }
+//}
+
+//extension Forecast {
+//  static func number(_ index: Int) -> String? {
+//    guard  range.contains(index) else { return nil}
+//    return Forecast()[index]
+//  }
+//}
+
+//extension Forecast {
+//  static func number(_ index: Int) -> String? {
+//    switch index {
+//    case range:
+//      return Forecast()[index]
+//    default:
+//      return nil
+//    }
+//  }
+//}
+
+extension Forecast {
+  static func number(_ index: Int) -> String? {
+    if case range = index {
+      return Forecast()[index]
+    } else {
+      return nil
+    }
+  }
 }
 
-var textField = TextField()
-textField.text = "Hello"
-
-func replace(_ field: TextField) {
-    var field = field
-    field = TextField()
-    field.text = "Goodbye"
-    field.text
-}
-
-func modify(_ field: TextField) {
-    field.text = "Changed"
-}
-
-replace(textField)
-textField.text
-modify(textField)
-textField.text
+Forecast.number(0)
+Forecast.number(-2)
+Forecast.number(20)

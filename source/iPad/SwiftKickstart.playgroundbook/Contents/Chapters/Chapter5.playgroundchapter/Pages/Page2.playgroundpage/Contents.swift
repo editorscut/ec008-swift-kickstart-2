@@ -11,9 +11,11 @@ func color(from primaryColor: PrimaryColor) -> Color {
     case .red:
         return Color.red
     case .yellow:
-        return Color.yellow
+      return Color.yellow
     case .blue:
-        return Color.blue
+      return Color.blue
+    @unknown default:
+      fatalError("Switch is no longer exhaustive")
     }
 }
 

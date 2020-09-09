@@ -1,48 +1,49 @@
-struct SubscriptOutOfBoundsError: Error {
+func apply<Input, Output>(to input: Input,
+                          using f: (Input) -> Output)
+                                           -> Output {
+    f(input)
 }
 
-extension Forecast {
-    static func number(_ index: Int) throws -> String {
-        if index < 0 || index >= Forecast.count {
-            throw SubscriptOutOfBoundsError()
-        }
-        return Forecast()[index]
-    }
+func revenueAt199on(_ count: Count) -> USDollar {
+    USDollar(count.asDouble() * 1.99 * 0.70)
+}
+func less7PercentTax(_ income: USDollar) -> USDollar {
+    USDollar(income.value * 0.93)
 }
 
-//try Forecast.number(0)
-//try Forecast.number(20)
-//try Forecast.number(-2)
+let net = less7PercentTax(revenueAt199on(17))
 
-do {
-    try Forecast.number(0)
-    try Forecast.number(20)
-}
-catch {
-    print("error")
+precedencegroup Application {
+  associativity: left
 }
 
-//func forecastNumber(_ index: Int) -> String {
-//    guard let forecast = try? Forecast.number(index),
-//        index < 3 else {
-//            return "error: can't get forecast for index \(index)"
-//    }
-//    return "forecast number \(index) is \(forecast)"
-//}
+infix operator |> : Application
 
-
-func forecastNumber(_ index: Int) -> String {
-    do {
-        let forecast = try Forecast.number(index)
-        return "Success!: forecast number \(index) is \(forecast)"
-    }
-    catch {
-        return "Error: \(error)"
-    }
+func |> <Input, Output>(input: Input,
+                        f: (Input) -> Output)
+                                   -> Output {
+    f(input)
 }
 
-forecastNumber(0)
+17 |> revenueAt199on |> less7PercentTax
 
-forecastNumber(20)
+precedencegroup Compose {
+  associativity: right
+  higherThan: Application
+}
 
-forecastNumber(-2)
+infix operator >>> : Compose
+
+
+func >>> <T, U, V>(f:  @escaping (T) -> U,
+                   g:  @escaping (U) -> V ) -> (T) -> V {
+  {x in g(f(x)) }
+}
+
+17 |> revenueAt199on >>> less7PercentTax
+
+let computation =  revenueAt199on >>> less7PercentTax
+
+17 |> computation
+
+computation(17)

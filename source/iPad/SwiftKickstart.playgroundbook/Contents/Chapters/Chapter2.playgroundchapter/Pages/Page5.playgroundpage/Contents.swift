@@ -3,6 +3,4 @@ func hello(name: String = "World") -> String {
 }
 
 hello()
-
 hello(name: "my friend")
-

@@ -1,9 +1,7 @@
-extension Forecast {
-    static func number(_ index: Int) -> String {
-        if index < 0 || index >= count {
-            preconditionFailure("\(index) is out of bounds. "
-                + "Must be between 0 and \(count).")
-        }
-        return Forecast()[index]
-    }
+func revenueAt199on(_ count: Count) -> USDollar {
+    USDollar(count.asDouble() * 1.99 * 0.70)
+}
+
+func revenueAt299on(_ count: Count) -> USDollar {
+    USDollar(count.asDouble() * 2.99 * 0.70)
 }

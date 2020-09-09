@@ -1,14 +1,9 @@
-var sellersShare = 0.70
+var two = 2
 
-func revenueGenerator(at pricePerApp: USDollar) -> (Count) -> USDollar {
-    func revenue(_ count: Count) -> USDollar {
-        USDollar(count.asDouble() * pricePerApp.value * sellersShare)
-    }
-    return revenue
+func double(_ input: Int) {
+    var input = input
+    input = input * 2
 }
 
-let revenueAt199on = revenueGenerator(at: USDollar(1.99))
-
-revenueAt199on(17)
-
-revenueGenerator(at: USDollar(2.99))(17)
+double(two)
+two

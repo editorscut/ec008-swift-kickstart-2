@@ -1,34 +1,17 @@
-//let dictionary = ["one": 1, "two": 2]
-//
-//let two = dictionary["two"]
-//let three = dictionary["three"]
-//
-//let array = [0, 1, 2]
-//array[2]
-//array[7]
+17 * 1.99 * 0.70
 
-//import Foundation
-//
-//
-//setUp()
-//
-//let url = URL(string: "http://editorscut.com/")
-//
-//
-//URLSession
-//          .shared
-//          .dataTask(with: url!) { (data, response, error) in
-//    print("response", response ?? "no response")
-//    print(error ?? "no error")
-//    shutDown()
-//}.resume()
-//
-extension Forecast {
-    static func number(_ index: Int) -> String {
-        Forecast()[index]
-    }
+let numberSold = 17
+let price = USDollar(1.99)
+let sellersShare = 0.70
+
+Double(numberSold) * price.value * sellersShare
+USDollar(numberSold.asDouble() * price.value * sellersShare)
+
+func revenue(on count: Count,
+             at appPrice: USDollar) -> USDollar {
+  USDollar(count.asDouble()
+            * price.value
+            * sellersShare)
 }
-
-Forecast.number(0)
-//Forecast.number(-2)
-//Forecast.number(20)
+revenue(on: numberSold,
+        at: price)

@@ -1,70 +1,64 @@
-let numberSold = [17, 29, 11, 15, 32, 21, 27]
-
-func revenueAt199on(_ count: Count) -> USDollar {
-    USDollar(count.asDouble() * 1.99 * 0.70)
+struct Model <Element> {
+  fileprivate let privateArray: [Element]
+  
+  init(_ elements: Element...) {
+    self.init(privateArray: elements)
+  }
 }
 
-func combination(runningTotal: USDollar,
-                 daysSales: Count) -> USDollar {
-    runningTotal + revenueAt199on(daysSales)
+extension Model : CustomStringConvertible {
+  var description: String {
+    return privateArray.description
+  }
 }
 
-extension Sequence {
-    func combine<Output>(_ initialResult: Output,
-                         _ nextPartialResult:(Output, Element) -> Output)
-        -> Output {
-            var accumulator = initialResult
-            for element in self {
-                accumulator = nextPartialResult(accumulator, element)
-            }
-            return accumulator
-    }
+extension Model { // Non-Mutating Methods
+  private init(privateArray: [Element]) {
+    self.privateArray = privateArray
+  }
+  
+  func removed(at index: Int) -> Model {
+    var mutableArray = privateArray
+    mutableArray.remove(at: index)
+    return Model(privateArray: mutableArray)
+  }
+  func inserted(_ element: Element,
+                at index: Int) -> Model {
+    var mutableArray = privateArray
+    mutableArray.insert(element, at: index)
+    return Model(privateArray: mutableArray)
+  }
+  func moved(from fromIndex: Int,
+             to toIndex: Int) -> Model {
+    return removed(at: fromIndex)
+      .inserted(privateArray[fromIndex], at: toIndex)
+  }
 }
 
-numberSold.combine(USDollar(0), combination)
-
-numberSold.reduce(USDollar(0), combination)
-
-
-numberSold.reduce(USDollar(0)){
-    combination(runningTotal: $0, daysSales: $1)
+extension Model where Element: Equatable {
+  func removed(_ element: Element) -> Model {
+    guard let location
+            = privateArray.firstIndex(of: element)
+    else {return self}
+    return removed(at: location)
+  }
 }
 
 
-numberSold.reduce(USDollar(0)){
-    $0 + revenueAt199on($1)
+let model = Model("A", "B", "C", "D", "E")
+model.removed(at: 3)
+model.inserted("Z", at: 1)
+model.moved(from: 0, to: 1)
+model.moved(from: 3, to: 2)
+model.moved(from: 4, to: 4)
+
+let intModel = Model(1, 2, 3)
+intModel.moved(from: 1, to: 2)
+
+struct Vertex {
+    let x, y: Int
 }
 
-let dailyNumberSold = ["Mon": 17, "Tue": 29,
-                       "Wed": 11, "Thu": 15,
-                       "Fri": 32, "Sat": 21,
-                       "Sun": 27]
-
-
-let dailyTotals = dailyNumberSold
-    .reduce([String : USDollar]()){(accumulator, entry) in
-        var running = accumulator
-        running[entry.key] = revenueAt199on(entry.value)
-        return running
-}
-
-dailyTotals.description
-
-extension Sequence {
-    func mapUsingReduce<Output>(_ f: (Element) -> Output) -> [Output] {
-        reduce([Output]()){$0 + [f($1)]}
-    }
-}
-numberSold.mapUsingReduce(revenueAt199on).description
-
-
-func isMoreThan25(_ count: Count) -> Bool {
-    count > 25
-}
-
-extension Sequence {
-    func filterUsingReduce(_ condition: (Element) -> Bool ) -> [Element] {
-        reduce([Element]()){condition($1) ? $0 + [$1] : $0 }
-    }
-}
-numberSold.filterUsingReduce(isMoreThan25)
+let vertexModel = Model(Vertex(x: 3, y: 4), Vertex(x: 6, y: 8), Vertex(x: 9, y: 12))
+//vertexModel.removed(Vertex(x: 3, y: 4))
+vertexModel.removed(at: 1)

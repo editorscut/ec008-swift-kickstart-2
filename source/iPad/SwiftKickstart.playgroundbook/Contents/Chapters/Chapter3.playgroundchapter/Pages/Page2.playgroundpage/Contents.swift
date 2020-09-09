@@ -1,19 +1,11 @@
 let someone = "Swift Programmer"
 
-// someone = "Some new value"
-
 let shouldBeRed: Bool
-
-//print(shouldBeRed)
-
 shouldBeRed = true
-
 let stringWithoutValue: String
-
 if shouldBeRed {
-    stringWithoutValue = "red"
+  stringWithoutValue = "red"
 } else {
-    stringWithoutValue = "blue"
+  stringWithoutValue = "blue"
 }
-
-print(shouldBeRed)
+print(stringWithoutValue)

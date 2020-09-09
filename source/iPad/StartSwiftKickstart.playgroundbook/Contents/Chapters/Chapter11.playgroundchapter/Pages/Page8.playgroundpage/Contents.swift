@@ -1,37 +1,8 @@
-struct SubscriptOutOfBoundsError: Error {
-    let reason: String
-}
+let numberSold = [17, 29, 11, 15, 32, 21, 27]
 
-extension SubscriptOutOfBoundsError: CustomDebugStringConvertible {
-    var debugDescription: String {
-        return "Subscript out of bounds - \(reason)"
-    }
-}
+let dailyNumberSold = ["Mon": 17, "Tue": 29,
+                       "Wed": 11, "Thu": 15,
+                       "Fri": 32, "Sat": 21,
+                       "Sun": 27]
 
-extension Forecast {
-    static func number(_ index: Int) throws -> String {
-        if index < 0 {
-            throw SubscriptOutOfBoundsError(reason: "\(index) is less than zero")
-        } else if index >= Forecast.count {
-            throw SubscriptOutOfBoundsError(reason: "\(index) is greater than \(count)")
-        }
-        return Forecast()[index]
-    }
-}
-
-
-func forecastNumber(_ index: Int) -> String {
-    do {
-        let forecast = try Forecast.number(index)
-        return "Success!: forecast number \(index) is \(forecast)"
-    }
-    catch {
-        return  "Error: \(error)"
-    }
-}
-
-forecastNumber(0)
-
-forecastNumber(20)
-
-forecastNumber(-2)
+let weekendDays = ["Sat", "Sun"]

@@ -1,37 +1,38 @@
-//extension Forecast {
-//    static func number(_ index: Int) -> String {
-//        assert(index >= 0 && index < count, "Out of bounds")
-//        return Forecast()[index]
-//    }
+var sellersShare = 0.70
+
+//func revenueGenerator(at pricePerApp: USDollar)
+//             -> (Count) -> USDollar {
+//  func revenue(_ count: Count) -> USDollar {
+//    USDollar(count.asDouble()
+//              * pricePerApp.value
+//              * sellersShare)
+//  }
+//  return revenue
 //}
 
-//extension Forecast {
-//    static func number(_ index: Int) -> String {
-//        precondition(index >= 0 && index < count, "Out of bounds")
-//        return Forecast()[index]
-//    }
+//func revenueGenerator(at pricePerApp: USDollar)
+//             -> (Count) -> USDollar {
+//  let revenue = {(_ count: Count) -> USDollar in
+//    USDollar(count.asDouble()
+//              * pricePerApp.value
+//              * sellersShare)
+//  }
+//  return revenue
 //}
 
-//extension Forecast {
-//    static func number(_ index: Int) -> String {
-//        if index < 0 || index >= count {
-//            assertionFailure("\(index) is out of bounds. "
-//                + "Must be between 0 and \(count).")
-//        }
-//        return Forecast()[index]
-//    }
-//}
-
-extension Forecast {
-    static func number(_ index: Int) -> String {
-        if index < 0 || index >= count {
-            preconditionFailure("\(index) is out of bounds. "
-                + "Must be between 0 and \(count).")
-        }
-        return Forecast()[index]
-    }
+func revenueGenerator(at pricePerApp: USDollar)
+             -> (Count) -> USDollar {
+  {(_ count: Count) -> USDollar in
+    USDollar(count.asDouble()
+              * pricePerApp.value
+              * sellersShare)
+  }
 }
 
-Forecast.number(0)
-//Forecast.number(-2)
-//Forecast.number(20)
+let revenueAt199on = revenueGenerator(at: USDollar(1.99))
+
+revenueAt199on(17)
+
+revenueGenerator(at: USDollar(2.99))(17)
+sellersShare = 1.0
+revenueAt199on(17)

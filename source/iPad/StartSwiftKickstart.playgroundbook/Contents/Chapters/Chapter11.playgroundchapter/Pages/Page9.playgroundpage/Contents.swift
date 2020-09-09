@@ -1,43 +1,10 @@
-enum SubscriptOutOfBoundsError: Error {
-    case negativeIndexError
-    case indexIsTooLargeError(amountOver: Int)
+let numberSold = [17, 29, 11, 15, 32, 21, 27]
+
+func revenueAt199on(_ count: Count) -> USDollar {
+    USDollar(count.asDouble() * 1.99 * 0.70)
 }
 
-extension SubscriptOutOfBoundsError: CustomDebugStringConvertible {
-    var debugDescription: String {
-        switch self {
-        case .negativeIndexError:
-            return "is less than zero"
-        case .indexIsTooLargeError(let excess):
-            return "is greater than \(Forecast.count) by \(excess)"
-        }
-    }
-}
-
-extension Forecast {
-    static func number(_ index: Int) throws -> String {
-        if index < 0 {
-            throw SubscriptOutOfBoundsError.negativeIndexError
-        } else if index >= Forecast.count {
-            let excess = index - Forecast.count + 1
-            throw SubscriptOutOfBoundsError
-                .indexIsTooLargeError(amountOver: excess)
-        }
-        return Forecast()[index]
-    }
-}
-
-func forecastNumber(_ index: Int) -> String {
-    do {
-        let forecast = try Forecast.number(index)
-        return "Success!: forecast number \(index) is \(forecast)"
-    }
-    catch {
-        return  "Error: \(index) \(error)"
-    }
-}
-
-forecastNumber(3)
-forecastNumber(20)
-forecastNumber(-2)
-forecastNumber(7)
+let dailyNumberSold = ["Mon": 17, "Tue": 29,
+                       "Wed": 11, "Thu": 15,
+                       "Fri": 32, "Sat": 21,
+                       "Sun": 27]

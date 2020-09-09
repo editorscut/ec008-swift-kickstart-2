@@ -5,12 +5,12 @@ enum PrimaryColor {
 }
 
 enum Desktop {
-    case black
-    case white
-    case color(PrimaryColor)
+  case black
+  case white
+  case color(PrimaryColor)
 }
 
 let blackBackground = Desktop.black
 let whiteBackground = Desktop.white
-let redBackground = Desktop.color(PrimaryColor.red)
+let redBackground = Desktop.color(.red)
 let yellowBackground = Desktop.color(.yellow)

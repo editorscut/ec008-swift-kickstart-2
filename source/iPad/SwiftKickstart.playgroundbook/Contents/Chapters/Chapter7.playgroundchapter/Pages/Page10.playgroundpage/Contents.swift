@@ -1,37 +1,49 @@
+
 protocol NameBadgeable: CustomStringConvertible {
-    func nameBadge() -> String
+  func nameBadge() -> String
 }
 extension NameBadgeable {
-    var description: String {
-        nameBadge()
-    }
+  var description: String {
+    nameBadge()
+  }
+}
+struct Attendee: NameBadgeable {
+  let name: String
+  
+  func nameBadge() -> String {
+    "Hi, I'm \(name)."
+  }
 }
 
-struct Attendee: NameBadgeable {
-    let name: String
-    init(name: String) {
-        self.name = name
-    }
-    func nameBadge() -> String {
-        "Hi, I'm \(name)."
-    }
-}
+//extension Attendee: CustomStringConvertible {
+//  var description: String {
+//    nameBadge()
+//  }
+//}
 
 struct TutorialAttendee: NameBadgeable {
-    let tutorial: String
-    private let attendee: Attendee
-    var name: String {
-        attendee.name
-    }
-    init(name: String,
-         tutorial: String) {
-        self.tutorial = tutorial
-        self.attendee = Attendee(name: name)
-    }
-    func nameBadge() -> String {
-        attendee.nameBadge() + " I'm taking \(tutorial)."
-    }
+  let tutorial: String
+  private let attendee: Attendee
+  var name: String {
+    attendee.name
+  }
+  init(name: String,
+       tutorial: String) {
+    self.tutorial = tutorial
+    attendee = Attendee(name: name)
+  }
+  
+  func nameBadge() -> String {
+    attendee.nameBadge()
+      + " I'm taking \(tutorial)."
+  }
 }
+
+//extension TutorialAttendee: CustomStringConvertible {
+//  var description: String {
+//    nameBadge()
+//  }
+//}
 
 let daniel = Attendee(name: "Daniel")
 let kimberli = TutorialAttendee(name: "Kimberli",

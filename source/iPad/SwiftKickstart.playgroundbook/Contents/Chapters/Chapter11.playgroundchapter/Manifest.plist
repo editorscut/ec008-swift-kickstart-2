@@ -5,7 +5,7 @@
 	<key>Version</key>
 	<string>1.0</string>
 	<key>Name</key>
-	<string>Errors</string>
+	<string>Higher-Order Functions</string>
 	<key>Pages</key>
 	<array>
 		<string>Page1.playgroundpage</string>
@@ -18,6 +18,7 @@
 		<string>Page8.playgroundpage</string>
 	    <string>Page9.playgroundpage</string>
 	    <string>Page10.playgroundpage</string>
+	    <string>Page11.playgroundpage</string>
 	</array>
 </dict>
 </plist>

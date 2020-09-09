@@ -1,61 +1,43 @@
-let numberSold = [17, 29, 11, 15, 32, 21, 27]
-
-let dailyNumberSold = ["Mon": 17, "Tue": 29,
-                       "Wed": 11, "Thu": 15,
-                       "Fri": 32, "Sat": 21,
-                       "Sun": 27]
-
-let weekendDays = ["Sat", "Sun"]
-
-extension Sequence {
-    func keep(using f: (Element) -> Bool) -> [Element] {
-        var output = [Element]()
-        for element in self {
-            if f(element) {
-                output.append(element)
-            }
-        }
-        return output
-    }
+struct Model<Element> {
+  fileprivate let privateArray: [Element]
+  
+  init(_ elements: Element...) {
+    privateArray = elements
+  }
 }
 
-numberSold.keep{
-    $0 > 25
+extension Model : CustomStringConvertible {
+  var description: String {
+    return privateArray.description
+  }
 }
 
-dailyNumberSold.keep{
-    !weekendDays.contains($0.key)
+extension Model { // Non-Mutating Methods
+  private init(privateArray: [Element]) {
+    self.privateArray = privateArray
+  }
+  
+  func removed(at index: Int) -> Model {
+    var mutableArray = privateArray
+    mutableArray.remove(at: index)
+    return Model(privateArray: mutableArray)
+  }
+  func inserted(_ element: Element,
+                at index: Int) -> Model {
+    var mutableArray = privateArray
+    mutableArray.insert(element, at: index)
+    return Model(privateArray: mutableArray)
+  }
+  func moved(from fromIndex: Int,
+             to toIndex: Int) -> Model {
+    return removed(at: fromIndex)
+      .inserted(privateArray[fromIndex], at: toIndex)
+  }
 }
 
-let moreThan25 = numberSold.filter{$0 > 25}
-moreThan25
-
-let weekdaySales = dailyNumberSold.filter{!weekendDays.contains($0.key)}
-weekdaySales
-
-let revenueFromMoreThan25
-    = numberSold.filter{$0 > 25}
-        .map{USDollar($0.asDouble() * 1.99 * 0.70)}
-        .description
-
-revenueFromMoreThan25
-
-func isMoreThan25(_ count: Count) -> Bool {
-    count > 25
-}
-
-func revenueAt199on(_ count: Count) -> USDollar {
-    USDollar(count.asDouble() * 1.99 * 0.70)
-}
-
-numberSold.filter{isMoreThan25($0)}
-    .map{revenueAt199on($0)}
-    .description
-
-numberSold.filter{count in isMoreThan25(count)}
-    .map{filteredCount in revenueAt199on(filteredCount)}
-    .description
-
-numberSold.filter(isMoreThan25)
-    .map(revenueAt199on)
-    .description
+let model = Model("A", "B", "C", "D", "E")
+model.removed(at: 3)
+model.inserted("Z", at: 1)
+model.moved(from: 0, to: 1)
+model.moved(from: 3, to: 2)
+model.moved(from: 4, to: 4)

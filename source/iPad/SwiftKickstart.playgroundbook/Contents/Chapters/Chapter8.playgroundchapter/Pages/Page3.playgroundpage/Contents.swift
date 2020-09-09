@@ -34,12 +34,12 @@ struct Rectangle {
 }
 
 extension Rectangle: Movable {
-    func movedHorizontally(by deltaX: Int) -> Rectangle {
-        let movedTopLeftCorner
-            = topLeftCorner.movedHorizontally(by: deltaX)
-        return Rectangle(topLeftCorner:movedTopLeftCorner,
-                         size: size)
-    }
+  func movedHorizontally(by deltaX: Int) -> Rectangle {
+    let movedTopLeftCorner
+      = topLeftCorner.movedHorizontally(by: deltaX)
+    return Rectangle(topLeftCorner:movedTopLeftCorner,
+                     size: size)
+  }
 }
 
 extension Rectangle: CustomStringConvertible {

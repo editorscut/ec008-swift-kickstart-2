@@ -1,11 +1,14 @@
-extension Forecast {
-    static func number(_ index: Int) -> String {
-        assert(index >= 0 && index < count, "Out of bounds")
-        return Forecast()[index]
+var sellersShare = 0.70
+
+func revenueGenerator(at pricePerApp: USDollar) -> (Count) -> USDollar {
+    func revenue(_ count: Count) -> USDollar {
+        USDollar(count.asDouble() * pricePerApp.value * sellersShare)
     }
+    return revenue
 }
 
+let revenueAt199on = revenueGenerator(at: USDollar(1.99))
 
-Forecast.number(0)
-//Forecast.number(-2)
-//Forecast.number(20)
+revenueAt199on(17)
+
+revenueGenerator(at: USDollar(2.99))(17)

@@ -1,45 +1,42 @@
-//extension Forecast {
-//    static func number(_ index: Int) -> String {
-//        if index < 0 || index >= count {
-//            preconditionFailure("\(index) is out of bounds. "
-//                + "Must be between 0 and \(count).")
-//        }
-//        return Forecast()[index]
-//    }
-//}
-
-
-struct SubscriptOutOfBoundsError: Error {
+func revenueAt199on(_ count: Count) -> USDollar {
+    USDollar(count.asDouble() * 1.99 * 0.70)
 }
 
-extension Forecast {
-    static func number(_ index: Int) throws -> String {
-        if index < 0 || index >= Forecast.count {
-            throw SubscriptOutOfBoundsError()
-        }
-        return Forecast()[index]
-    }
+func revenueAt299on(_ count: Count) -> USDollar {
+    USDollar(count.asDouble() * 2.99 * 0.70)
 }
 
-//try Forecast.number(0)
-//try Forecast.number(20)
-//try Forecast.number(-2)
-
-//try! Forecast.number(0)
-//try! Forecast.number(20)
-
-let forecast0 =  try? Forecast.number(0)
-let forecast20 = try? Forecast.number(20)
-
-func forecastNumber(_ index: Int) -> String {
-    guard let forecast = try? Forecast.number(index),
-        index < 3 else {
-            return "error: can't get forecast for index \(index)"
-    }
-    return "forecast number \(index) is \(forecast)"
+func calculateRevenue(for count: Count,
+                      using f: (Count) -> USDollar)
+                                          -> USDollar {
+  f(count)
 }
 
-forecastNumber(0)
-forecastNumber(20)
-forecastNumber(-2)
-forecastNumber(3)
+calculateRevenue(for: 17,
+                 using: revenueAt199on)
+calculateRevenue(for: 17,
+                 using: { count in
+    USDollar(count.asDouble() * 1.99 * 0.70)
+})
+
+calculateRevenue(for: 17){count in
+    USDollar(count.asDouble() * 1.99 * 0.70)
+}
+
+calculateRevenue(for: 17){
+    USDollar($0.asDouble() * 1.99 * 0.70)
+}
+
+calculateRevenue(for: 17, using: revenueAt199on)
+calculateRevenue(for: 17){count in revenueAt199on(count)}
+calculateRevenue(for: 17){revenueAt199on($0)}
+
+func apply<Input, Output>(to input: Input,
+                          using f: (Input) -> Output)
+                                           -> Output {
+  f(input)
+}
+
+apply(to: 17){
+  USDollar($0.asDouble() * 1.99 * 0.70)
+}

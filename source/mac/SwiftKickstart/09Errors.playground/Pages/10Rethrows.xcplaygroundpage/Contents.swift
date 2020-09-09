@@ -65,4 +65,4 @@ func sayHi(_ repeating: Int) -> String {
 sayHi(5)
 
 try rethrowsExample(3, using: sayHi)
-//: [TOC](00TOC) | [Previous](@previous) | [Next}(@next)
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

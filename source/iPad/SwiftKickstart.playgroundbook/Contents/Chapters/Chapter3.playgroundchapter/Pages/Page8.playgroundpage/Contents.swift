@@ -1,5 +1,4 @@
 var name: String?
 name = "Swifty"
+//name = nil
 print(name!)
-name = nil
-// print(name!) runtime error

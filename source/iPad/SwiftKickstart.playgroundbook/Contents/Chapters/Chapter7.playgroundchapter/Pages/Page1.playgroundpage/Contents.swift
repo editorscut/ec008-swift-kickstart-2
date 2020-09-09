@@ -1,6 +1,6 @@
 class Attendee {
-    let name = "Daniel"
-    let hometown = "Shaker Heights"
+  let name = "Daniel"
+  let hometown = "Shaker Heights"
 }
 
 let person = Attendee()

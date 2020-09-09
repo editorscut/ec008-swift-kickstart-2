@@ -1,10 +1,20 @@
-var two = 2
+//extension Forecast {
+//    static func number(_ index: Int) -> String {
+//      assert(range.contains(index),
+//             "Out of bounds")
+//        return Forecast()[index]
+//    }
+//}
 
-func double(_ input: inout Int) {
-    input = input * 2
+extension Forecast {
+  static func number(_ index: Int) -> String {
+    if !range.contains(index) {
+      assertionFailure("\(index) is out of bounds. Must be between 0 and \(count).")
+    }
+    return Forecast()[index]
+  }
 }
 
-double(&two)
-double(&two)
-double(&two)
-two
+Forecast.number(0)
+//Forecast.number(-2)
+//Forecast.number(20)

@@ -1,5 +1,5 @@
 func hello() -> String {
-    "Hello, World!"
+  print("Just a demonstration")
+   return "Hello, World!"
 }
-
 hello()

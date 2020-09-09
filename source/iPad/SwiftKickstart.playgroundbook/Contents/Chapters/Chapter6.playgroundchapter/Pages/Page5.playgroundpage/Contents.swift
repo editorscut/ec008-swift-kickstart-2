@@ -1,11 +1,11 @@
-struct Vertex {
-    let x, y: Double
+struct Vertex: CustomStringConvertible {
+  let x, y: Double
 }
 
-extension Vertex: CustomStringConvertible {
-    var description: String {
-        "(\(x), \(y))"
-    }
+extension Vertex {
+  var description: String {
+    "(\(x), \(y))"
+  }
 }
 
 let point = Vertex(x: 3, y: 4)

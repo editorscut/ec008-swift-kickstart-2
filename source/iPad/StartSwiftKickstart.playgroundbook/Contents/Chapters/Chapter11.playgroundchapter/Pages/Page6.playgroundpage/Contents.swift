@@ -1,48 +1,8 @@
-struct SubscriptOutOfBoundsError: Error {
+func apply<Input, Output>(to input: Input, using f: (Input) -> Output) -> Output {
+    f(input)
+}
+func revenueAt199on(_ count: Count) -> USDollar {
+    USDollar(count.asDouble() * 1.99 * 0.70)
 }
 
-extension Forecast {
-    static func number(_ index: Int) throws -> String {
-        if index < 0 || index >= Forecast.count {
-            throw SubscriptOutOfBoundsError()
-        }
-        return Forecast()[index]
-    }
-}
-
-var status = ""
-
-func forecastNumber(_ index: Int) -> String {
-    status += "\nBegin for index = \(index)\n"
-    do {
-        let forecast = try Forecast.number(index)
-        status += "Success\n"
-        return "Success!: forecast number \(index) is \(forecast)"
-    }
-    catch {
-        status += "Error\n"
-        return "Error: \(error)"
-    }
-}
-
-
-
-forecastNumber(0)
-
-forecastNumber(20)
-
-forecastNumber(-2)
-
-
-status
-
-
-
-forecastNumber(0)
-
-forecastNumber(20)
-
-forecastNumber(-2)
-
-
-status
+let numberSold = [17, 29, 11, 15, 32, 21, 27]

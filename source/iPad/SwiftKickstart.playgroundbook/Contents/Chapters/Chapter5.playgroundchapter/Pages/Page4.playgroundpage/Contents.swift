@@ -4,8 +4,8 @@ enum PrimaryColor {
     case red
     case yellow
     case blue
- 
-    var color: Color {
+
+  var color: Color {
         switch self {
         case .red:
             return Color.red

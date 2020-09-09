@@ -1,57 +1,58 @@
-struct Model <Element> {
-    fileprivate let privateArray: [Element]
-    
-    init(_ elements: Element...) {
-        privateArray = elements
+enum SubscriptOutOfBoundsError: Error {
+    case negativeIndexError
+    case indexIsTooLargeError(amountOver: Int)
+}
+
+extension SubscriptOutOfBoundsError: CustomDebugStringConvertible {
+    var debugDescription: String {
+        switch self {
+        case .negativeIndexError:
+            return "is less than zero"
+        case .indexIsTooLargeError(let excess):
+            return "is greater than \(Forecast.count - 1) by \(excess)"
+        }
     }
 }
 
-extension Model : CustomStringConvertible {
-    var description: String {
-        privateArray.description
+extension Forecast {
+    static func number(_ index: Int) throws -> String {
+        if index < 0 {
+            throw SubscriptOutOfBoundsError.negativeIndexError
+        } else if index >= Forecast.count {
+            let excess = index - Forecast.count + 1
+            throw SubscriptOutOfBoundsError
+                .indexIsTooLargeError(amountOver: excess)
+        }
+        return Forecast()[index]
     }
 }
 
-extension Model { // Non-Mutating Methods
-    private init(privateArray: [Element]) {
-        self.privateArray = privateArray
-    }
-    
-    func removed(at index: Int) -> Model {
-        var mutableArray = privateArray
-        mutableArray.remove(at: index)
-        return Model(privateArray: mutableArray)
-    }
-    func inserted(_ element: Element,
-                  at index: Int) -> Model {
-        var mutableArray = privateArray
-        mutableArray.insert(element, at: index)
-        return Model(privateArray: mutableArray)
-    }
-    func moved(from fromIndex: Int,
-               to toIndex: Int) -> Model {
-        removed(at: fromIndex)
-            .inserted(privateArray[fromIndex], at: toIndex)
-    }
+func forecastNumber(_ index: Int) -> String {
+  do {
+    let forecast = try Forecast.number(index)
+    return "Success!: forecast number \(index) is \(forecast)"
+  }
+  catch SubscriptOutOfBoundsError.negativeIndexError {
+    let error = SubscriptOutOfBoundsError.negativeIndexError
+    return "too small: \(index) \(error)"
+  }
+  catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess)
+          where excess < 5 {
+    let error = SubscriptOutOfBoundsError
+      .indexIsTooLargeError(amountOver: excess)
+    return "slightly over: \(index) \(error)"
+  }
+  catch SubscriptOutOfBoundsError.indexIsTooLargeError(let excess) {
+    let error = SubscriptOutOfBoundsError
+      .indexIsTooLargeError(amountOver: excess)
+    return "too big: \(index) " + "\(error))"
+  }
+  catch {
+    return  "Error: \(index) \(error)"
+  }
 }
 
-extension Model where Element: Equatable {
-    func removed(_ element: Element) -> Model {
-        guard let location = privateArray.firstIndex(of: element)
-            else {return self}
-        return removed(at: location)
-    }
-}
-
-
-let model = Model("A", "B", "C", "D", "E")
-model.removed("B")
-model.removed("Z")
-
-struct Vertex {
-    let x, y: Int
-}
-
-let vertexModel = Model(Vertex(x: 3, y: 4), Vertex(x: 6, y: 8), Vertex(x: 9, y: 12))
-//vertexModel.removed(Vertex(x: 3, y: 4))
-vertexModel.removed(at: 1)
+forecastNumber(3)
+forecastNumber(20)
+forecastNumber(-2)
+forecastNumber(7)

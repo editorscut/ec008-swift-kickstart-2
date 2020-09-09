@@ -1,16 +1,25 @@
-var number = 2
-
-extension Int {
-    mutating func double() {
-        self = self * 2
-    }
-    func doubled() -> Int {
-        self * 2
-    }
+struct SubscriptOutOfBoundsError: Error {
 }
 
-number.double()
-number
+extension Forecast {
+  static func number(_ index: Int) throws -> String {
+    if !range.contains(index){
+      throw SubscriptOutOfBoundsError()
+    }
+    return Forecast()[index]
+  }
+}
 
-number = number.doubled()
-number
+func forecastNumber(_ index: Int) -> String {
+  do {
+    let forecast = try Forecast.number(index)
+    return "Success!: forecast number \(index) is \(forecast)"
+  }
+  catch {
+    return "Error: \(error)"
+  }
+}
+
+forecastNumber(0)
+forecastNumber(20)
+forecastNumber(-2)

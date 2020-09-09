@@ -1,47 +1,53 @@
-struct Model <Element> {
-    fileprivate let privateArray: [Element]
-    
-    init(_ elements: Element...) {
-        privateArray = elements
-    }
+enum SubscriptOutOfBoundsError : Error {
+  case negativeIndexError
+  case indexIsTooLargeError(amountOver: Int)
 }
 
-extension Model : CustomStringConvertible {
-    var description: String {
-        privateArray.description
+extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
+  var debugDescription: String {
+    switch self {
+    case .negativeIndexError:
+      return "is less than zero"
+    case .indexIsTooLargeError(let excess):
+      return "is greater than \(Forecast.count-1) by \(excess)"
     }
-}
-
-extension Model { // Non-Mutating Methods
-    private init(privateArray: [Element]) {
-        self.privateArray = privateArray
-    }
-    
-    func removed(at index: Int) -> Model {
-        var mutableArray = privateArray
-        mutableArray.remove(at: index)
-        return Model(privateArray: mutableArray)
-    }
-    func inserted(_ element: Element,
-                  at index: Int) -> Model {
-        var mutableArray = privateArray
-        mutableArray.insert(element, at: index)
-        return Model(privateArray: mutableArray)
-    }
-    func moved(from fromIndex: Int,
-               to toIndex: Int) -> Model {
-        removed(at: fromIndex)
-            .inserted(privateArray[fromIndex], at: toIndex)
-    }
+  }
 }
 
 
-let model = Model("A", "B", "C", "D", "E")
-model.removed(at: 3)
-model.inserted("Z", at: 1)
-model.moved(from: 0, to: 1)
-model.moved(from: 3, to: 2)
-model.moved(from: 4, to: 4)
+//extension Forecast {
+//  static func number(_ index: Int) throws -> String {
+//    if !range.contains(index){
+//      throw SubscriptOutOfBoundsError(reason: "\(index) is out of bounds")
+//    }
+//    return Forecast()[index]
+//  }
+//}
+extension Forecast {
+  static func number(_ index: Int) throws -> String {
+    if index < 0 {
+      throw SubscriptOutOfBoundsError.negativeIndexError
+    } else if index >= Forecast.count {
+      let excess = index - Forecast.count + 1
+      throw SubscriptOutOfBoundsError.indexIsTooLargeError(amountOver: excess)
+    }
+    return Forecast()[index]
+  }
+}
 
-let intModel = Model(1, 2, 3)
-intModel.moved(from: 1, to: 2)
+
+func forecastNumber(_ index: Int) -> String {
+  do {
+    let forecast = try Forecast.number(index)
+    return "Success!: forecast number \(index) is \(forecast)"
+  }
+  catch {
+    return  "Error: \(index) \(error)"
+  }
+}
+
+forecastNumber(0)
+
+forecastNumber(20)
+
+forecastNumber(-2)

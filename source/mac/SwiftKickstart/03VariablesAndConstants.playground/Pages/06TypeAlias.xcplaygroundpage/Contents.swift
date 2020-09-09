@@ -19,7 +19,7 @@ func earnings(for numbersSold: Count,
 }
 
 earnings(for: 10,
-         using: revenue)5
+         using: revenue)
 
 
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

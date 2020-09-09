@@ -1,48 +1,21 @@
-//extension Forecast {
-//    static func number(_ index: Int) -> String {
-//        Forecast()[index]
-//    }
-//}
+var sellersShare = 0.70
 
-
-//extension Forecast {
-//    static func number(_ index: Int) -> String? {
-//        if index >= 0 && index < count {
-//            return Forecast()[index]
-//        } else {
-//            return nil
-//        }
-//    }
-//}
-
-//extension Forecast {
-//    static func number(_ index: Int) -> String? {
-//        guard index >= 0 && index < count else { return nil }
-//        return Forecast()[index]
-//    }
-//}
-
-//extension Forecast {
-//    static func number(_ index: Int) -> String? {
-//        switch index {
-//        case 0 ..< count:
-//            return Forecast()[index]
-//        default:
-//            return nil
-//        }
-//    }
-//}
-
-extension Forecast {
-    static func number(_ index: Int) -> String? {
-        if case 0 ..< count = index {
-            return Forecast()[index]
-        } else {
-            return nil
-        }
-    }
+func revenueGenerator(at pricePerApp: USDollar)
+                         -> (Count) -> USDollar {
+  func revenue(_ count: Count) -> USDollar {
+      USDollar(count.asDouble()
+                * pricePerApp.value
+                * sellersShare)
+  }
+  return revenue
 }
 
-Forecast.number(0)
-Forecast.number(-2)
-Forecast.number(20)
+let revenueAt199on = revenueGenerator(at: USDollar(1.99))
+
+revenueAt199on(17)
+let shareArray = [sellersShare]
+
+sellersShare = 1.0
+
+shareArray
+revenueAt199on(17)

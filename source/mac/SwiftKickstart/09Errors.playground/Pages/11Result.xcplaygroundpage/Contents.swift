@@ -48,5 +48,4 @@ forecastNumber(0)
 forecastNumber(20)
 
 forecastNumber(-2)
-//: ### Rethrows
 //: [TOC](00TOC) | [Previous](@previous) | Next

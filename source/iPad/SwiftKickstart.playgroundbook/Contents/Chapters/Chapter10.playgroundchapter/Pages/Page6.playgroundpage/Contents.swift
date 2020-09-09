@@ -1,37 +1,42 @@
-func apply<Input, Output>(to input: Input,
-                          using f: (Input) -> Output) -> Output {
-    f(input)
+struct Model {
+  private var privateArray: [String]
+  
+  init(_ strings: String...) {
+    privateArray = strings
+  }
 }
 
-
-func apply<Input, Output>(to input: [Input],
-                          using f: (Input) -> Output) -> [Output] {
-    var output = [Output]()
-    for element in input {
-        output.append(f(element))
-    }
-    return output
+extension Model { //Mutating Methods
+  mutating func remove(at index: Int) {
+    privateArray.remove(at: index)
+  }
+  mutating func insert(_ string: String,
+                       at index: Int) {
+    privateArray.insert(string, at: index)
+  }
+//  mutating func move(from fromIndex: Int,
+//                     to toIndex: Int) {
+//    privateArray.insert(privateArray.remove(at: fromIndex),
+//                        at: toIndex)
+//  }
+  mutating func move(from fromIndex: Int,
+                     to toIndex: Int) {
+    let elementToBeMoved = remove(at: fromIndex)
+    insert(elementToBeMoved, at: toIndex)
+  }
 }
 
-let numberSold = [17, 29, 11, 15, 32, 21, 27]
-
-apply(to: numberSold){
-    USDollar($0.asDouble() * 1.99 * 0.70)
-}
-apply(to: numberSold){
-    USDollar($0.asDouble() * 1.99 * 0.70).description
+extension Model: CustomStringConvertible {
+  var description: String {
+    privateArray.description
+  }
 }
 
-func revenueAt199on(_ count: Count) -> USDollar {
-    USDollar(count.asDouble() * 1.99 * 0.70)
-}
+extension Model: Equatable{}
 
-apply(to: numberSold){
-    revenueAt199on($0).description
-}
-
-apply(to: numberSold){
-    revenueAt199on($0)
-    }.description
-
-apply(to: numberSold, using: revenueAt199on).description
+var model = Model("A", "B", "C", "D", "E")
+model.remove(at: 3)
+model.insert("Z", at: 1)
+model.move(from: 0, to: 1)
+model.move(from: 3, to: 2)
+model.move(from: 4, to: 4)

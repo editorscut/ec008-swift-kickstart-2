@@ -1,28 +1,19 @@
-enum SubscriptOutOfBoundsError : Error {
-    case negativeIndexError
-    case indexIsTooLargeError(amountOver: Int)
+enum Language: String {
+    case c, cplusplus
+    case objectivec
+    case java, csharp
+    case ruby
+    case swift
 }
 
-extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
-    var debugDescription: String {
-        switch self {
-        case .negativeIndexError:
-            return "is less than zero"
-        case .indexIsTooLargeError(let excess):
-            return "is greater than \(Forecast.count) by \(excess)"
-        }
-    }
-}
+let joansLanguages = [Language.ruby, .c, .csharp, .swift]
+let davesLanguages = [Language.c, .objectivec, .java]
+let marysLanguages = [Language.swift, .objectivec, .java]
+let fredsLanguages = [Language.objectivec, .swift]
 
-extension Forecast {
-    static func number(_ index: Int) throws -> String {
-        if index < 0 {
-            throw SubscriptOutOfBoundsError.negativeIndexError
-        } else if index >= Forecast.count {
-            let excess = index - Forecast.count + 1
-            throw SubscriptOutOfBoundsError
-                .indexIsTooLargeError(amountOver: excess)
-        }
-        return Forecast()[index]
-    }
-}
+
+let dictionary = ["Joan"  : joansLanguages,
+                  "Dave"  : davesLanguages,
+                  "Mary"  : marysLanguages,
+                  "Fred"  : fredsLanguages]
+

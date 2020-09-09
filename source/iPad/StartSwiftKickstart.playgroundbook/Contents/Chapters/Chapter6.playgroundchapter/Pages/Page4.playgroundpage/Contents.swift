@@ -1,12 +1,10 @@
-import Foundation
-
 struct Vertex {
     private(set) var x: Double
     private(set) var y: Double
     
     var magnitude: Double {
         get {
-            return sqrt(x * x + y * y)
+          (x * x + y * y).squareRoot()
         }
         set {
             let multiplier = newValue / magnitude

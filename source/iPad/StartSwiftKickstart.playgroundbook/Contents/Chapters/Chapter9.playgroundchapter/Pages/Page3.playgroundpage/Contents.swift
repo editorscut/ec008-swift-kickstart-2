@@ -1,9 +1,10 @@
-var two = 2
-
-func double(_ input: Int) {
-    var input = input
-    input = input * 2
+extension Forecast {
+    static func number(_ index: Int) -> String? {
+       
+    }
 }
 
-double(two)
-two
+
+//Forecast.number(0)
+//Forecast.number(-2)
+//Forecast.number(20)

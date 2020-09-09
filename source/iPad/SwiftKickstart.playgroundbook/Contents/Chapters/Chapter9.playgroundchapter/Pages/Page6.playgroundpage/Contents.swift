@@ -1,36 +1,48 @@
-struct Model {
-    fileprivate var privateArray: [String]
-    
-    init(_ strings: String...) {
-        privateArray = strings
-    }
+struct SubscriptOutOfBoundsError: Error {
 }
 
-extension Model : CustomStringConvertible {
-    var description: String {
-        privateArray.description
+extension Forecast {
+  static func number(_ index: Int) throws -> String {
+    if !range.contains(index){
+      throw SubscriptOutOfBoundsError()
     }
+    return Forecast()[index]
+  }
 }
 
-extension Model { // Mutating Methods
-    mutating func remove(at index: Int) {
-        privateArray.remove(at: index)
-    }
-    mutating func insert(_ string: String,
-                         at index: Int) {
-        privateArray.insert(string, at: index)
-    }
-    mutating func move(from fromIndex: Int,
-                       to toIndex: Int) {
-        let elementToBeMoved = privateArray[fromIndex]
-        remove(at: fromIndex)
-        insert(elementToBeMoved, at: toIndex)
-    }
+var status = ""
+
+//func forecastNumber(_ index: Int) -> String {
+//  status += "\nBegin for index = \(index)\n"
+//  defer {
+//    status += "In defer block\n"
+//  }
+//  do {
+//    let forecast = try Forecast.number(index)
+//    status += "Success\n"
+//    return "Success!: forecast number \(index) is \(forecast)"
+//  }
+//  catch {
+//    status += "Error\n"
+//    return "Error: \(error)"
+//  }
+//}
+
+func forecastNumber(_ index: Int) -> String {
+  do {
+    let forecast = try Forecast.number(index)
+    return "Success!: forecast number \(index) is \(forecast)"
+  }
+  catch {
+    return  "Error: \(error)"
+  }
 }
 
-var model = Model("A", "B", "C", "D", "E")
-model.remove(at: 3)
-model.insert("Z", at: 1)
-model.move(from: 0, to: 1)
-model.move(from: 3, to: 2)
-model.move(from: 4, to: 4)
+
+forecastNumber(0)
+forecastNumber(20)
+forecastNumber(-2)
+
+
+status
+print(status)

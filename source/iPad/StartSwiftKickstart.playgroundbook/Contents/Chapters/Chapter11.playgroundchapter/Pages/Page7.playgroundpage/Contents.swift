@@ -1,29 +1,9 @@
-struct SubscriptOutOfBoundsError: Error {
-}
+let numberSold = [17, 29, 11, 15, 32, 21, 27]
 
-extension Forecast {
-    static func number(_ index: Int) throws -> String {
-        if index < 0 || index >= Forecast.count {
-            throw SubscriptOutOfBoundsError()
-        }
-        return Forecast()[index]
+func myMap<Input, Output>(to input: [Input], using f: (Input) -> Output) -> [Output] {
+    var output = [Output]()
+    for element in input {
+        output.append(f(element))
     }
+    return output
 }
-
-
-
-func forecastNumber(_ index: Int) -> String {
-    do {
-        let forecast = try Forecast.number(index)
-        return "Success!: forecast number \(index) is \(forecast)"
-    }
-    catch {
-        return  "Error: \(error)"
-    }
-}
-
-forecastNumber(0)
-
-forecastNumber(20)
-
-forecastNumber(-2)

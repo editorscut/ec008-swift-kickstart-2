@@ -1,22 +1,24 @@
-var sellersShare = 0.70
-
-func revenueGenerator(at pricePerApp: USDollar) -> (Count) -> USDollar {
-    func revenue(_ count: Count) -> USDollar {
-        USDollar(count.asDouble() * pricePerApp.value * sellersShare)
-    }
-    return revenue
+class TextField {
+  var text = ""
 }
 
-let revenueAt199on = revenueGenerator(at: USDollar(1.99))
+var textField = TextField()
+textField.text = "Hello"
 
-revenueAt199on(17)
+func replace(_ field: TextField) {
+  var field = field
+  field = TextField()
+  field.text = "Goodbye"
+  field.text
+}
 
-let shareArray = [sellersShare]
+replace(textField)
+textField.text
 
-sellersShare = 1.0
 
-shareArray
+func modify(_ field: TextField) {
+  field.text = "Changed"
+}
 
-revenueAt199on(17)
-
-shareArray
+modify(textField)
+textField.text

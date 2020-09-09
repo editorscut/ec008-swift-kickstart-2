@@ -14,5 +14,9 @@ func bonjour(name: String) -> String {
 let greetings = [hello, bonjour]
 
 primes[2]
+
 primeNames[1]
+
 greetings[0]("World")
+
+//primes[2] = 11

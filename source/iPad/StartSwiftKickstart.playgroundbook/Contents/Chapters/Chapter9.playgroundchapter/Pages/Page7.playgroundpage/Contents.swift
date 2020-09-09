@@ -1,15 +1,29 @@
-struct Model {
-    fileprivate let privateArray: [String]
-    
-    init(_ strings: String...) {
-        privateArray = strings
+struct SubscriptOutOfBoundsError: Error {
+}
+
+extension Forecast {
+    static func number(_ index: Int) throws -> String {
+      if !range.contains(index){
+            throw SubscriptOutOfBoundsError()
+        }
+        return Forecast()[index]
     }
 }
 
-extension Model : CustomStringConvertible {
-    var description: String {
-        return privateArray.description
+
+
+func forecastNumber(_ index: Int) -> String {
+    do {
+        let forecast = try Forecast.number(index)
+        return "Success!: forecast number \(index) is \(forecast)"
+    }
+    catch {
+        return  "Error: \(error)"
     }
 }
 
-var model = Model("A", "B", "C", "D", "E")
+forecastNumber(0)
+
+forecastNumber(20)
+
+forecastNumber(-2)

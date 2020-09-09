@@ -1,16 +1,10 @@
-struct SubscriptOutOfBoundsError: Error {
+func apply<Input, Output>(to input: Input, using f: (Input) -> Output) -> Output {
+    f(input)
 }
 
-extension Forecast {
-    static func number(_ index: Int) throws -> String {
-        if index < 0 || index >= Forecast.count {
-            throw SubscriptOutOfBoundsError()
-        }
-        return Forecast()[index]
-    }
+func revenueAt199on(_ count: Count) -> USDollar {
+    USDollar(count.asDouble() * 1.99 * 0.70)
 }
-
-//try Forecast.number(0)
-//try Forecast.number(20)
-//try Forecast.number(-2)
-
+func less7PercentTax(_ income: USDollar) -> USDollar {
+    USDollar(income.value * 0.93)
+}

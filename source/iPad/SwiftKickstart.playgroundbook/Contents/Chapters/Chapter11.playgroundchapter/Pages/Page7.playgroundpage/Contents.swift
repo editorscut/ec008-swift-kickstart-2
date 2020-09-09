@@ -1,50 +1,42 @@
-struct SubscriptOutOfBoundsError: Error {
-    let reason: String
+let numberSold = [17, 29, 11, 15, 32, 21, 27]
+
+func myMap<Input, Output>(to input: [Input],
+                          using f: (Input) -> Output)
+                                           -> [Output] {
+  var output = [Output]()
+  for element in input {
+    output.append(f(element))
+  }
+  return output
 }
 
-extension SubscriptOutOfBoundsError: CustomDebugStringConvertible {
-    var debugDescription: String {
-        return "Subscript out of bounds - \(reason)"
+extension Array {
+  func myMap<Output>(transform f: (Element) -> Output)
+                                        -> [Output] {
+    var output = [Output]()
+    for element in self {
+      output.append(f(element))
     }
+    return output
+  }
 }
 
-
-//extension Forecast {
-//    static func number(_ index: Int) throws -> String {
-//        if index < 0 || index >= Forecast.count {
-//            throw SubscriptOutOfBoundsError(reason:
-//                                              "Index out of bounds")
-//        }
-//        return Forecast()[index]
-//    }
-//}
-
-extension Forecast {
-    static func number(_ index: Int) throws -> String {
-        if index < 0 {
-            throw SubscriptOutOfBoundsError(reason:
-                "\(index) is less than zero")
-        } else if index >= Forecast.count {
-            throw SubscriptOutOfBoundsError(reason:
-                "\(index) is greater than \(count)")
-        }
-        return Forecast()[index]
-    }
+numberSold.myMap{
+    USDollar($0.asDouble() * 1.99 * 0.70).description
 }
 
-
-func forecastNumber(_ index: Int) -> String {
-    do {
-        let forecast = try Forecast.number(index)
-        return "Success!: forecast number \(index) is \(forecast)"
-    }
-    catch {
-        return  "Error: \(error)"
-    }
+numberSold.map{
+    USDollar($0.asDouble() * 1.99 * 0.70).description
 }
 
-forecastNumber(0)
+let dailyNumberSold = ["Mon": 17, "Tue": 29,
+                       "Wed": 11, "Thu": 15,
+                       "Fri": 32, "Sat": 21,
+                       "Sun": 27]
 
-forecastNumber(20)
+dailyNumberSold.map{
+    USDollar($0.value.asDouble() * 1.99 * 0.70)
+    }.description
 
-forecastNumber(-2)
+let result = dailyNumberSold.mapValues{$0.asDouble() * 1.99 * 0.70}
+result
