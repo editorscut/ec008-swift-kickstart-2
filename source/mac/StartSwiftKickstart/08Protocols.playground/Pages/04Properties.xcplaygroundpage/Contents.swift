@@ -44,7 +44,7 @@ extension Rectangle: Movable {
 
 extension Rectangle: CustomStringConvertible {
     var description: String {
-//        "\(size) at \(topLeftCorner)"
+        "\(size) at \(topLeftCorner)"
     }
 }
 
