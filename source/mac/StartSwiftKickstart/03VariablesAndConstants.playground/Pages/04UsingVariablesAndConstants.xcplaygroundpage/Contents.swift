@@ -9,6 +9,5 @@ func hello(_ people: String...) -> (count: Int,
 }
 
 hello("Thing One", "Thing Two")
-print("Hi")
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 
