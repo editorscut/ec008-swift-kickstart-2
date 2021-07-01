@@ -3,7 +3,7 @@
 func hello() -> String {
     hello(name: "World")
 }
-
+hello()
 func hello(name: String) -> String {
     "Hello, \(name)!"
 }

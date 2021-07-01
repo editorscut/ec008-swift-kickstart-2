@@ -1,18 +1,15 @@
 //: ### Using Variables and Constants
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+let greeting = "Hi there"
 
-func hello(_ people: String...) -> (count: Int,
-                                    greeting: String) {
-        var tempGreeting = ""
-  for person in people {
-    tempGreeting += "\nHello, \(person)!"
-  }
-  return (people.count, tempGreeting)
+func greet(_ people: String...) -> String {
+    var response = ""
+    for person in people {
+        response += "\n\(greeting), \(person)!"
+    }
+    return response
 }
 
-let result = hello("Thing One", "Thing Two")
-
-result.count
-result.greeting
+let result = greet("Thing One", "Thing Two")
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 

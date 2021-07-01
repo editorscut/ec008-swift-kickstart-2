@@ -5,15 +5,15 @@
 	<key>Version</key>
 	<string>1.0</string>
 	<key>ContentVersion</key>
-	<string>0.8</string>
+	<string>0.9</string>
 	<key>Name</key>
 	<string>A Swift Kickstart</string>
 	<key>ContentIdentifier</key>
 	<string>com.editorscut.a-swift-kickstart-2.Final</string>
 	<key>SwiftVersion</key>
-	<string>5.1</string>
+	<string>5.5</string>
 	<key>DeploymentTarget</key>
-	<string>ios13.0</string>
+	<string>ios15.0</string>
 	<key>Chapters</key>
 	<array>
 		<string>Chapter1.playgroundchapter</string>

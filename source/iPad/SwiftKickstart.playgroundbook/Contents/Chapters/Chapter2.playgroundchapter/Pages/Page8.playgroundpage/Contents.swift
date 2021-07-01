@@ -22,3 +22,15 @@ func hello(_ people: String...) -> String {
 }
 
 hello("Thing One", "Thing Two")
+
+func greet(_ people: String...,
+           using greetings: String...)  {
+  for person in people {
+    for greeting in greetings {
+      print("\(greeting), \(person)!")
+    }
+  }
+}
+
+greet("Thing One", "Thing Two",
+      using: "Hello", "Bonjour")

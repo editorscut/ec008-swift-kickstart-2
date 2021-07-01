@@ -1,21 +1,19 @@
-func hello(to people: String...) -> (count: Int,
-                                    greeting: String) {
-        var tempGreeting = ""
-        for person in people {
-            tempGreeting += "\nHello, \(person)!"
-        }
-        return (people.count, tempGreeting)
+let greeting = "Hi there"
+
+func greetings(to people: String...) -> String {
+    var response = ""
+    for person in people {
+        response += "\n\(greeting), \(person)!"
+    }
+    return response
 }
 
-let result = hello(to: "Thing One", "Thing Two")
-
-result.count
-result.greeting
-
-func hello() -> String {
+func greetings() -> String {
   "Hello, World!"
 }
 
-let greetingFunction = hello(to:)
+let result = greetings(to: "Thing One", "Thing Two")
 
-greetingFunction("A", "B")
+let greetingFunction = greetings(to:)
+
+greetingFunction("A", "B") 
