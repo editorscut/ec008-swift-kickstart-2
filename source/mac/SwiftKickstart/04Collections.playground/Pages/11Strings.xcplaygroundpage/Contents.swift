@@ -30,15 +30,15 @@ func filterVowels(from input: String) -> String {
 
 filterVowels(from: title)
 
-let firstSpace = title.index(of: " ") ?? title.endIndex
+let firstSpace = title.firstIndex(of: " ") ?? title.endIndex
 
 let firstWord = title[...firstSpace]
 let trimmedFirstWord = title[..<firstSpace]
 let secondWord = title[firstSpace...]
 let result
-  = String(firstWord.uppercased()
-            + "-"
-            + secondWord.reversed())
+= String(firstWord.uppercased()
+         + "-"
+         + String(secondWord.reversed()))
 
 //: [TOC](00TOC) | [Previous](@previous) | Next
 

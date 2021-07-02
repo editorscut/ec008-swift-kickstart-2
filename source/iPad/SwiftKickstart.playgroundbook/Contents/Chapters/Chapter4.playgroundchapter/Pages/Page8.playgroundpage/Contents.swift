@@ -1,4 +1,4 @@
-var numbers = [String: Int]()
+var numbers: [String: Int] = [:]
 numbers["one"] = 8
 numbers["too"] = 3
 numbers["one"] = 1
