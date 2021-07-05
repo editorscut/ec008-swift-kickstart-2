@@ -22,3 +22,18 @@ pointThreeFour == pointTwoFour
 pointThreeFour == anotherPointThreeFour
 pointThreeFour != pointTwoFive
 pointThreeFour != anotherPointThreeFour
+
+extension Vertex: Comparable {
+  static func <(lhs: Vertex, rhs: Vertex) -> Bool {
+    if lhs.x > rhs.x {return false}
+    else if lhs.x < rhs.x {return true}
+    else {return lhs.y < rhs.y}
+  }
+}
+
+pointThreeFour < pointTwoFour
+pointThreeFour > pointTwoFour
+pointThreeFour < pointThreeFour
+pointThreeFour <= pointThreeFour
+pointTwoFour < pointTwoFive
+pointThreeFour < pointTwoFive

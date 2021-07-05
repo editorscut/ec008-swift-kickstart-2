@@ -36,9 +36,7 @@ class Attendee {
   }
 }
 
-func optionalChaining(attendee: Attendee) -> Apartment? {
-  func optionalChaining(attendee: Attendee) -> Apartment? {
+func optionalChaining(attendee: Attendee) -> String? {
     let info = attendee.address?.streetInformation?.apartment
     return info
-  }
 }

@@ -16,10 +16,30 @@
 //  }
 //}
 
+//struct Vertex {
+//  private(set) var x: Double
+//  let y: Double
+//
+//  mutating func moveHorizontally(by deltaX: Double) {
+//    self = Vertex(x: x + deltaX,
+//                  y: y)
+//  }
+//}
+
+//struct Vertex {
+//  private(set) var x: Double
+//  let y: Double
+//
+//  mutating func moveHorizontally(by deltaX: Double) {
+//    self = Vertex(x: x + deltaX,
+//                  y: 0)
+//  }
+//}
+
 struct Vertex {
   let x: Double
   let y: Double
-  
+
   func movedHorizontally(by deltaX: Double) -> Vertex {
     Vertex(x: x + deltaX, y: y)
   }
@@ -35,6 +55,10 @@ extension Vertex: CustomStringConvertible {
 //let movedPoint = point.movedHorizontally(by: 6)
 //point
 //point.magnitude()
+//point
+
+//var point = Vertex(x: 3, y: 4)
+//point.moveHorizontally(by: 6)
 //point
 
 var point = Vertex(x: 3, y: 4)
