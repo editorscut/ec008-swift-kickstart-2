@@ -29,8 +29,8 @@ struct Rectangle {
   let topLeftCorner: Vertex
   let size: Size
 }
-extension Rectangle: Movable {
-  func movedHorizontally(by deltaX: Int) -> Rectangle {
+extension Rectangle {
+  func movedHorizontally(by deltaX: Int) -> Rectangle  {
     guard let movedTopLeftCorner
             = topLeftCorner.movedHorizontally(by: deltaX)
             as? Vertex else {return self}
