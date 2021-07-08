@@ -7,7 +7,7 @@ struct Model {
 }
 
 extension Model { //Mutating Methods
-  mutating func remove(at index: Int) {
+  mutating func remove(at index: Int) -> String {
     privateArray.remove(at: index)
   }
   mutating func insert(_ string: String,
