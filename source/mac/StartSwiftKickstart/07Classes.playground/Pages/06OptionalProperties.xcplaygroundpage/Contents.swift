@@ -14,6 +14,12 @@ class Attendee {
     }
 }
 
+extension Attendee: CustomStringConvertible {
+  var description: String {
+    nameBadge()
+  }
+}
+
 let daniel = Attendee(name: "Daniel",
                       hometown: "Shaker Heights")
 let kimberli = Attendee(name: "Kimberli")

@@ -8,7 +8,7 @@ let fileURL = Bundle
 
 //func validate(_ url: URL?) -> String {
 //  if url != nil {
-//      let validFileURL = fileURL!
+//      let validFileURL = url!
 //      return "Found file at: \(validFileURL.path)"
 //  } else {
 //      return "No file found"

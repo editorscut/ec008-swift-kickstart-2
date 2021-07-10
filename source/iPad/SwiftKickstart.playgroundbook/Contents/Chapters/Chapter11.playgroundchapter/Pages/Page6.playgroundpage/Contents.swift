@@ -20,4 +20,4 @@ func myMap<Input, Output>(to input: [Input],
 }
 
 myMap(to: numberSold,
-      using: revenueAt199on)
+      using: revenueAt199on).description

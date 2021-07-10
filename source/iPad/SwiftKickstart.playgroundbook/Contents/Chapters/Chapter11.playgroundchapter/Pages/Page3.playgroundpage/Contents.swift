@@ -22,7 +22,7 @@ var sellersShare = 0.70
 
 func revenueGenerator(at pricePerApp: USDollar)
              -> (Count) -> USDollar {
-  {(_ count: Count) -> USDollar in
+  { count in
     USDollar(count.asDouble()
               * pricePerApp.value
               * sellersShare)

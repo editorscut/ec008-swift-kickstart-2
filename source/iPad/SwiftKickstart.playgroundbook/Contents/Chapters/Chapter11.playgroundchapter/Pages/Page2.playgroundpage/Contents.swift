@@ -15,7 +15,7 @@ let revenueAt199on = revenueGenerator(at: USDollar(1.99))
 revenueAt199on(17)
 let shareArray = [sellersShare]
 
-sellersShare = 1.0
+sellersShare = 0.85
 
 shareArray
 revenueAt199on(17)

@@ -7,7 +7,7 @@ extension SubscriptOutOfBoundsError : CustomDebugStringConvertible {
   var debugDescription: String {
     switch self {
     case .negativeIndexError:
-      return "is less than zero"
+      return "Index is less than zero"
     case .indexIsTooLargeError(let excess):
       return "Index is greater than \(Forecast.count-1) by \(excess)"
     }

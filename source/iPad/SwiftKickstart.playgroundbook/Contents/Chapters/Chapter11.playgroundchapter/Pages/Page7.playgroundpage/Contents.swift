@@ -22,12 +22,12 @@ extension Array {
 }
 
 numberSold.myMap{
-    USDollar($0.asDouble() * 1.99 * 0.70).description
-}
+        USDollar($0.asDouble() * 1.99 * 0.70)
+    }.description
 
 numberSold.map{
-    USDollar($0.asDouble() * 1.99 * 0.70).description
-}
+        USDollar($0.asDouble() * 1.99 * 0.70)
+    }.description
 
 let dailyNumberSold = ["Mon": 17, "Tue": 29,
                        "Wed": 11, "Thu": 15,
@@ -38,5 +38,6 @@ dailyNumberSold.map{
     USDollar($0.value.asDouble() * 1.99 * 0.70)
     }.description
 
-let result = dailyNumberSold.mapValues{$0.asDouble() * 1.99 * 0.70}
-result
+dailyNumberSold.mapValues{
+        USDollar($0.asDouble() * 1.99 * 0.70)
+    }.description

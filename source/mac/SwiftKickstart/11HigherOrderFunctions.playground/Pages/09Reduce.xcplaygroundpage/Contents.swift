@@ -65,6 +65,8 @@ extension Sequence {
     }
 }
 
-numberSold.filterUsingReduce{item in item > 25}
+numberSold
+    .filterUsingReduce{item in item > 25
+}.description
 
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
