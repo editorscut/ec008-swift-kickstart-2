@@ -1,2 +1,0 @@
-let someone = "Swift Programmer"
-

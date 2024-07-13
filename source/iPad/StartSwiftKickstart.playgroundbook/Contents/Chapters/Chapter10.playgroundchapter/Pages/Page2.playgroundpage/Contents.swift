@@ -1,3 +1,0 @@
-class TextField {
-    var text = ""
-}
