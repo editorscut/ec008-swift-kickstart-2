@@ -21,7 +21,7 @@ revenue(on: numberSold)
 func revenue(on count: Count,
              at appPrice: USDollar) -> USDollar {
   USDollar(count.asDouble
-            * price.value
+           * appPrice.value
             * sellersShare)
 }
 
